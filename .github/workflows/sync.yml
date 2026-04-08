@@ -1,6 +1,5 @@
 name: Sync to Hugging Face Hub
 
-# This tells GitHub to run this script every time you push to the 'main' branch
 on:
   push:
     branches: [main]
@@ -16,7 +15,4 @@ jobs:
           lfs: true
       
       - name: Push to Hugging Face
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        # This forces your GitHub code into your Hugging Face Space
-        run: git push --force https://Abhishek1205:$HF_TOKEN@huggingface.co/spaces/Abhishek1205/Email-RL-Agent main
+        run: git push --force https://Abhishek1205:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/Abhishek1205/Email-RL-Agent main
