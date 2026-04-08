@@ -1,4 +1,4 @@
-# Frontend / Node.js (not needed in container)
+# ── Frontend / Node.js ──────────────────────────────────────────────────────
 node_modules/
 src/
 dist/
@@ -10,39 +10,46 @@ tailwind.config.js
 postcss.config.js
 index.html
 
-# Backend FastAPI (not needed in container)
+# ── Backend FastAPI (separate service, not used by inference.py) ─────────────
 backend/
 
-# Python cache
+# ── Training artifacts ───────────────────────────────────────────────────────
+training/
+
+# ── Tasks (not imported by inference.py) ────────────────────────────────────
+tasks/
+
+# ── Python cache ─────────────────────────────────────────────────────────────
 __pycache__/
 **/__pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pycache
 
-# Environment / secrets
+# ── Secrets / environment files ──────────────────────────────────────────────
 .env
 **/.env
 
-# Git / IDE
+# ── Git / CI / IDE ────────────────────────────────────────────────────────────
 .git/
 .gitignore
 .github/
 .vscode/
 .kiro/
 
-# Dev / test artifacts
+# ── Dev / test artifacts ─────────────────────────────────────────────────────
 aim_env.log
 analysis.md
+diff_output.txt
 test_platform.py
-training/
+main.py
 *.log
-*.json.bak
+*.bak
 
-# Docker Compose (not needed inside image)
+# ── Docker Compose (not needed inside image) ──────────────────────────────────
 docker-compose.yml
+backend/Dockerfile
 
-# OS artifacts
+# ── OS artifacts ─────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
