@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\common_utils.py
+# hypothesis_version: 6.151.4
+
+[',', '2023-06-01', 'ANTHROPIC_API_BASE', 'ANTHROPIC_API_KEY', 'Bearer ', 'accept', 'allowed_callers', 'anthropic', 'anthropic-beta', 'anthropic-version', 'anthropic/', 'application/json', 'authorization', 'cache_control', 'computer_', 'computer_20241022', 'computer_20250124', 'container', 'content', 'content-type', 'data', 'effort', 'files-api-2025-04-14', 'function', 'id', 'input_examples', 'is_vertex_request', 'llm_provider', 'mcp_servers', 'opus-4-5', 'opus_4_5', 'output_config', 'reasoning_effort', 'skills', 'skills-2025-10-02', 'text', 'tools', 'true', 'type', 'x-api-key', '{}-{}']

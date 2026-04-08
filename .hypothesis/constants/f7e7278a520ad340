@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\files\main.py
+# hypothesis_version: 6.151.4
+
+[600.0, 400, 600, 'AZURE_AD_TOKEN', 'AZURE_API_BASE', 'AZURE_API_KEY', 'AZURE_API_VERSION', 'AZURE_OPENAI_API_KEY', 'OPENAI_API_BASE', 'OPENAI_API_KEY', 'OPENAI_BASE_URL', 'OPENAI_ORGANIZATION', 'Unsupported provider', 'VERTEXAI_CREDENTIALS', 'VERTEXAI_LOCATION', 'VERTEXAI_PROJECT', 'acreate_file', 'afile_content', 'afile_delete', 'afile_list', 'afile_retrieve', 'anthropic', 'api_base', 'api_key', 'assistants', 'azure', 'azure_ad_token', 'batch', 'bedrock', 'client', 'create_file', 'create_thread', 'custom_llm_provider', 'expires_after', 'extra_body', 'extra_headers', 'file', 'file_delete', 'file_list', 'file_retrieve', 'fine-tune', 'gemini', 'hosted_vllm', 'id', 'is_async', 'litellm_call_id', 'litellm_logging_obj', 'manus', 'model', 'n/a', 'openai', 'purpose', 'request_timeout', 'vertex_ai']

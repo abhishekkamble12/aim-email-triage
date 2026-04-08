@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tokenize\stanford_segmenter.py
+# hypothesis_version: 6.151.4
+
+[',', '-inputEncoding', '-keepAllWhitespaces', '-loadClassifier', '-mx2g', '-options', '-serDictionary', '-sighanCorporaDict', '-textFile', './data/', 'SLF4J', 'STANFORD_MODELS', 'STANFORD_SEGMENTER', 'UTF-8', 'always', 'ar', 'data', 'dict-chris6.ser.gz', 'false', 'ignore', 'pku.gz', 'slf4j-api.jar', 'true', 'wb', 'zh']

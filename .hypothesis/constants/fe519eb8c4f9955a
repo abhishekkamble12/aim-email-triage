@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\logging_utils.py
+# hypothesis_version: 6.151.4
+
+[1000, 'async', 'llm_api_duration_ms', 'logging_obj', 'messages', 'model_call_details', 'sync']

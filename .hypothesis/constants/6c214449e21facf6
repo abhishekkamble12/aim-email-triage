@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_utils\common_utils.py
+# hypothesis_version: 6.151.4
+
+['OpenAIFileObject', 'id', 'litellm_metadata', 'metadata', 'model_info', 'supports_web_search', 'team_id', 'tools', 'type', 'user_api_key_team_id', 'web_search', 'web_search_preview']

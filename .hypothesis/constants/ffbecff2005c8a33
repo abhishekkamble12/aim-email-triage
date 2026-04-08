@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\_logging.py
+# hypothesis_version: 6.151.4
+
+['%H:%M:%S', '()', 'DEBUG', 'JSON_LOGS', 'LITELLM_LOG', 'LiteLLM', 'LiteLLM Proxy', 'LiteLLM Router', 'access', 'class', 'default', 'exception', 'ext://sys.stdout', 'formatter', 'formatters', 'handlers', 'httpx', 'json', 'langfuse', 'langfuse_otel', 'level', 'loggers', 'message', 'propagate', 'stacktrace', 'stream', 'timestamp', 'uvicorn', 'uvicorn.access', 'uvicorn.error', 'version']

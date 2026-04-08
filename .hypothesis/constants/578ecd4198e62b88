@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\huggingface\common_utils.py
+# hypothesis_version: 6.151.4
+
+[128, 500, '</s>', '<s>', '<|assistant|>', '<|system|>', '<|user|>', 'Accept', 'Authorization', 'HUGGINGFACE_API_KEY', 'application/json', 'conversational', 'expand', 'headers', 'response', 'status_code', 'text-classification', 'text-generation']

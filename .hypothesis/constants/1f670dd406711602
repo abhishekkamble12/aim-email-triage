@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\watsonx\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['/', '<|begin_of_text|>', '<|eot_id|>', 'HOSTED_VLLM_API_BASE', 'HOSTED_VLLM_API_KEY', 'api_version', 'assistant', 'auto', 'deployment/', 'frequency_penalty', 'logprobs', 'max_tokens', 'n', 'none', 'post_message', 'pre_message', 'presence_penalty', 'reasoning_effort', 'required', 'response_format', 'seed', 'stop', 'stream', 'system', 'temperature', 'tool_choice', 'tool_choice_option', 'tools', 'top_logprobs', 'top_p', 'user', 'watsonx/', 'watsonx_text/']

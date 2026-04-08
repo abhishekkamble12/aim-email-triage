@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\conversation\heuristics\degeneration\metric.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, 4.0, '\\b\\w+\\b', 'assistant', 'average_score', 'content', 'degeneration_score', 'fallback_hit', 'normalized_entropy', 'overlap_previous', 'peak_score', 'per_turn', 'repetition_ratio', 'role']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\interactions\__init__.py
+# hypothesis_version: 6.151.4
+
+['AgentOption', 'Annotation', 'AudioContent', 'CodeExecution', 'ComputerUse', 'Content', 'ContentDelta', 'ContentStart', 'ContentStop', 'DocumentContent', 'DynamicAgentConfig', 'ErrorEvent', 'FileSearch', 'Function', 'FunctionCallContent', 'GenerationConfig', 'GoogleSearch', 'ImageContent', 'Interaction', 'InteractionEvent', 'InteractionInput', 'InteractionSseEvent', 'InteractionStatus', 'InteractionTool', 'McpServer', 'ModelOption', 'ResponseModality', 'TextContent', 'ThoughtContent', 'Tool', 'ToolChoiceConfig', 'Turn', 'UrlContext', 'Usage', 'VideoContent']

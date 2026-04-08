@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\integrations\dedupe.py
+# hypothesis_version: 6.151.4
+
+['dedupe', 'exc_info', 'last-seen']

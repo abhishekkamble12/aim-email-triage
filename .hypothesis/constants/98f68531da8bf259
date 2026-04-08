@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\mlflow.py
+# hypothesis_version: 6.151.4
+
+[1000000000.0, ':', 'MLflow Logging Error', 'acompletion', 'api_base', 'cache_hit', 'call_type', 'choices', 'completion', 'completion_tokens', 'custom_llm_provider', 'delta', 'embeddings', 'exception', 'functions', 'input_tokens', 'litellm_call_id', 'litellm_params', 'messages', 'model', 'optional_params', 'output_tokens', 'prediction', 'prompt_tokens', 'raw_llm_response', 'request_tags', 'response', 'response_cost', 'saved_cache_cost', 'stream', 'streaming_chunk', 'tool_choice', 'tools', 'total_tokens', 'user']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\projects\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 422, 'DELETE', 'GET', 'PATCH', 'POST', 'application/json', 'breakdown', 'content-type', 'description', 'ids', 'interval', 'interval_end', 'interval_start', 'metric_type', 'name', 'page', 'project_ids', 'size', 'sorting', 'span_filters', 'thread_filters', 'trace_filters', 'v1/private/projects', 'visibility', 'write']

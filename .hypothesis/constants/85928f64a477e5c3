@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\secret_managers\get_azure_ad_token_provider.py
+# hypothesis_version: 6.151.4
+
+['AZURE_CLIENT_ID', 'AZURE_CLIENT_SECRET', 'AZURE_CREDENTIAL', 'AZURE_SCOPE', 'AZURE_TENANT_ID']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\types\trace_thread_filter_write_operator.py
+# hypothesis_version: 6.151.4
+
+['!=', '<', '<=', '=', '>', '>=', 'contains', 'ends_with', 'is_empty', 'is_not_empty', 'not_contains', 'starts_with']

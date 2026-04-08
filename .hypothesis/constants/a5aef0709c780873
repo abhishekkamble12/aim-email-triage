@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\prompt\chat\content_renderer_registry.py
+# hypothesis_version: 6.151.4
+
+[500, '...', '<<</image>>>', '<<</media>>>', '<<</video>>>', '<<<image>>>', '<<<media>>>', '<<<video>>>', 'image_url', 'text', 'type', 'url', 'video', 'video_url', 'vision']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\g_eval\parser.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, 'LiteLLMModelResponse', '__dict__', 'choices', 'content', 'logprob', 'logprobs', 'message', 'model_dump', 'reason', 'score', 'token', 'top_logprobs']

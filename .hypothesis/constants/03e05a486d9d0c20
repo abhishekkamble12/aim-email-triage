@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\profiler\utils.py
+# hypothesis_version: 6.151.4
+
+[101, 128, 'ProcessedFrame', '__name__', 'abs_path', 'cls', 'filename', 'function', 'lineno', 'module', 'name', 'self', '{}.{}']

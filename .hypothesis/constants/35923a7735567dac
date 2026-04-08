@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\llm_response_utils\get_api_base.py
+# hypothesis_version: 6.151.4
+
+['claude', 'gemini', 'model', 'openai', 'stream']

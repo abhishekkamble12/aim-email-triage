@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\core\http_client.py
+# hypothesis_version: 6.151.4
+
+[0.25, 0.5, 2.0, 408, 409, 429, 500, 1000, '^\\s*[0-9]+\\s*$', 'additional_headers', 'max_retries', 'retry-after', 'retry-after-ms', 'timeout_in_seconds']

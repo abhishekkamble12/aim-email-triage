@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\conversation\heuristics\knowledge_retention\metric.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, '?', 'No assistant turns', 'No facts to retain', 'about', 'allow', 'assistant', 'can', 'content', 'could', 'explain', 'from', 'give', 'have', 'help', 'let', 'may', 'might', 'name', 'need', 'number', 'please', 'provide', 'reference_terms', 'request', 'retained_terms', 'role', 'shall', 'should', 'show', 'tell', 'that', 'the', 'there', 'this', 'user', 'want', 'which', 'with', 'would']

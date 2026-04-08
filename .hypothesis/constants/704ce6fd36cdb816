@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\dotprompt\dotprompt_manager.py
+# hypothesis_version: 6.151.4
+
+['Assistant:', 'System:', 'User:', 'assistant', 'content', 'dotprompt', 'metadata', 'role', 'system', 'user']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\malt.py
+# hypothesis_version: 6.151.4
+
+['(', '(The|the|A|a|An|an)$', ')', ',', '-c', '-cp', '-i', '-m', '-o', '.', '.*', '.*able$', '.*ed$', '.*ing$', '.*ly$', '.*ness$', '.*s$', '.jar', ':', ';', '?', 'CD', 'DT', 'IN', 'JJ', 'MALT_MODEL', 'MALT_PARSER', 'NN', 'NNS', 'PRP', 'PRP$', 'RB', 'VBD', 'VBG', '[', '\\($', '\\)$', '\\,$', '\\.$', '\\?$', '\\[$', '\\]$', ']', '__main__', 'java', 'learn', 'liblinear-1.8.jar', 'libsvm.jar', 'log4j.jar', 'malt_input.conll.', 'malt_output.conll.', 'malt_temp.mco', 'malt_train.conll.', 'maltparser-', 'null', 'org.maltparser.Malt', 'parse', 'w', 'win']

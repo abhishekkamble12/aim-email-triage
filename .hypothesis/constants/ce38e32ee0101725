@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\deepeval\deepeval.py
+# hypothesis_version: 6.151.4
+
+['CONFIDENT_API_KEY', 'LITELM_ENVIRONMENT', 'NO_INPUT', 'NO_OUTPUT', 'choices', 'completion_tokens', 'content', 'development', 'error_string', 'id', 'input', 'message', 'model', 'prompt_tokens', 'response', 'trace_id', 'usage']

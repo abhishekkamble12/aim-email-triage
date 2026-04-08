@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\tnt.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.1, 2.0, 100, 120, 200, 1000, '     : words known:', '!', ',', '--', '.', '?', 'Accuracy:', 'BOS', 'Capitalization off:', 'Capitalization on:', 'EOS', 'Percentage known:', 'Percentage unknown:', 'Unk']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\opik_context.py
+# hypothesis_version: 6.151.4
+
+['attachments', 'error_info', 'feedback_scores', 'input', 'metadata', 'model', 'name', 'output', 'prompts', 'provider', 'tags', 'thread_id', 'total_cost', 'trace_context', 'update_current_span', 'update_current_trace', 'usage']

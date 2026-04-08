@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\chat\gpt_5_transformation.py
+# hypothesis_version: 6.151.4
+
+[400, '/', 'frequency_penalty', 'gpt-5', 'gpt-5-chat', 'gpt-5-codex', 'gpt-5.1', 'gpt-5.1-codex-max', 'gpt-5.2', 'gpt-5.2-pro', 'logprobs', 'max_tokens', 'none', 'presence_penalty', 'pro', 'reasoning_effort', 'stop', 'temperature', 'tool_choice', 'top_logprobs', 'top_p', 'verbosity', 'xhigh']

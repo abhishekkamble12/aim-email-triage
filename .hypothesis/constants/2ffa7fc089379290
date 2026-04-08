@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\together_ai\rerank\handler.py
+# hypothesis_version: 6.151.4
+
+[200, 'accept', 'application/json', 'authorization', 'content-type']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\completion.py
+# hypothesis_version: 6.151.4
+
+['allow', 'assistant', 'auto', 'function', 'high', 'image_url', 'low', 'system', 'text', 'tool', 'user']

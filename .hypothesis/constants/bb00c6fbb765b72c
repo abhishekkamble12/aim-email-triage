@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\xmldocs.py
+# hypothesis_version: 6.151.4
+
+[b'\\s*<\\?xml\\b.*\\bencoding="([^"]+)"', b"\\s*<\\?xml\\b.*\\bencoding='([^']+)'", 1024, '(backtrack)', '/', '<', '>', 'EMPTY_ELT_TAG', 'END_TAG', 'START_TAG', 'Unmatched tag </%s>', '[<>]', '\\Z', 'ascii', 'rb', 'utf-16-be', 'utf-16-le', 'utf-32-be', 'utf-32-le', 'utf-8', 'xmlcharrefreplace', '{:>25} {}']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\text.py
+# hypothesis_version: 6.151.4
+
+[0.0, 100, '(?:<(?:', '(?<!\\\\)\\.', ')>)', '*END*', '*START*', '...', '; ', '<', '</s>', '<Text: %s>', '<s>', '>', '><', 'Collocations:', 'Concordance:', 'ConcordanceIndex', 'ConcordanceLine', 'ContextIndex', 'Dispersion plot:', 'Indexing:', 'No matches', 'Text', 'TextCollection', 'TokenSearcher', 'Vocabulary plot:', '[^>]', '\\s', '\\w+|[\\.\\!\\?]', ']', '_', '__main__', '_collocations', '_concordance_index', '_token_searcher', '_trigram_model', '_vocab', '_word_context_index', 'announced', 'english', 'left', 'left_print', 'line', 'news', 'no matches', 'offset', 'query', 'report', 'right', 'right_print', 'said', 'text[3:5]:', 'text[3]:', 'words']

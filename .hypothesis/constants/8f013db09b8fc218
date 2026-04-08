@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\multidict\__init__.py
+# hypothesis_version: 6.151.4
+
+['6.7.0', 'CIMultiDict', 'CIMultiDictProxy', 'MultiDict', 'MultiDictProxy', 'MultiMapping', 'MutableMultiMapping', 'getversion', 'istr', 'upstr']

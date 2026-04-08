@@ -1,0 +1,4 @@
+# file: D:\Reinforcement-learning\env\models.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'Email subject line.', 'archive', 'critical', 'escalate', 'forums', 'high', 'inbox', 'low', 'medium', 'normal', 'promotions', 'review', 'social', 'spam', 'trash', 'updates', 'urgent']

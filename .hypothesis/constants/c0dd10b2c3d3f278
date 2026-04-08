@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\realtime_api\main.py
+# hypothesis_version: 6.151.4
+
+['2024-10-01-preview', 'AZURE_API_BASE', 'AZURE_API_KEY', 'OPENAI_API_KEY', 'XAI_API_BASE', 'XAI_API_KEY', 'api-key', 'aws_access_key_id', 'aws_external_id', 'aws_profile_name', 'aws_region_name', 'aws_role_name', 'aws_session_name', 'aws_session_token', 'aws_sts_endpoint', 'azure', 'bedrock', 'beta', 'extra_headers', 'headers', 'https://api.x.ai/v1', 'litellm_logging_obj', 'model', 'openai', 'realtime_protocol', 'user', 'xai']

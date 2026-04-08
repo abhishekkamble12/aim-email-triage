@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\chunk\util.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.5, 100, ' chunks>', '.*', '/', '<ChunkScoring of ', '<[^>]+>|[^\\s<]+', '<b_', '<e_', 'B', 'B-', 'BO', 'Bad IEER string', 'CARDINAL', 'ChunkParse score:\n', 'CoNLL output:', 'DATE', 'DURATION', 'I', 'I-', 'LOCATION', 'MEASURE', 'MONEY', 'NP', 'O', 'ORGANIZATION', 'PERCENT', 'PERSON', 'PP', 'S', 'VP', 'XXXX', '[', '\\[|\\]|[^\\[\\]\\s]+', ']', '__main__', 'chunk_label', 'date_time', 'docno', 'doctype', 'headline', 'max_fn_examples', 'max_fp_examples', 'max_tp_examples', 'text', 'type']

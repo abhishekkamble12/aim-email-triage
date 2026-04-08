@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\completion\transformation.py
+# hypothesis_version: 6.151.4
+
+['assistant', 'choices', 'extra_headers', 'finish_reason', 'frequency_penalty', 'function_call', 'functions', 'id', 'logit_bias', 'logprobs', 'max_retries', 'max_tokens', 'model', 'n', 'original_response', 'presence_penalty', 'prompt', 'response_format', 'seed', 'self', 'stop', 'stream', 'stream_options', 'temperature', 'text', 'tool_choice', 'tools', 'top_logprobs', 'top_p', 'usage', 'user']

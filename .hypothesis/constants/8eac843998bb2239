@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\chat\converse_handler.py
+# hypothesis_version: 6.151.4
+
+[200, 408, 1024, 'Content-Type', 'api_base', 'application/json', 'aws_access_key_id', 'aws_external_id', 'aws_profile_name', 'aws_region_name', 'aws_role_name', 'aws_session_name', 'aws_session_token', 'aws_sts_endpoint', 'bedrock', 'complete_input_dict', 'fake_stream', 'headers', 'json_mode', 'model_id', 'stream', 'stream_chunk_size', 'timeout', 'us-west-2']

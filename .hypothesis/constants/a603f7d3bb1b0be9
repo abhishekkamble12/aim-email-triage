@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\metrics\scores.py
+# hypothesis_version: 6.151.4
+
+[1e-100, 0.01, 0.05, 0.1, 0.15, 0.25, 0.5, 1.0, 999, '   Recall:', '-', 'Accuracy:', 'F-Measure:', 'Precision:', 'Reference =', 'Test    =', 'Test =   ', '__main__', 'actual statistic: %f', 'intersection', 'pseudo-statistic: %f', 'shuffle: %d', 'shuffles', 'shuffles: %d', 'significance: %f', 'statistic', 'verbose']

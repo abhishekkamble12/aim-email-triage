@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\observation_data.py
+# hypothesis_version: 6.151.4
+
+['ObservationData', 'ObservationDataT', 'attachments', 'input', 'metadata', 'output', 'prompts', 'tags']

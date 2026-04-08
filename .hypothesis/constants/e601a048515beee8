@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\prompts\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 422, 'DELETE', 'GET', 'PATCH', 'POST', 'PUT', 'application/json', 'change_description', 'commit', 'content-type', 'description', 'filters', 'id', 'ids', 'merge_tags', 'metadata', 'name', 'page', 'search', 'size', 'sorting', 'tags', 'template', 'template_structure', 'type', 'update', 'v1/private/prompts', 'version', 'write']

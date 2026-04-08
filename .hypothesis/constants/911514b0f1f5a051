@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tokenize\punkt.py
+# hypothesis_version: 6.151.4
+
+[-2.0, 1e-08, 0.3, 0.99, 1.0, 7.88, '  Rare Abbrev: %s', ' type=%s,', '!', '##number##', '(?:\\r|^\\s+)', ', ', ',:;', '-', '.', '..', '/tmp/punkt.new', '/tmp/punkt_tab', ';:,.!?', '<A>', '<E>', '<S>', '?', 'BEG-LC', 'BEG-UC', 'MID-LC', 'MID-UC', 'MultiChar', 'NonWord', 'SentEndChars', 'UNK-LC', 'UNK-UC', 'WordStart', '[%s]', '[^\\W\\d]', '[^\\W\\d]+$', '[^\\W\\d]\\.$', '\\.\\.+$', '\\s*', '_re_period_context', '_re_word_tokenizer', 'abbr', 'after_tok', 'break_decision', 'collocation', 'default decision', 'ellipsis', 'english', 'initial', 'internal', 'linestart', 'lower', 'next_tok', 'none', 'parastart', 'period_final', 'period_index', 'reason', 'sentbreak', 'text', 'tok', 'type', 'type1', 'type1_in_abbrs', 'type1_is_initial', 'type2', 'type2_ortho_contexts', 'unknown', 'upper', 'utf-8', 'w', '{}({},{} {})']

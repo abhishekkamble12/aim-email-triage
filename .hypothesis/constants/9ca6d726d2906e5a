@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure_ai\anthropic\messages_transformation.py
+# hypothesis_version: 6.151.4
+
+['/', '/anthropic', '/v1/messages', '2023-06-01', 'AZURE_API_BASE', 'anthropic-version', 'api-key', 'api_key', 'application/json', 'content-type', 'x-api-key']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai_like\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['/', 'OPENAI_LIKE_API_BASE', 'OPENAI_LIKE_API_KEY', '_tokens', 'arguments', 'choices', 'complete_input_dict', 'content', 'function', 'max_tokens', 'message', 'model', 'stream', 'tool_calls', 'usage']

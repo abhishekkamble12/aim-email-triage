@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\containers\utils.py
+# hypothesis_version: 6.151.4
+
+['after', 'expires_after', 'extra_body', 'extra_headers', 'extra_query', 'file_ids', 'limit', 'order']

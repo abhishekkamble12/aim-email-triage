@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\passthrough\utils.py
+# hypothesis_version: 6.151.4
+
+['(:endpoint)/', '(:foundation-model)/', '(:imported-model)/', '(:prompt)/', '(:prompt-router)/', '\\1%2F', '\\1%2F\\2%2F\\3', 'arn:aws:', 'content-length', 'host', 'utf-8']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\verbnet.py
+# hypothesis_version: 6.151.4
+
+['  Frames:\n', '  Semantics:\n', '  Syntax: ', '  Thematic roles:\n', ' ({})', ' Example: ', '!', '(none)', '* ', './/VNSUBCLASS', 'ARGS/ARG', 'DESCRIPTION', 'EXAMPLES/EXAMPLE', 'FRAMES/FRAME', 'ID', 'MEMBERS/MEMBER', 'Members: ', 'SELRESTRS/SELRESTR', 'SEMANTICS/PRED', 'SYNRESTRS/SYNRESTR', 'SYNTAX', 'Subclasses: ', 'THEMROLES/THEMROLE', 'Value', '[\\d+.\\-]+$', '[{}]', 'arguments', 'bool', 'description', 'example', 'modifiers', 'name', 'negated', 'pos_tag', 'predicate_value', 'primary', 'secondary', 'selrestrs', 'semantics', 'synrestrs', 'syntax', 'type', 'value', 'wn', '{}{}']

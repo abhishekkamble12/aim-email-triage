@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\context_recall\parser.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, 'context_recall_score', 'reason']

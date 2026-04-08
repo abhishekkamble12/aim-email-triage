@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\batches\handler.py
+# hypothesis_version: 6.151.4
+
+[200, ':', 'Authorization', 'Content-Type', 'api_base', 'complete_input_dict', 'headers', 'pageSize', 'pageToken', 'request_str', 'us-central1', 'v1', 'vertex_ai']

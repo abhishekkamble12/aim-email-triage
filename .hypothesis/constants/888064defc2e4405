@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\image_generation\amazon_titan_transformation.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'TEXT_IMAGE', '__', 'amazon.titan', 'hd', 'height', 'high', 'images', 'low', 'medium', 'n', 'negativeText', 'numberOfImages', 'premium', 'quality', 'self', 'size', 'standard', 'taskType', 'text', 'width', 'x']

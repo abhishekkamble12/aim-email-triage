@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\voyage\embedding\transformation.py
+# hypothesis_version: 6.151.4
+
+['/embeddings', 'Authorization', 'POST', 'VOYAGE_AI_API_KEY', 'VOYAGE_AI_TOKEN', 'VOYAGE_API_KEY', 'data', 'dimensions', 'encoding_format', 'input', 'model', 'object', 'output_dimension', 'total_tokens', 'usage']

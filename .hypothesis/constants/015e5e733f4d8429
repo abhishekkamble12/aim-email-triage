@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\responses\litellm_completion_transformation\handler.py
+# hypothesis_version: 6.151.4
+
+['custom_llm_provider', 'litellm_metadata', 'model', 'previous_response_id']

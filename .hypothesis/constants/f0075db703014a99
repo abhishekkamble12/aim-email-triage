@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\heuristics\bleu.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1e-06, 1.0, 'corpus_bleu_metric', 'ignore', 'method1', 'sentence_bleu_metric']

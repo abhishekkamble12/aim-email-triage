@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\search\main.py
+# hypothesis_version: 6.151.4
+
+['api_base', 'asearch', 'country', 'litellm_call_id', 'litellm_logging_obj', 'max_results', 'max_tokens_per_page', 'search_domain_filter']

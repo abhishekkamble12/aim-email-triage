@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\classify\textcat.py
+# hypothesis_version: 6.151.4
+
+[140, '#', '...', '<', '>', 'Abkhaz-UTF8', 'Abkhazian', 'Esperanto', 'Esperanto-UTF8', 'Farsi_Persian-UTF8', 'Hawaiian', 'Hawaiian-UTF8', 'Hindi', 'Hindi-UTF8', 'Iranian Persian', 'Kurdish-UTF8', 'Language snippet: ', 'Northern Kurdish', 'Russian', 'Russian-UTF8', 'Serbian', 'Serbian_Srpski-UTF8', 'Vietnamese', 'Vietnamese-UTF8', "[^\\P{P}\\']+", '__main__', 'abk', 'epo', 'haw', 'hin', 'kmr', 'pes', 'rus', 'srp', 'vie']

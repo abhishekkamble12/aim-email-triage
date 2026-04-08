@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure\assistants.py
+# hypothesis_version: 6.151.4
+
+['assistant_id', 'completed', 'event_handler', 'instructions', 'messages', 'metadata', 'model', 'status', 'thread_id', 'tools']

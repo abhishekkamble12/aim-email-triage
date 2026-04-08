@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\lago.py
+# hypothesis_version: 6.151.4
+
+['/', '/api/v1/events', 'Authorization', 'Bearer {}', 'Content-Type', 'ENTERS LAGO CALLBACK', 'LAGO_API_BASE', 'LAGO_API_CHARGE_BY', 'LAGO_API_EVENT_CODE', 'LAGO_API_KEY', 'UTC', 'api/v1/events', 'application/json', 'body', 'code', 'completion_tokens', 'end_user_id', 'event', 'id', 'litellm_call_id', 'litellm_params', 'metadata', 'model', 'prompt_tokens', 'properties', 'proxy_server_request', 'response', 'response_cost', 'team_id', 'text', 'total_tokens', 'transaction_id', 'usage', 'user', 'user_api_key_org_id', 'user_api_key_team_id', 'user_api_key_user_id', 'user_id']

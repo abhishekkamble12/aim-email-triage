@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\exceptions.py
+# hypothesis_version: 6.151.4
+
+[400, 401, 403, 404, 408, 422, 429, 500, 502, 503, '429', 'GET', 'POST', '_request', 'headers', 'https://litellm.ai', 'litellm.APIError: {}', 'litellm.Timeout: {}', 'openai', 'throttling_error']

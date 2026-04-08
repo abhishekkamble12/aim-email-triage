@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\util.py
+# hypothesis_version: 6.151.4
+
+['\nSentence: %s', '#', '%d:  %s', '%s', '*', '-', '--demo', '--gram', '--model', '--no-beta-reduction', '--no-eval', '--semtrace', '--sentences', '--syntrace', '-T', '-b', '-d', '-e', '-g', '-m', '-s', '-t', 'D', 'G', 'John sees Mary', 'M', 'Reading grammar: %s', 'S', 'SEM', '__main__', 'b1', 'b2', 'bark', 'beta', 'boy', 'chase', 'count', 'd1', 'd2', 'default', 'demo', 'dog', 'evaluate', 'fido', 'g1', 'g2', 'girl', 'grammar', 'hello', 'import %s as model', 'in', 'john', 'mary', 'model', 'n', 'noosa', 'output: ', 'r', 'read in grammar G', 'see', 'sem', 'semtrace', 'sentences', 'store_false', 'suzie', 'syntrace', 'tess', 'utf8', 'walk', 'who walks', 'with']

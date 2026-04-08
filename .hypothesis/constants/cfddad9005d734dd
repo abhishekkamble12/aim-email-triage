@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\annotation_queues\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 422, 'GET', 'PATCH', 'POST', 'annotation_queues', 'application/json', 'comments_enabled', 'content-type', 'description', 'filters', 'id', 'ids', 'instructions', 'name', 'page', 'project_id', 'scope', 'size', 'sorting', 'write']

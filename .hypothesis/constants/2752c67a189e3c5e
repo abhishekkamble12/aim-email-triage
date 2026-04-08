@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\galileo.py
+# hypothesis_version: 6.151.4
+
+[200, 1000, '%Y-%m-%dT%H:%M:%S', '-', 'Authorization', 'Content-Type', 'GALILEO_BASE_URL', 'GALILEO_PASSWORD', 'GALILEO_PROJECT_ID', 'GALILEO_USERNAME', 'On Async Failure', 'On Async Success', 'accept', 'access_token', 'application/json', 'call_type', 'choices', 'completion_tokens', 'data', 'embedding', 'litellm', 'message', 'model', 'password', 'prompt_tokens', 'records', 'usage', 'username']

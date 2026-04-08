@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\image_generation\amazon_stability1_transformation.py
+# hypothesis_version: 6.151.4
+
+[0.0, '1024-x-1024', '50-steps', '__', 'artifacts', 'base64', 'bedrock', 'height', 'max-steps', 'self', 'size', 'steps', 'text', 'text_prompts', 'user', 'weight', 'width', 'x']

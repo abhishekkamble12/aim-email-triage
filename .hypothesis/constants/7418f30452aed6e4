@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\lfg.py
+# hypothesis_version: 6.151.4
+
+['\n%s', "\n{}{} '{}'", '\n{}{} {{{}}}', '\n{}{} {}', '%s:[', 'D', 'PAST', 'ROOT', 'TOP', 'VB', '[', ']', '__main__', 'a', 'address', 'b', 'c', 'd', 'deps', 'e', 'f', 'g', 'h', 'head', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', "pred '%s'", 'punct', 'q', 'r', 'rel', 's', 'spec', 't', 'tag', 'tense', 'u', 'v', 'w', 'word', 'x', 'y', 'z']

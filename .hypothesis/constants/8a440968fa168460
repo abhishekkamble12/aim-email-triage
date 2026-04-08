@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\custom_httpx\http_handler.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, '&', '0.0.0', '0.0.0.0', 'AIOHTTP_TRUST_ENV', 'ClientSession', 'DELETE', 'False', 'LITELLM_USER_AGENT', 'PATCH', 'POST', 'PUT', 'SSL_CERTIFICATE', 'SSL_CERT_FILE', 'SSL_ECDH_CURVE', 'SSL_SECURITY_LEVEL', 'SSL_VERIFY', 'User-Agent', '[REDACTED_API_KEY]', 'async_httpx_client', 'default-model-name', 'httpx_client', 'keepalive_timeout', 'key=', 'limit', 'limit_per_host', 'local_addr', 'message', 'response', 'response_headers-{}', 'shared_session', 'ssl', 'status_code', 'sync_transport', 'text', 'ttl_dns_cache']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\responses\streaming_iterator.py
+# hypothesis_version: 6.151.4
+
+['additional_headers', 'api_base', 'call_type', 'callbacks', 'content', 'cost', 'id', 'litellm_params', 'message', 'model_call_details', 'model_dump', 'model_id', 'model_info', 'response', 'start_time', 'type', 'usage']

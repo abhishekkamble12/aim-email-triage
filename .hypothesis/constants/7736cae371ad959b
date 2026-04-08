@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\gcs_pubsub\pub_sub.py
+# hypothesis_version: 6.151.4
+
+[200, 202, 'Authorization', 'Content-Type', 'GCS_PUBSUB_TOPIC_ID', 'Pub/Sub response: %s', 'application/json', 'data', 'messages', 'pub-sub', 'utf-8', 'vertex_ai']

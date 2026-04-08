@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\multimodal_embeddings\transformation.py
+# hypothesis_version: 6.151.4
+
+[0.0, 200, ',', 'Authorization', 'Content-Type', 'dimensions', 'embedding', 'endOffsetSec', 'gs://', 'image', 'imageEmbedding', 'instances', 'mp4', 'outputDimensionality', 'predictions', 'startOffsetSec', 'text', 'textEmbedding', 'vertex_ai', 'video', 'videoEmbeddings']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_utils\pre_call_checks\model_rate_limit_check.py
+# hypothesis_version: 6.151.4
+
+[429, '%H-%M', 'hidden_params', 'id', 'litellm_model_name', 'litellm_params', 'model', 'model_id', 'model_info', 'model_name', 'retry-after', 'rpm', 'total_tokens', 'tpm']

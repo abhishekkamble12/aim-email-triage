@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\llms\oci.py
+# hypothesis_version: 6.151.4
+
+['ASSISTANT', 'AUTO', 'CHATBOT', 'COHERE', 'COMPLETE', 'ERROR', 'ERROR_LIMIT', 'ERROR_TOXIC', 'FUNCTION', 'GEMINI', 'GENERIC', 'HIGH', 'IMAGE', 'LOW', 'MAX_TOKENS', 'SYSTEM', 'TEXT', 'TOOL', 'USER', 'USER_CANCEL', 'text']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\embed\amazon_titan_multimodal_transformation.py
+# hypothesis_version: 6.151.4
+
+['dimensions', 'embedding', 'embeddingConfig', 'inputTextTokenCount']

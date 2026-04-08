@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\configurator\configure.py
+# hypothesis_version: 6.151.4
+
+[200, '/api/', '/api/my/settings/', 'API key must be set.', 'Authorization', 'OPIK_API_KEY', 'OPIK_WORKSPACE', 'api_key', 'defaultWorkspaceName', 'opik/api/', 'url_override', 'workspace']

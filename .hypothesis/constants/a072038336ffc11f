@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\error_tracking\error_filtering\filter_chain_builder.py
+# hypothesis_version: 6.151.4
+
+[400, 401, 402, 403, 'error', 'warning']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\predibase\chat\handler.py
+# hypothesis_version: 6.151.4
+
+[200, 422, 500, '/generate', '/generate_stream', '</s>', '<s>', '<|assistant|>', '<|system|>', '<|user|>', 'PREDIBASE_API_BASE', '_logprob', 'acompletion', 'additional_headers', 'api_base', 'best_of', 'best_of_sequences', 'choices', 'complete_input_dict', 'content', 'details', 'error', 'final_prompt_value', 'finish_reason', 'generated_text', 'headers', 'https', 'initial_prompt_value', 'inputs', 'llm_provider-{}', 'logprob', 'message', 'parameters', 'predibase', 'roles', 'stream', 'timeout', 'tokens', 'x-', '{}']

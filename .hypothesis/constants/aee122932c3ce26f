@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\classify\weka.py
+# hypothesis_version: 6.151.4
+
+['\n@DATA\n', '% Weka ARFF file\n', '%% %s\n\n', '%r', '%s', '%s\n', '%s,', ',', '-T', '-d', '-distribution', '-l', '-label-', '-p', '-t', '.', '/tmp/name.model', '/usr/lib/weka', '/usr/local/lib/weka', '/usr/share/weka', '0', ':', '?', '@ATTRIBUTE %-30r %s\n', '@RELATION rel\n\n', 'C4.5', 'NUMERIC', 'STRING', 'WEKAHOME', '[*,]+', '[Found Weka: %s]', '__main__', 'actual', 'distribution', 'error', 'inst#', 'kstar', 'log_regression', 'naivebayes', 'predicted', 'prediction', 'ripper', 'svm', 'test.arff', 'train.arff', 'w', 'weka.jar', 'write', '{True, False}']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\integrations\litellm\litellm_completion_decorator.py
+# hypothesis_version: 6.151.4
+
+['anthropic', 'anthropic_api_key', 'api_key', 'aws_access_key_id', 'azure_ad_token', 'azure_key', 'azure_password', 'azure_username', 'baseten_api_key', 'bedrock', 'bedrock_converse', 'choices', 'client_secret', 'cohere_api_key', 'created_from', 'function_call', 'functions', 'gemini', 'groq', 'huggingface_api_key', 'json', 'litellm', 'messages', 'model', 'model_dump', 'openai', 'openai_api_key', 'openrouter_api_key', 'replicate_api_key', 'response_format', 'stop', 'togetherai_api_key', 'tool_choice', 'tools', 'usage', 'vertex_ai', 'vertex_credentials', 'vertex_location', 'vertex_project']

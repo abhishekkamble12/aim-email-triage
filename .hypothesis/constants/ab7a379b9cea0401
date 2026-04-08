@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\batches\handler.py
+# hypothesis_version: 6.151.4
+
+['/v1/embeddings', '24h', 'LiteLLMBatch', 'batch', 'completed', 'endTime', 'failed', 'failureMessage', 'failure_message', 'invocationArn', 'lastModifiedTime', 'modelArn', 'model_arn', 'outputDataConfig', 'output_file_id', 's3OutputDataConfig', 's3Uri', 'status', 'submitTime']

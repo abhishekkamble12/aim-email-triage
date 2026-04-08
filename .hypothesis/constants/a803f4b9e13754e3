@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\ollama\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 422, 500, 502, 503, 'POST', 'api_key', 'application/json', 'base_url', 'content-type']

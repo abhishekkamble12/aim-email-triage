@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\llms\custom_http.py
+# hypothesis_version: 6.151.4
+
+['a2a', 'caching', 'guardrail_callback', 'logging_callback', 'mcp', 'oauth2_check', 'oauth2_register', 'prompt_factory', 'prompt_management', 'rag', 'search', 'secret_manager', 'sso_handler', 'ui']

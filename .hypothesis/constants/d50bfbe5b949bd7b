@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\stem\cistem.py
+# hypothesis_version: 6.151.4
+
+['$', '%', '&', '(.)\\*', '(.)\\1', '[esn]$', '\\1', '\\1*', '\\1\\1', '^ge(.{4,})', 'a', 'e[mr]$', 'ei', 'ie', 'nd$', 'o', 'sch', 'ss', 't$', 'u', 'ß', 'ä', 'ö', 'ü']

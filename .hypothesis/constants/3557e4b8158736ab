@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\datadog\datadog_handler.py
+# hypothesis_version: 6.151.4
+
+[',', 'DD_BASE_URL', 'DD_ENV', 'DD_SERVICE', 'DD_SOURCE', 'DD_VERSION', 'HOSTNAME', 'POD_NAME', 'env', 'litellm', 'litellm-server', 'request_tags', 'service', 'unknown', 'version']

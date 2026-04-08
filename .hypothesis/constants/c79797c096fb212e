@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\error_tracking\environment_details.py
+# hypothesis_version: 6.151.4
+
+['anthropic', 'aws_lambda', 'colab', 'crewai', 'dspy', 'github_actions', 'google-adk', 'google-genai', 'haystack-ai', 'installation_type', 'jupyter', 'langchain', 'langchain-anthropic', 'langchain-community', 'langchain-openai', 'litellm', 'llama-index', 'openai', 'openai-agents', 'os', 'os_type', 'pid', 'pydantic', 'pytest', 'python_version', 'release', 'session_id']

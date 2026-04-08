@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\image_generation\dall_e_2_transformation.py
+# hypothesis_version: 6.151.4
+
+['1024x1024', 'LiteLLMLoggingObj', 'complete_input_dict', 'image_generation', 'n', 'output_format', 'png', 'prompt', 'quality', 'response_format', 'size', 'standard', 'user']

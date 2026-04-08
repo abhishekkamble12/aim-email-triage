@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\cohere\common_utils.py
+# hypothesis_version: 6.151.4
+
+['Authorization', 'Request-Source', 'TEXT_CONTENT', 'accept', 'application/json', 'arguments', 'citation-start', 'citations', 'content', 'content-delta', 'content-type', 'data', 'data:', 'delta', 'end', 'event', 'finish_reason', 'function', 'id', 'index', 'input_tokens', 'is_finished', 'message', 'message-end', 'name', 'output_tokens', 'sources', 'start', 'stop', 'text', 'tokens', 'tool-call-delta', 'tool-plan-delta', 'tool_calls', 'tool_plan', 'type', 'unspecified:litellm', 'usage', 'utf-8', 'v1', 'v1/', 'v2']

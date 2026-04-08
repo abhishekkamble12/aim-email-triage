@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\files\handler.py
+# hypothesis_version: 6.151.4
+
+[600.0, 200, 400, 401, 403, 404, 429, 500, 503, 504, '2023-06-01', 'Unknown error', 'accept', 'anthropic-version', 'api_error', 'application/json', 'assistant', 'authentication_error', 'batch_', 'batch_processing', 'batch_request', 'body', 'canceled', 'chat.completion', 'choices', 'completion_tokens', 'content', 'created', 'custom_id', 'error', 'errored', 'expired', 'file_id', 'finish_reason', 'id', 'index', 'message', 'model', 'not_found_error', 'object', 'optional_params', 'overloaded_error', 'permission_error', 'prompt_tokens', 'rate_limit_error', 'request_id', 'response', 'result', 'role', 'status_code', 'stop', 'succeeded', 'timeout_error', 'total_tokens', 'type', 'usage', 'user', 'utf-8', 'x-api-key']

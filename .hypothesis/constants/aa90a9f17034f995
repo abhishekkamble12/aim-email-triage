@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_embeddings\transformation.py
+# hypothesis_version: 6.151.4
+
+['CLASSIFICATION', 'CLUSTERING', 'FACT_VERIFICATION', 'QUESTION_ANSWERING', 'RETRIEVAL_DOCUMENT', 'RETRIEVAL_QUERY', 'SEMANTIC_SIMILARITY', '__', 'dimensions', 'embedding', 'embeddings', 'index', 'input_type', 'instances', 'list', 'object', 'outputDimensionality', 'parameters', 'predictions', 'project', 'region_name', 'self', 'shared_session', 'statistics', 'task_type', 'title', 'token_count', 'usage', 'values', 'vertex_location', 'vertex_project']

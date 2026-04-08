@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tokenize\texttiling.py
+# hypothesis_version: 6.151.4
+
+[0.0, 2.0, 100, 10000, '(window_len)', 'Depth scores', 'Gap Scores', 'Sentence Gap index', 'Smoothed Gap scores', "[a-z\\-' \\n\\t]", '\\w+', 'bartlett', 'blackman', 'd', 'english', 'flat', 'hamming', 'hanning', 'numpy.', 'same', 'self']

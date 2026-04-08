@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_strategy\budget_limiter.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'budget_duration', 'budget_limit', 'custom_llm_provider', 'id', 'litellm_params', 'max_budget', 'model', 'model_id', 'model_info', 'model_name', 'response_cost', 'time_period']

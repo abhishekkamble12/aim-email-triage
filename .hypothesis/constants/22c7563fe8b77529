@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\chat_completions\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 'POST', 'application/json', 'content-type', 'frequency_penalty', 'function_call', 'functions', 'logit_bias', 'max_tokens', 'messages', 'metadata', 'model', 'n', 'parallel_tool_calls', 'presence_penalty', 'reasoning_effort', 'response_format', 'seed', 'service_tier', 'stop', 'store', 'stream', 'stream_options', 'temperature', 'tool_choice', 'tools', 'top_p', 'user', 'write']

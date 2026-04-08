@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\responses\litellm_completion_transformation\streaming_iterator.py
+# hypothesis_version: 6.151.4
+
+[1.0, 'annotations', 'arguments', 'assistant', 'auto', 'call_id', 'completed', 'content', 'cost', 'created_at', 'effort', 'error', 'function', 'function_call', 'id', 'in_progress', 'incomplete_details', 'instructions', 'max_output_tokens', 'message', 'metadata', 'model', 'model_dump', 'name', 'object', 'output', 'output_text', 'parallel_tool_calls', 'previous_response_id', 'reasoning', 'reasoning_content', 'reasoning_text', 'response', 'role', 'sequence_number', 'status', 'store', 'summary', 'summary_text', 'temperature', 'text', 'thinking_blocks', 'tool_calls', 'tool_choice', 'tools', 'top_p', 'truncation', 'type', 'usage', 'user']

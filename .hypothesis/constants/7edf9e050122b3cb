@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\linearlogic.py
+# hypothesis_version: 6.151.4
+
+['%s', '(', '((g -o G) -o G)', '(H -o H)((g -o f))', '(H -o f)(g)', '(g -o f)', '(g -o f)(g)', ')', ', ', '-o', 'BindingDict: %s', '__main__', 'f', 'g -o h -o f', 'v%s', '{', '{}{} {} {}{}', '}']

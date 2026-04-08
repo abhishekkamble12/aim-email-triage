@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\caching\qdrant_semantic_cache.py
+# hypothesis_version: 6.151.4
+
+[0.0, 3.0, 200, 'Content-Type', 'Cosine', 'QDRANT_API_BASE', 'QDRANT_API_KEY', 'QDRANT_URL', 'always_ram', 'api-key', 'application/json', 'binary', 'compression', 'content', 'data', 'distance', 'embedding', 'exists', 'id', 'ignore', 'int8', 'limit', 'messages', 'metadata', 'model_name', 'no-cache', 'no-store', 'os.environ/', 'oversampling', 'params', 'payload', 'points', 'product', 'quantile', 'quantization', 'quantization_config', 'rescore', 'response', 'result', 'scalar', 'score', 'semantic-similarity', 'size', 'text', 'trace_id', 'type', 'user_api_key', 'vector', 'vectors', 'with_payload', 'x16']

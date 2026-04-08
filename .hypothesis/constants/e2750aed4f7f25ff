@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure\completion\handler.py
+# hypothesis_version: 6.151.4
+
+[422, 500, 'Authorization', 'acompletion', 'api-key', 'api_base', 'api_key', 'api_version', 'application/json', 'azure_ad_token', 'azure_text', 'complete_input_dict', 'content-type', 'headers', 'max_retries', 'model', 'prompt', 'response', 'status_code', 'stream']

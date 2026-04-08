@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\heuristics\tone.py
+# hypothesis_version: 6.151.4
+
+[-0.2, 0.0, 0.3, 1.0, '!', '\\b\\w+\\b', 'angry', 'appreciate', 'assist', 'awful', 'bad', 'complain', 'excellent', 'exclamation_count', 'forbidden_hit', 'frustrated', 'glad', 'great', 'happy', 'hate', 'helpful', 'i refuse to assist', 'idiot', 'incompetent', 'max_exclamations', 'max_upper_ratio', 'min_sentiment', 'not my problem', 'please', 'sentiment_score', 'shut up', 'stupid', 'support', 'terrible', 'thank', 'this is pointless', 'thresholds', 'tone_metric', 'uppercase_ratio', 'useless', 'welcome', 'wonderful']

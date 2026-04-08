@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\argilla.py
+# hypothesis_version: 6.151.4
+
+[1.0, 300, 60000, 'ARGILLA_API_KEY', 'ARGILLA_BASE_URL', 'ARGILLA_BATCH_SIZE', 'ARGILLA_DATASET_NAME', 'Argilla HTTP Error', 'Argilla Layer Error', 'X-Argilla-Api-Key', 'choices', 'content', 'fields', 'id', 'items', 'litellm-completion', 'message', 'messages', 'response']

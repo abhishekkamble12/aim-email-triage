@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\custom_httpx\aiohttp_handler.py
+# hypothesis_version: 6.151.4
+
+[422, 500, 600, 'aclose', 'api_base', 'async_call', 'client', 'complete_input_dict', 'connector', 'content', 'data', 'files', 'headers', 'params', 'response', 'role', 'status_code', 'stream', 'test', 'text', 'user']

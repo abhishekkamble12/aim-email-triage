@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\image_generation\gpt_transformation.py
+# hypothesis_version: 6.151.4
+
+['1024x1024', 'LiteLLMLoggingObj', 'background', 'complete_input_dict', 'high', 'image_generation', 'moderation', 'n', 'output_compression', 'output_format', 'png', 'prompt', 'quality', 'response_format', 'size', 'user']

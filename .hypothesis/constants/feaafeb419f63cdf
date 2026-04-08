@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\deepeval\types.py
+# hypothesis_version: 6.151.4
+
+['ERRORED', 'SUCCESS', 'agent', 'agentSpans', 'base', 'baseSpans', 'costPerInputToken', 'costPerOutputToken', 'development', 'endTime', 'inputTokenCount', 'llm', 'llmSpans', 'outputTokenCount', 'parentUuid', 'production', 'retriever', 'retrieverSpans', 'staging', 'startTime', 'tool', 'toolSpans', 'traceUuid']

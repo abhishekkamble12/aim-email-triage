@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\conll.py
+# hypothesis_version: 6.151.4
+
+[' ]', '%-12s ', '%-20s ', '%-8s ', '%15s*%-8s ', '(', ')', '*', '-', '-DOCSTART-', '-LRB-', '-RRB-', '<<%s>>', 'B', 'BO', 'Bad column type %r', 'C-V', 'I', 'O', 'S', 'Tree mismatch!', 'V', '[%s ', ']', '] ', 'chunk', 'ignore', 'ne', 'pos', 's', 'srl', 'tree', 'utf8', 'words']

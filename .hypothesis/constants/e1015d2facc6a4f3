@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\brill_trainer.py
+# hypothesis_version: 6.151.4
+
+[200, 'Selecting rules...', 'Updated rule tables:', 'finalacc', 'finalerrors', 'initialacc', 'initialerrors', 'min_acc', 'min_score', 'rulescores', 'sequencecount', 'str', 'templatecount', 'tokencount', '|', '|   ']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\rag.py
+# hypothesis_version: 6.151.4
+
+['allow', 'bedrock', 'completed', 'cosine', 'euclidean', 'failed', 'in_progress', 'openai', 's3_vectors', 'vertex_ai']

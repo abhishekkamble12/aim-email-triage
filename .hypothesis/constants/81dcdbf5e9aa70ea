@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\corenlp.py
+# hypothesis_version: 6.151.4
+
+[9000, '-mx2g', '-port', '-preload', 'CORENLP', 'CORENLP_MODELS', 'Content-Type', '_', 'annotators', 'ascii', 'basicDependencies', 'conll2007', 'dep', 'dependent', 'depparse', 'devnull', 'false', 'governor', 'json', 'lemma', 'live', 'ner', 'originalText', 'outputFormat', 'parse', 'penn', 'pos', 'properties', 'ready', 'sentences', 'ssplit.eolonly', 'ssplit.isOneSentence', 'tokenize,ssplit', 'tokenize,ssplit,', 'tokenize.whitespace', 'tokens', 'true', 'utf8', 'word']

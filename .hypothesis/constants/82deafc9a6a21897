@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\perplexity\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1000, 'citation_tokens', 'cost', 'input_cost_per_token', 'perplexity', 'reasoning_tokens', 'total_cost', 'web_search_requests']

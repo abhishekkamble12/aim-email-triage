@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\batches\transformation.py
+# hypothesis_version: 6.151.4
+
+['/', '/predictions.jsonl', '24hrs', 'JOB_STATE_CANCELLED', 'JOB_STATE_CANCELLING', 'JOB_STATE_EXPIRED', 'JOB_STATE_FAILED', 'JOB_STATE_PAUSED', 'JOB_STATE_PENDING', 'JOB_STATE_QUEUED', 'JOB_STATE_RUNNING', 'JOB_STATE_SUCCEEDED', 'JOB_STATE_UPDATING', 'batch', 'batchPredictionJobs', 'cancelled', 'cancelling', 'completed', 'createTime', 'data', 'expired', 'failed', 'first_id', 'gcsDestination', 'gcsOutputDirectory', 'gcsSource', 'has_more', 'in_progress', 'inputConfig', 'input_file_id', 'jsonl', 'last_id', 'list', 'name', 'nextPageToken', 'next_page_token', 'object', 'outputConfig', 'outputInfo', 'outputUriPrefix', 'publishers/', 'state', 'uris', 'validating']

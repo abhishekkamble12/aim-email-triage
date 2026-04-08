@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai_like\chat\handler.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, 200, 408, 500, 1024, 'api_base', 'base_model', 'chat_completions', 'complete_input_dict', 'custom_endpoint', 'extra_body', 'headers', 'json_mode', 'max_retries', 'messages', 'model', 'stream']

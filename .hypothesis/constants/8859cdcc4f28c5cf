@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\grammar.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.01, 1.0, 10000, '\n    %s', '\n  %d:%s', '\n  %s', '\nEvents:', '\nTags:', '    S.symbol() =>', ' (start state = %r)', ' [%g]', ' [1.0]', '#', '%', '%s', '%s -> ', '\'"', ',', ',\n', ', ', '<', '<%s>', '@$@', 'A Grammar:', 'A PCFG grammar:', 'A PCFG production:', 'Bad directive', 'CFG', 'DependencyGrammar', 'DependencyProduction', 'Expected an arrow', 'N, V, P, Det', 'Nonterminal', 'Not implemented yet', 'PCFG', 'Production', 'S', 'S, NP, VP, PP', 'S0_SIGMA', 'Some nonterminals:', 'Unterminated string', '\\', '\\s* -> \\s*', '\\| \\s*', '__hash__', '__main__', 'induce_pcfg', 'nonterminals', 'read_grammar', 'start', '|']

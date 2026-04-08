@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\logger.py
+# hypothesis_version: 6.151.4
+
+['attributes', 'body', 'debug', 'default', 'error', 'fatal', 'info', 'severity_number', 'severity_text', 'time_unix_nano', 'trace', 'trace_id', 'warn']

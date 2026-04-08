@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\message_processing\processors\online_message_processor.py
+# hypothesis_version: 6.151.4
+
+[409, 429, 'Sent trace %s', 'error_tracking_extra', 'exception', 'fingerprint', 'span', 'status_code', 'trace']

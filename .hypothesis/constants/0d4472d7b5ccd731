@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\propbank.py
+# hypothesis_version: 6.151.4
+
+[100, '%s', '*', '*CHAIN*', '*SPLIT*', ',', '-', '-rel', '.', '3', ':', 'a', 'b', 'expected a string', 'f', 'frames/%s.xml', 'g', 'i', 'id', 'instance_filter', 'n', 'o', 'p', 'predicate/roleset', 'rel', 'utf8', 'v', '{} {} {} {} {} {}']

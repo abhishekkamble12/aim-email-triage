@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_ai_partner_models\main.py
+# hypothesis_version: 6.151.4
+
+[400, 500, '@', 'Authorization', 'Bearer {}', 'POST', 'anthropic_version', 'claude', 'codestral', 'deepseek-ai', 'is_vertex_request', 'jamba', 'language_models', 'llama', 'messages', 'meta/', 'minimaxai/', 'mistral', 'model', 'moonshotai/', 'openai/gpt-oss-', 'preview', 'qwen', 'status_code', 'stream', 'text_completion', 'vertex-2023-10-16', 'vertex_ai', 'vertex_credentials', 'vertex_location', 'vertex_project', 'zai-org/']

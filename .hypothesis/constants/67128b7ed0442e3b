@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\integrations\datadog.py
+# hypothesis_version: 6.151.4
+
+[1000, 'DatadogPayload', 'dd.span_id', 'dd.trace_id', 'ddsource', 'ddtags', 'error', 'hostname', 'info', 'message', 'service', 'status', 'warning']

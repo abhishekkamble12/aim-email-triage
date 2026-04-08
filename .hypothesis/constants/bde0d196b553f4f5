@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\vector_stores.py
+# hypothesis_version: 6.151.4
+
+['DELETE', 'GET', 'PATCH', 'POST', 'PUT', 'auto', 'bedrock', 'completed', 'expired', 'filters', 'in_progress', 'last_active_at', 'list', 'max_num_results', 'ragflow', 'ranking_options', 'read', 'rewrite_query', 'static', 'vector_store', 'write']

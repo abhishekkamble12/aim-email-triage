@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\containers\__init__.py
+# hypothesis_version: 6.151.4
+
+['acreate_container', 'adelete_container', 'alist_containers', 'aretrieve_container', 'create_container', 'delete_container', 'list_container_files', 'list_containers', 'retrieve_container']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\attachments\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 401, 403, 'GET', 'POST', 'PUT', 'application/json', 'chunk_size', 'container_id', 'content-type', 'entity_id', 'entity_type', 'file_name', 'file_size', 'mime_type', 'num_of_file_parts', 'page', 'path', 'project_id', 'project_name', 'size', 'upload_id', 'uploaded_file_parts', 'workspace_name', 'write']

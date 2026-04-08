@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\integrations\__init__.py
+# hypothesis_version: 6.151.4
+
+[209, 210, 500, 600, '\n- `{}`', '.', 'aiohttp', 'anthropic', 'ariadne', 'arq', 'asyncpg', 'beam', 'boto3', 'bottle', 'celery', 'chalice', 'clickhouse_driver', 'cohere', 'django', 'dramatiq', 'falcon', 'fastapi', 'flask', 'gql', 'graphene', 'grpc', 'huggingface_hub', 'langchain', 'launchdarkly', 'loguru', 'openai', 'openai_agents', 'openfeature', 'quart', 'ray', 'requests', 'rq', 'sanic', 'sqlalchemy', 'starlette', 'starlite', 'statsig', 'strawberry', 'tornado', 'typer', 'unleash']

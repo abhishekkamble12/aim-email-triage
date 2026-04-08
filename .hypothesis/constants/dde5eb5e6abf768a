@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\streaming_chunk_builder_utils.py
+# hypothesis_version: 6.151.4
+
+[3600, 'UsagePerChunk', '_hidden_params', 'arguments', 'audio', 'choices', 'completion_tokens', 'content', 'created', 'created_at', 'data', 'delta', 'expires_at', 'finish_reason', 'function', 'function_call', 'id', 'index', 'inf', 'message', 'model', 'name', 'object', 'prompt_tokens', 'reasoning_content', 'redacted_thinking', 'role', 'server_tool_use', 'signature', 'stop', 'system_fingerprint', 'thinking', 'thinking_blocks', 'tool_calls', 'total_tokens', 'transcript', 'type', 'usage', 'utf-8', 'web_search_requests', '{}']

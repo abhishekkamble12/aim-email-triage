@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\chart.py
+# hypothesis_version: 6.151.4
+
+['  0000.0000', '  6: All parsers', '  rankdir=LR;\n', '  {rank=same;', ' %04d.%04d', ' %s', ' *', '#', '%', '%-2r ->', '%s:', '([a-z])([A-Z])', '* Grammar', '* Parsing times', '* Sentence:', '* Strategy: ', '-', '->%s->%04d.0000', '.', '1', '1234', '123456', '2', '3', '4', '56', '6', ';\n\n', '<', '=', '>', 'Bad parser number', 'Bad restriction: %s', 'Bottom-up', 'Filtered left-corner', 'Not all parses found', 'Nr edges in chart:', 'Nr trees:', 'Stepping', 'Top-down', '[', '[Edge: %s]', '\\1 \\2', ']', '__main__', 's parser: %6.3fsec', '|', '| %s', '|.', '}\n']

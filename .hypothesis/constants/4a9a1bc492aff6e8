@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\embed\twelvelabs_marengo_transformation.py
+# hypothesis_version: 6.151.4
+
+[',', '_invocation_arn', 'async_invoke/', 'audio', 'base64String', 'bucketOwner', 'data', 'data:', 'embedding', 'embeddingOption', 'embeddings', 'encoding_format', 'end', 'float', 'image', 'inputText', 'inputTextTokenCount', 'inputType', 'input_type', 'invocationArn', 'lengthSec', 'mediaSource', 'minClipSec', 's3://', 's3Location', 'startSec', 'text', 'textTruncate', 'uri', 'useFixedLengthSec', 'video', 'visual-image', 'visual-text']

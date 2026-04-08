@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\files\transformation.py
+# hypothesis_version: 6.151.4
+
+['/', 'Authorization', 'GCS_BUCKET_NAME', 'api_base is required', 'api_key is required', 'batch', 'body', 'bucket_name', 'content', 'file', 'file is required', 'filename', 'id', 'messages', 'model', 'name', 'purpose', 'purpose is required', 'rb', 'read', 'request', 'size', 'timeCreated', 'uploaded', 'utf-8', 'vertex_ai', 'vertex_credentials', 'vertex_project']

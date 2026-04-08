@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\agentops\agentops.py
+# hypothesis_version: 6.151.4
+
+[200, 'AGENTOPS_API_KEY', 'AGENTOPS_ENVIRONMENT', 'Connection', 'Content-Type', 'agentops', 'api_key', 'application/json', 'keep-alive', 'litellm', 'otlp_http', 'production', 'project.id', 'project_id', 'service.name', 'telemetry.sdk.name', 'token']

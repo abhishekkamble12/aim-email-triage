@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rag\ingestion\gemini_ingestion.py
+# hypothesis_version: 6.151.4
+
+[60.0, 300.0, 200, 201, 400, 800, '/v1beta', '0', 'Content-Length', 'Content-Type', 'RAGIngestOptions', 'Router', 'X-Goog-Upload-Offset', 'api_base', 'api_key', 'application/json', 'chunkingConfig', 'customMetadata', 'custom_metadata', 'displayName', 'file', 'litellm-rag-ingest', 'maxOverlapTokens', 'maxTokensPerChunk', 'max_overlap_tokens', 'max_tokens_per_chunk', 'name', 'resumable', 'start', 'timeout', 'upload, finalize', 'uploaded', 'v1beta', 'vector_store_id', 'whiteSpaceConfig', 'white_space_config', 'x-goog-upload-url']

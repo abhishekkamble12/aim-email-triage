@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\validation\chat_prompt_messages.py
+# hypothesis_version: 6.151.4
+
+[', ', 'ChatPrompt.__init__', 'assistant', 'audio_url', 'content', 'image_url', 'role', 'system', 'text', 'type', 'url', 'user', 'video_url']

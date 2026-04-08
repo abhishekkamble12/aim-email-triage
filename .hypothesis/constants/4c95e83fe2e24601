@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vllm\completion\handler.py
+# hypothesis_version: 6.151.4
+
+['POST', 'complete_input_dict', 'final_prompt_value', 'http://0.0.0.0:8000', 'initial_prompt_value', 'roles', 'stream', 'usage']

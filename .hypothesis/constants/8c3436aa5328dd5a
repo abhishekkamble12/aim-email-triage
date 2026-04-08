@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\session.py
+# hypothesis_version: 6.151.4
+
+['application', 'attrs', 'did', 'duration', 'email', 'environment', 'errors', 'exited', 'id', 'init', 'ip_address', 'ok', 'release', 'sid', 'started', 'status', 'timestamp', 'user_agent', 'username']

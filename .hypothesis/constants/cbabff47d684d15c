@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\files\handler.py
+# hypothesis_version: 6.151.4
+
+[200, '/', ';', '=', 'Body', 'GET', 'aws_access_key_id', 'aws_profile_name', 'aws_role_name', 'aws_session_name', 'aws_session_token', 'aws_sts_endpoint', 'content-type', 'file_id', 'llm_output_file_id,', 's3', 's3://']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\search\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'input_cost_per_query', 'max_results', 'max_results_range', 'tiered_pricing']

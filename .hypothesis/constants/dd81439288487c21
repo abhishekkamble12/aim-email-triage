@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\inference\tableau.py
+# hypothesis_version: 6.151.4
+
+['%s', '%s |- %s: %s', '((x = y) & walks(y))', '(P -> Q)', '(man(x) -> --man(x))', '(man(x) -> man(x))', '(man(x) iff man(x))', '(man(x) or -man(x))', '(x = w)', ',', ', ', "--> Using '%s'", ':   %s', ':   []', 'AGENDA EMPTY', 'CLOSED', 'P', 'P & -P', 'P | -P', 'P(Q(y), R(y) & R(z))', 'Q', 'X%s', '[%s]', '__main__', 'all x.man(x)', 'believe(j, -lie(b))', 'believe(j, lie(b))', 'cannot categorize %s', 'lie(b)', 'man(John)', 'man(Socrates)', 'man(x)', 'mortal(Socrates)', 'some y.walks(y)', 'walks(x)', '{}{}']

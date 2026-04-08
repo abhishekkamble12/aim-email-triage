@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\welcome_wizard\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 'GET', 'POST', 'application/json', 'content-type', 'email', 'integrations', 'join_beta_program', 'role']

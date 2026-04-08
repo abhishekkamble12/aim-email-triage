@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\traces\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 401, 404, 'DELETE', 'GET', 'PATCH', 'POST', 'PUT', 'application/json', 'author', 'category_name', 'chunk_size', 'content-type', 'created_at', 'created_by', 'end_time', 'error_info', 'exclude', 'filters', 'from_time', 'id', 'ids', 'input', 'last_retrieved_id', 'last_updated_at', 'last_updated_by', 'limit', 'merge_tags', 'metadata', 'name', 'names', 'output', 'page', 'project_id', 'project_name', 'reason', 'scores', 'size', 'sorting', 'source', 'start_time', 'strip_attachments', 'tags', 'text', 'thread_id', 'thread_ids', 'to_time', 'traces', 'truncate', 'update', 'v1/private/traces', 'value', 'value_by_author', 'write']

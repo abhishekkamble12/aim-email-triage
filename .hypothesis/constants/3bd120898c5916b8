@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\models\langchain\message_converters.py
+# hypothesis_version: 6.151.4
+
+['AIMessage', 'HumanMessage', 'SystemMessage', 'ai', 'assistant', 'content', 'data', 'function', 'human', 'name', 'role', 'system', 'tool', 'tool_call_id', 'type', 'user']

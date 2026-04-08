@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\vector_stores\vector_store_registry.py
+# hypothesis_version: 6.151.4
+
+['created_at', 'custom_llm_provider', 'desc', 'list', 'litellm_params', 'vector_store_id', 'vector_store_ids', 'vector_store_name']

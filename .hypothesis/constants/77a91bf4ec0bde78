@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\duration_parser.py
+# hypothesis_version: 6.151.4
+
+[3600, 86400, 604800, '(\\d+)([a-z]+)', '(\\d+)(mo|[smhdw]?)', 'Asia/Bangkok', 'Asia/Kolkata', 'Europe/London', 'US/Eastern', 'US/Pacific', 'UTC', 'd', 'h', 'm', 'mo', 's', 'w']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\experimental_pass_through\adapters\streaming_iterator.py
+# hypothesis_version: 6.151.4
+
+['ModelResponseStream', 'None', 'assistant', 'content', 'content_block', 'content_block_start', 'content_block_stop', 'delta', 'id', 'index', 'input_tokens', 'message', 'message_delta', 'message_start', 'message_stop', 'model', 'msg_{}', 'name', 'output_tokens', 'role', 'stop_reason', 'stop_sequence', 'text', 'thinking', 'tool_use', 'type', 'usage']

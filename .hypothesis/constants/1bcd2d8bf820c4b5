@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\logfire_logger.py
+# hypothesis_version: 6.151.4
+
+['LOGFIRE_TOKEN', 'acompletion', 'aembedding', 'aimage_generation', 'cache_hit', 'caching_groups', 'call_type', 'completion', 'embedding', 'endTime', 'endpoint', 'error', 'id', 'image_generation', 'info', 'litellm_params', 'messages', 'metadata', 'model', 'modelParameters', 'openai', 'optional_params', 'previous_models', 'request_data', 'response', 'response_cost', 'spend', 'startTime', 'usage', 'user']

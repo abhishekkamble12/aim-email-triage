@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\greenscale.py
+# hypothesis_version: 6.151.4
+
+[200, 1000, '%Y-%m-%dT%H:%M:%SZ', 'Content-Type', 'GREENSCALE_API_KEY', 'GREENSCALE_ENDPOINT', 'api-key', 'application', 'application/json', 'completion_tokens', 'greenscale', 'greenscale_', 'greenscale_project', 'inputTokenCount', 'invocationLatency', 'key', 'litellm_params', 'metadata', 'model', 'modelId', 'outputTokenCount', 'project', 'prompt_tokens', 'tags', 'timestamp', 'usage', 'value']

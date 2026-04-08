@@ -1,5 +1,5 @@
 ---
-title: Aim Email Triage
+title: AIM-Env — AI Email Triage
 emoji: 📧
 colorFrom: blue
 colorTo: green
@@ -7,23 +7,34 @@ sdk: docker
 pinned: false
 tags:
   - openenv
+  - reinforcement-learning
+  - llm
 ---
 
-# Your normal README content starts down here...
 # AIM-Env: AI Email Triage RL Environment
 
-AIM-Env is a lightweight, OpenEnv-compliant Reinforcement Learning execution environment where an LLM agent triages a simulated email inbox. It is designed to run as a single Python script inside a minimal Docker container and pass the Round 1 automated grader with a perfect score.
+AIM-Env is an [OpenEnv](https://openenv.dev)-compliant reinforcement learning environment where an LLM agent triages a simulated email inbox. An LLM-powered agent reads inbox state, decides actions (open, classify, detect phishing, submit), and is scored on accuracy, routing, and efficiency.
+
+The project ships three components:
+
+| Component | Purpose |
+|---|---|
+| `inference.py` | OpenEnv entry point — the only file the grader executes |
+| `backend/` | FastAPI server for the interactive web demo |
+| `src/` | React + Vite frontend dashboard |
 
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Architecture](#architecture)
 - [Repository Structure](#repository-structure)
-- [Environment Variables](#environment-variables)
 - [Quick Start](#quick-start)
-- [How It Works](#how-it-works)
+  - [Run inference (grader mode)](#run-inference-grader-mode)
+  - [Run the web demo](#run-the-web-demo)
+  - [Run with Docker](#run-with-docker)
+- [Environment Variables](#environment-variables)
+- [How the RL Environment Works](#how-the-rl-environment-works)
   - [Episode Lifecycle](#episode-lifecycle)
   - [Action Space](#action-space)
   - [Observation Space](#observation-space)
@@ -31,39 +42,43 @@ AIM-Env is a lightweight, OpenEnv-compliant Reinforcement Learning execution env
   - [Grader & Scoring](#grader--scoring)
 - [Task Configurations](#task-configurations)
 - [Stdout Format Contract](#stdout-format-contract)
+- [Code Architecture (inference.py)](#code-architecture-inferencepy)
 - [Data Models](#data-models)
+- [Training](#training)
+- [Testing](#testing)
 - [Docker](#docker)
 - [OpenEnv Spec Compliance](#openenv-spec-compliance)
-- [Cleanup Checklist](#cleanup-checklist)
-
----
-
-## Overview
-
-The agent receives a simulated inbox of emails and must triage them by opening, classifying, prioritizing, routing, and detecting phishing — all within a fixed time budget. Each episode is driven by an LLM (via the OpenAI-compatible API) that reads the current inbox state and returns a JSON action.
-
-The environment is fully deterministic: given the same seed, the same emails are always generated in the same order. This makes scoring reproducible across runs.
 
 ---
 
 ## Architecture
 
 ```
-Grader / CI Runner
-       │
-       ▼  docker run
-  inference.py  ◄──── HF_TOKEN / API_BASE_URL / MODEL_NAME (env vars)
-       │
-       ├── openai.OpenAI client  ──► LLM API
-       │
-       └── env/ module
-             ├── AIMEnv          (reset / step / state / get_result)
-             ├── EmailGenerator  (deterministic email synthesis)
-             ├── Grader          (weighted scoring formula)
-             └── Pydantic Models (Observation, Action, Reward, TaskConfig, ...)
-```
+┌─────────────────────────────────────────────────────────┐
+│                    OpenEnv Grader / CI                  │
+└────────────────────────┬────────────────────────────────┘
+                         │ docker run
+                         ▼
+┌─────────────────────────────────────────────────────────┐
+│                    inference.py                         │
+│                                                         │
+│  InferenceRunner                                        │
+│    └── EpisodeRunner (per task)                         │
+│          ├── PromptBuilder  ──► LLM prompt              │
+│          ├── ActionParser   ◄── LLM response            │
+│          └── AIMEnv         ──► step / reset / grade    │
+│                                                         │
+│  Config: HF_TOKEN / API_BASE_URL / MODEL_NAME           │
+└─────────────────────────────────────────────────────────┘
 
-The execution is entirely linear — a single Python process, no web server, no database, no frontend.
+┌──────────────────┐     ┌──────────────────────────────┐
+│  React Frontend  │────►│  FastAPI Backend              │
+│  (src/)          │     │  (backend/)                   │
+│  Vite + Tailwind │     │  /api/run-demo                │
+│  Dashboard/Demo  │     │  /api/train-agent             │
+└──────────────────┘     │  /api/metrics                 │
+                         └──────────────────────────────┘
+```
 
 ---
 
@@ -71,23 +86,104 @@ The execution is entirely linear — a single Python process, no web server, no 
 
 ```
 .
-├── inference.py          # Entry point — the only file the grader executes
-├── Dockerfile            # Lean python:3.10-slim image
-├── requirements.txt      # openai + pydantic only
-├── openenv.yaml          # OpenEnv task registry (easy / medium / hard)
+├── inference.py              # OpenEnv entry point (grader executes this)
+├── Dockerfile                # python:3.10-slim image for inference.py
+├── docker-compose.yml        # Runs backend + frontend together
+├── requirements.txt          # openai, pydantic, fastapi, uvicorn
+├── openenv.yaml              # OpenEnv task registry (easy/medium/hard)
+├── test_inference.py         # Unit + property-based tests (pytest + Hypothesis)
 │
-├── env/                  # Core RL environment package
-│   ├── __init__.py       # Exports all public symbols
-│   ├── env.py            # AIMEnv class (reset, step, state, get_result)
-│   ├── models.py         # All Pydantic models
-│   ├── reward.py         # Reward model
-│   ├── grader.py         # Deterministic scoring
-│   └── email_generator.py# Seeded email synthesis
+├── env/                      # Core RL environment package
+│   ├── __init__.py
+│   ├── env.py                # AIMEnv — reset(), step(), state(), get_result()
+│   ├── models.py             # Pydantic models: Observation, Action, Reward, ...
+│   ├── reward.py             # Per-step reward computation
+│   ├── grader.py             # Deterministic episode scoring
+│   └── email_generator.py    # Seeded, reproducible email synthesis
 │
-└── tasks/                # Standalone task config modules
-    ├── task_easy.py
-    ├── task_medium.py
-    └── task_hard.py
+├── tasks/                    # Task config modules
+│   ├── task_easy.py
+│   ├── task_medium.py
+│   └── task_hard.py
+│
+├── backend/                  # FastAPI web API (demo/dashboard only)
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── app/
+│       ├── main.py           # FastAPI app, CORS, rate limiting
+│       ├── api/routes.py     # /run-demo, /run-task, /train-agent, /metrics
+│       ├── services/
+│       │   ├── env_service.py
+│       │   ├── agent_service.py
+│       │   └── training_service.py
+│       └── schemas/          # Pydantic request/response schemas
+│
+├── src/                      # React + Vite frontend
+│   ├── pages/
+│   │   ├── Home.jsx          # Landing page with live stats
+│   │   ├── Demo.jsx          # Interactive agent demo
+│   │   ├── Dashboard.jsx     # Training metrics & analytics
+│   │   ├── Architecture.jsx  # System diagram
+│   │   └── About.jsx
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   └── services/api.js       # Axios client for backend
+│
+└── training/
+    ├── train.py              # Q-learning + LLM hybrid training loop
+    ├── scores.json           # Saved training scores
+    └── learning_curve.png    # Training curve visualization
+```
+
+---
+
+## Quick Start
+
+### Run inference (grader mode)
+
+```bash
+pip install openai pydantic
+
+export HF_TOKEN=your_token_here
+export API_BASE_URL=https://api.openai.com/v1   # optional
+export MODEL_NAME=gpt-4o-mini                   # optional
+
+python inference.py
+```
+
+### Run the web demo
+
+Requires Node.js 18+ and Python 3.10+.
+
+```bash
+# Backend
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+
+# Frontend (separate terminal)
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173.
+
+### Run with Docker
+
+**Inference only (grader mode):**
+
+```bash
+docker build -t aim-env .
+docker run --rm \
+  -e HF_TOKEN=your_token_here \
+  aim-env
+```
+
+**Full stack (backend + frontend):**
+
+```bash
+docker-compose up --build
 ```
 
 ---
@@ -96,71 +192,41 @@ The execution is entirely linear — a single Python process, no web server, no 
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `HF_TOKEN` | **Yes** | — | API key passed to the OpenAI client. Raises `ValueError` immediately if missing. |
-| `API_BASE_URL` | No | `https://api.openai.com/v1` | Base URL for the OpenAI-compatible API endpoint. |
-| `MODEL_NAME` | No | `gpt-4o-mini` | Model identifier used for all LLM calls. |
-
-`HF_TOKEN` is mandatory. The script will raise a `ValueError` and exit before doing any work if it is not set.
-
----
-
-## Quick Start
-
-### Run locally
-
-```bash
-export HF_TOKEN=your_token_here
-export API_BASE_URL=https://api.openai.com/v1   # optional
-export MODEL_NAME=gpt-4o-mini                   # optional
-
-pip install openai pydantic
-python inference.py
-```
-
-### Run with Docker
-
-```bash
-docker build -t aim-env .
-
-docker run --rm \
-  -e HF_TOKEN=your_token_here \
-  -e API_BASE_URL=https://api.openai.com/v1 \
-  -e MODEL_NAME=gpt-4o-mini \
-  aim-env
-```
+| `HF_TOKEN` | **Yes** | — | API key for the LLM client. Raises `ValueError` immediately if missing. |
+| `API_BASE_URL` | No | `https://api.openai.com/v1` | Base URL for any OpenAI-compatible endpoint. |
+| `MODEL_NAME` | No | `gpt-4o-mini` | Model identifier used for all completions. |
+| `INFERENCE_TIMEOUT` | No | `30` | Per-request timeout in seconds. |
 
 ---
 
-## How It Works
+## How the RL Environment Works
 
 ### Episode Lifecycle
 
-For each of the three tasks (easy → medium → hard), `inference.py` runs one full episode:
+For each of the three tasks (easy → medium → hard), one full episode runs:
 
 1. `AIMEnv(config)` is instantiated with the task's `TaskConfig`.
-2. `env.reset()` generates a fresh inbox of emails using the fixed seed and returns the initial `Observation`.
-3. `[START]` is printed to stdout.
-4. The `while not done` loop runs:
-   - The current `Observation` is serialized into a natural-language prompt.
+2. `env.reset()` generates a deterministic inbox using the fixed seed and returns the initial `Observation`.
+3. `[START]` is logged to stdout.
+4. The step loop runs until `done`:
+   - `PromptBuilder` converts the `Observation` into a natural-language prompt.
    - The LLM is called via `client.chat.completions.create(...)`.
-   - The response is parsed as a JSON `Action`. If parsing fails for any reason, the fallback action is `{"type": "submit"}`.
-   - `env.step(action)` is called, returning `(Observation, Reward, done)`.
-   - `[STEP]` is printed to stdout.
-5. After the loop, `env.get_result()` computes the `EpisodeResult` and `Grader().grade_episode(result)` produces the final score.
-6. `[END]` is printed to stdout.
+   - `ActionParser` extracts the JSON action from the response (handles markdown fences). On any parse failure, falls back to `{"type": "submit"}`.
+   - `env.step(action)` returns `(Observation, Reward, done)`.
+   - `[STEP]` is logged to stdout.
+5. `env.get_result()` + `Grader().grade_episode()` compute the final score.
+6. `[END]` is logged to stdout.
 
 ### Action Space
 
-The agent can issue one of four action types per step:
-
 | Action | Required Fields | Effect |
 |---|---|---|
-| `open` | `email_id` | Reveals the full email body; marks email as `opened`. Required before classifying. |
-| `classify` | `email_id`, `category`, `priority`, `route` | Assigns category/priority/route to an opened email; marks it `processed`. |
-| `detect_phishing` | `email_id` | Flags an email as phishing; marks it `processed`. |
+| `open` | `email_id` | Reveals full email body; marks email as opened. Required before classifying. |
+| `classify` | `email_id`, `category`, `priority`, `route` | Assigns category/priority/route to an opened email. |
+| `detect_phishing` | `email_id` | Flags an email as phishing. |
 | `submit` | — | Ends the episode immediately. |
 
-The LLM must respond with a single JSON object, for example:
+Example LLM responses:
 
 ```json
 {"type": "open", "email_id": "email_001"}
@@ -171,14 +237,12 @@ The LLM must respond with a single JSON object, for example:
 
 ### Observation Space
 
-At each step the agent receives an `Observation` containing:
-
 | Field | Type | Description |
 |---|---|---|
 | `inbox` | `List[EmailPartial]` | Up to 5 unread emails (id, subject, sender, preview) |
 | `opened` | `List[str]` | IDs of currently opened emails |
-| `time_left` | `int` | Remaining time units before timeout |
-| `step_count` | `int` | Number of steps taken so far |
+| `time_left` | `int` | Remaining time units |
+| `step_count` | `int` | Steps taken so far |
 | `pending_emails` | `int` | Emails not yet processed |
 | `alerts` | `List[str]` | Environment-level warnings |
 | `classified` | `int` | Running count of correct classifications |
@@ -187,30 +251,25 @@ At each step the agent receives an `Observation` containing:
 
 ### Reward Structure
 
-Each step returns a `Reward` with a scalar `value` and a `components` dict breaking down the signal sources:
-
 | Component | Value | Trigger |
 |---|---|---|
 | `step` | `-0.02` | Every step (time cost) |
 | `opened` | `+0.01` | Successfully opening a new email |
 | `correct_classification` | `+0.35` | Category matches ground truth |
-| `correct_priority` | `+0.20` | Priority matches ground truth (requires correct category) |
-| `correct_route` | `+0.20` | Route matches ground truth (requires correct category) |
-| `wrong_classification` | `-0.25` | Category does not match ground truth |
+| `correct_priority` | `+0.20` | Priority correct (requires correct category) |
+| `correct_route` | `+0.20` | Route correct (requires correct category) |
+| `wrong_classification` | `-0.25` | Category mismatch |
 | `wrong_priority` | `-0.10` | Priority wrong (category was correct) |
 | `wrong_route` | `-0.10` | Route wrong (category was correct) |
 | `phishing_detected` | `+0.60` | Correctly flagged phishing email |
-| `phishing_detected_critical` | `+1.00` | Correctly flagged critical phishing email |
+| `phishing_detected_critical` | `+1.00` | Correctly flagged critical phishing |
 | `false_positive` | `-0.20` | Flagged a non-phishing email as phishing |
 | `no_open_penalty` | `-0.15` | Tried to classify without opening first |
 | `already_processed` | `-0.05` | Acted on an already-processed email |
 | `invalid_action` | `-0.05` | Malformed or unknown action |
 | `timeout` | `-0.50` | Time budget exhausted |
-| `delay_<id>` | `-0.30` | Delayed penalty for ignoring a critical email |
 
 ### Grader & Scoring
-
-The `Grader` computes a deterministic final score from the `EpisodeResult` using a weighted formula:
 
 ```
 score = 0.30 × classification_acc
@@ -220,15 +279,13 @@ score = 0.30 × classification_acc
       + 0.10 × efficiency_score
 ```
 
-All component values are normalized to `[0.0, 1.0]`. The final score is clamped to `[0.0, 1.0]`.
+All components are normalized to `[0.0, 1.0]`. Final score is clamped to `[0.0, 1.0]`.
 
-An episode is considered a **success** if `score >= 0.5`.
+An episode is a **success** when `score >= 0.5`.
 
 ---
 
 ## Task Configurations
-
-Three tasks are defined with fixed seeds for full reproducibility:
 
 | Task | Seed | Emails | Time Budget | Ambiguity | Phishing | Time Pressure |
 |---|---|---|---|---|---|---|
@@ -236,21 +293,20 @@ Three tasks are defined with fixed seeds for full reproducibility:
 | `medium` | 137 | 7 | 30 | 0.2 | Yes | 0.1 |
 | `hard` | 999 | 12 | 40 | 0.5 | Yes | 0.5 |
 
-- **Ambiguity level**: probability that email context fields are partially missing, making classification harder.
-- **Has phishing**: whether adversarial phishing emails are injected into the inbox.
-- **Time pressure**: multiplier applied to step cost — higher values drain the time budget faster.
+- **Ambiguity level**: probability that email context is partially missing, making classification harder.
+- **Has phishing**: whether adversarial phishing emails are injected.
+- **Time pressure**: multiplier on step cost — higher values drain the budget faster.
 
 ---
 
 ## Stdout Format Contract
 
-The grader parses stdout line-by-line. Every line must match exactly:
+The grader parses stdout line-by-line. Lines must match exactly:
 
 ### `[START]`
 ```
-[START] task=<task_name> env=<benchmark> model=<model_name>
+[START] task=<task_name> env=<env_name> model=<model_name>
 ```
-Example:
 ```
 [START] task=easy env=aim-email-triage model=gpt-4o-mini
 ```
@@ -259,12 +315,11 @@ Example:
 ```
 [STEP] step=<n> action=<action_str> reward=<0.00> done=<true|false> error=<msg|null>
 ```
-- `reward` is always formatted to **exactly 2 decimal places**
-- `done` is always lowercase `true` or `false`
-- `error` is the literal string `null` when no error occurred, or the exception message string when an LLM/parse error happened
-- `action_str` is `<type>` or `<type>:<email_id>` for actions targeting an email
+- `reward` — always 2 decimal places
+- `done` — lowercase `true` or `false`
+- `error` — literal `null` when no error, otherwise the exception message
+- `action_str` — `<type>` or `<type>:<email_id>`
 
-Example:
 ```
 [STEP] step=0 action=open:email_001 reward=-0.01 done=false error=null
 [STEP] step=1 action=classify:email_001 reward=0.73 done=false error=null
@@ -273,15 +328,42 @@ Example:
 
 ### `[END]`
 ```
-[END] success=<true|false> steps=<n> rewards=<r1,r2,...rn>
+[END] success=<true|false> steps=<n> rewards=<r1,r2,...>
 ```
-- `success` is lowercase `true` or `false`
-- `rewards` is a comma-separated list of all per-step reward values, each to **exactly 2 decimal places**, no spaces
+- `rewards` — comma-separated, each to 2 decimal places, no spaces
 
-Example:
 ```
 [END] success=true steps=3 rewards=-0.01,0.73,-0.02
 ```
+
+---
+
+## Code Architecture (inference.py)
+
+`inference.py` is structured in dependency order:
+
+```
+EnvConfig → PromptBuilder → ActionParser → EpisodeSummary → EpisodeRunner → InferenceRunner
+```
+
+| Class | Role |
+|---|---|
+| `EnvConfig` | Dataclass holding runtime config; `from_env()` reads env vars and raises `ValueError` if `HF_TOKEN` is missing |
+| `PromptBuilder` | Stateless; converts an `Observation` into a natural-language LLM prompt |
+| `ActionParser` | Parses raw LLM text (including markdown-fenced JSON) into a validated `Action`; wraps errors as `ValueError` |
+| `EpisodeSummary` | Dataclass capturing per-episode metrics: task name, steps, rewards, success flag |
+| `EpisodeRunner` | Runs one full episode loop; handles LLM timeouts, connection errors, and env step failures with graceful fallbacks |
+| `InferenceRunner` | Top-level orchestrator; iterates over all tasks, emits `[START]`/`[END]` logs, isolates per-task failures |
+
+Error handling summary:
+
+| Scenario | Handler | Fallback |
+|---|---|---|
+| `HF_TOKEN` missing | `EnvConfig.from_env` | `ValueError` — process exits |
+| LLM `TimeoutError` / `ConnectionError` | `EpisodeRunner` | `WARNING` log + `Action(type="submit")` |
+| Any other LLM exception | `EpisodeRunner` | error recorded in `[STEP]` log + `Action(type="submit")` |
+| `env.step` exception | `EpisodeRunner` | `ERROR` log + `done = True` |
+| `EpisodeRunner.run` unhandled exception | `InferenceRunner.run_all` | `ERROR` log + continue to next task |
 
 ---
 
@@ -289,22 +371,18 @@ Example:
 
 All models are Pydantic v2 and live in `env/models.py`.
 
-### `TaskConfig`
 ```python
 class TaskConfig(BaseModel):
-    num_emails: int        # number of emails to generate
-    time_budget: int       # step budget before timeout
-    seed: int              # deterministic RNG seed
-    ambiguity_level: float # 0.0–1.0 noise on email context
-    has_phishing: bool     # inject phishing emails
-    time_pressure: float   # step cost multiplier
-```
+    num_emails: int
+    time_budget: int
+    seed: int
+    ambiguity_level: float
+    has_phishing: bool
+    time_pressure: float
 
-### `Observation`
-```python
 class Observation(BaseModel):
-    inbox: List[EmailPartial]  # visible unread emails (max 5)
-    opened: List[str]          # currently opened email IDs
+    inbox: List[EmailPartial]
+    opened: List[str]
     time_left: int
     step_count: int
     pending_emails: int
@@ -312,45 +390,60 @@ class Observation(BaseModel):
     classified: int
     prioritized: int
     routed: int
-```
 
-### `Action`
-```python
 class Action(BaseModel):
-    type: str                        # open | classify | detect_phishing | submit
+    type: str                          # open | classify | detect_phishing | submit
     email_id: Optional[str]
     category: Optional[EmailCategory]  # urgent|normal|spam|promotions|social|updates|forums
     priority: Optional[PriorityLevel]  # low|medium|high|critical
     route: Optional[RouteOption]       # inbox|archive|trash|escalate|review
-```
 
-### `Reward`
-```python
 class Reward(BaseModel):
-    value: float                  # scalar step reward
-    components: Dict[str, float]  # breakdown by cause
+    value: float
+    components: Dict[str, float]
 ```
 
-### `EpisodeResult`
-```python
-class EpisodeResult(BaseModel):
-    score: float
-    steps: int
-    correct_classifications: int
-    phishing_detected: int
-    efficiency: float
-    classification_acc: float   # correct_classifications / total_emails
-    priority_acc: float         # correct_priorities / total_emails
-    routing_acc: float          # correct_routes / total_emails
-    risk_score: float           # phishing_detected / total_phishing
-    efficiency_score: float     # 1 - (steps / (time_budget * 2))
+---
+
+## Training
+
+`training/train.py` implements a Q-learning + LLM hybrid agent for offline experimentation:
+
+- Epsilon-greedy exploration (ε starts at 0.9, decays to 0.1)
+- Q-values stored per `(opened_emails, time_left)` state key
+- Few-shot experience replay: top positive-reward steps are injected into the LLM prompt
+- Runs 100 episodes across easy/medium/hard tasks
+
+```bash
+export OPENAI_API_KEY=your_key   # optional — runs in mock mode without it
+python training/train.py
 ```
+
+Results are saved to `training/scores.json` and visualized in `training/learning_curve.png`.
+
+---
+
+## Testing
+
+Tests live in `test_inference.py` alongside `inference.py`. The suite covers all six classes with both unit tests and property-based tests via [Hypothesis](https://hypothesis.readthedocs.io/).
+
+```bash
+pip install pytest hypothesis pytest-mock
+pytest test_inference.py -v
+```
+
+| Test type | Count | What it covers |
+|---|---|---|
+| Unit tests | 14 | `EnvConfig.from_env` defaults/errors, `PromptBuilder` rendering, `EpisodeRunner` call counts, `InferenceRunner` log format |
+| Property tests | 10 | Field round-trips, `ActionParser` round-trip, markdown fence transparency, invalid JSON, prompt completeness, rewards length, LLM exception fallback, `run_all` task count |
+
+All 24 tests pass in ~32 seconds.
 
 ---
 
 ## Docker
 
-The `Dockerfile` is intentionally minimal:
+**Inference image** (`Dockerfile` at repo root):
 
 ```dockerfile
 FROM python:3.10-slim
@@ -361,15 +454,9 @@ COPY . .
 CMD ["python", "inference.py"]
 ```
 
-`requirements.txt`:
-```
-openai
-pydantic
-```
+No Node.js, no build tools. Installs only `openai` and `pydantic`. Well within Hugging Face container limits (2 vCPU / 8 GB RAM).
 
-No Node.js, no npm, no React, no FastAPI, no build tools. The image installs only what is needed to run `inference.py`.
-
-Resource footprint is well within the Hugging Face container limits of 2 vCPU / 8 GB RAM.
+**Full stack** (`docker-compose.yml`): spins up the FastAPI backend on port 8000 and the React frontend on port 3000.
 
 ---
 
@@ -387,45 +474,10 @@ Resource footprint is well within the Hugging Face container limits of 2 vCPU / 
 | Booleans as lowercase strings | ✅ |
 | `error=null` literal when no error | ✅ |
 | Typed Pydantic `Observation`, `Action`, `Reward` models | ✅ |
-| `step()`, `reset()`, `state()` API functions | ✅ |
-| Minimum 3 tasks (Easy / Medium / Hard) | ✅ |
-| Deterministic graders returning `[0.0, 1.0]` | ✅ |
+| `step()`, `reset()`, `state()`, `get_result()` API | ✅ |
+| Minimum 3 tasks (easy / medium / hard) | ✅ |
+| Deterministic grader returning `[0.0, 1.0]` | ✅ |
 | `openenv.yaml` config at repo root | ✅ |
 | `python:3.10-slim` Docker base image | ✅ |
-
----
-
-## Cleanup Checklist
-
-Before submitting, delete the following directories and files that are not needed by the grader:
-
-```bash
-# Frontend (React / Vite)
-rm -rf src/
-rm -rf dist/
-rm -f index.html vite.config.js postcss.config.js tailwind.config.js
-rm -f package.json package-lock.json
-
-# Backend (FastAPI)
-rm -rf backend/
-
-# Docker Compose (not needed for single-container grader)
-rm -f docker-compose.yml
-
-# Node modules (if present)
-rm -rf node_modules/
-
-# Training artifacts (not part of grader evaluation)
-rm -rf training/
-```
-
-After cleanup, the only files needed are:
-
-```
-inference.py
-Dockerfile
-requirements.txt
-openenv.yaml
-env/
-tasks/
-```
+| `mypy --strict` clean | ✅ |
+| `ruff check` clean | ✅ |

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\traceloop.py
+# hypothesis_version: 6.151.4
+
+['DEFAULT', 'ERROR', 'Litellm-Server', 'choices', 'completion_tokens', 'content', 'finish_reason', 'frequency_penalty', 'functions', 'litellm.completion', 'max_tokens', 'message', 'messages', 'model', 'optional_params', 'presence_penalty', 'prompt_tokens', 'role', 'stop', 'temperature', 'tools', 'top_p', 'total_tokens', 'usage', 'user']

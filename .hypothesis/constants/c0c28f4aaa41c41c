@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\oobabooga\chat\oobabooga.py
+# hypothesis_version: 6.151.4
+
+[404, 500, '/v1/chat/completions', 'complete_input_dict', 'data', 'embedding', 'error', 'https', 'index', 'input', 'list', 'object', 'status_code', 'stream', 'usage']

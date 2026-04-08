@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure\audio_transcriptions.py
+# hypothesis_version: 6.151.4
+
+[500, 'Authorization', 'api_base', 'atranscription', 'audio_transcription', 'azure', 'complete_input_dict', 'custom_llm_provider', 'duration', 'file', 'headers', 'model']

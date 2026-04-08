@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\ollama\completion\handler.py
+# hypothesis_version: 6.151.4
+
+['/api/embed', 'dimensions', 'embedding', 'embeddings', 'index', 'input', 'keep_alive', 'list', 'model', 'object', 'ollama/', 'options', 'prompt_eval_count', 'truncate']

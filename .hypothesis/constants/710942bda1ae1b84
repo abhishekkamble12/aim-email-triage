@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\fine_tuning\main.py
+# hypothesis_version: 6.151.4
+
+[600.0, 400, 600, 'AZURE_AD_TOKEN', 'AZURE_API_BASE', 'AZURE_API_KEY', 'AZURE_API_VERSION', 'AZURE_OPENAI_API_KEY', 'OPENAI_API_BASE', 'OPENAI_API_KEY', 'OPENAI_BASE_URL', 'OPENAI_ORGANIZATION', 'Unsupported provider', 'VERTEXAI_CREDENTIALS', 'VERTEXAI_LOCATION', 'VERTEXAI_PROJECT', 'azure', 'azure_ad_token', 'client', 'create_thread', 'extra_body', 'n/a', 'openai', 'request_timeout', 'vertex_ai']

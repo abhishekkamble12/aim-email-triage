@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\openai.py
+# hypothesis_version: 6.151.4
+
+[408, 422, 500, 'Authorization', 'ClientSession', 'ReadTimeout', '__', '_is_async', 'acompletion', 'after', 'api.openai.com', 'api_base', 'assistant', 'assistant_id', 'base_url', 'before', 'body', 'client', 'complete_input_dict', 'completed', 'content', 'desc', 'embedding', 'encoding_format', 'event_handler', 'extra_headers', 'headers', 'image_generation', 'include_usage', 'input', 'instructions', 'limit', 'max_retries', 'message', 'messages', 'metadata', 'model', 'model_dump', 'openai', 'order', 'prompt', 'response', 'response_headers', 'role', 'self', 'status', 'status_code', 'stream', 'stream_options', 'text', 'thread_id', 'tools', 'user']

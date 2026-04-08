@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\stanford.py
+# hypothesis_version: 6.151.4
+
+['"tokenizeNLs=false"', '-encoding', '-loadClassifier', '-model', '-mx1000m', '-outputFormat', '-outputFormatOptions', '-textFile', '-tokenize', '-tokenizerFactory', '-tokenizerOptions', '/', '0', 'STANFORD_MODELS', '_', 'false', 'keepEmptySentences', 'slashTags', 'stanford-ner.jar', 'utf8', 'wb']

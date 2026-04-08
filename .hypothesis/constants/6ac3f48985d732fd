@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\mcp.py
+# hypothesis_version: 6.151.4
+
+['2024-11-05', '2025-03-26', '2025-06-18', 'api_key', 'authorization', 'basic', 'bearer_token', 'http', 'none', 'oauth2', 'sse', 'stdio']

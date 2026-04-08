@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai_like\json_loader.py
+# hypothesis_version: 6.151.4
+
+['api_base_env', 'api_key_env', 'base_class', 'base_url', 'constraints', 'openai_gpt', 'param_mappings', 'providers.json', 'special_handling']

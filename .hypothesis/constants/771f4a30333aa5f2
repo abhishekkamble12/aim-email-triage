@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tokenize\regexp.py
+# hypothesis_version: 6.151.4
+
+['\\s*\\n\\s*\\n\\s*', '\\s+', '\\w+|[^\\w\\s]+', 'pattern']

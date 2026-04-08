@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\wordlist.py
+# hypothesis_version: 6.151.4
+
+['#', '.txt', 'Close_Punctuation', 'Currency_Symbol', 'IsAlnum', 'IsAlpha', 'IsLower', 'IsN', 'IsSc', 'IsSo', 'IsUpper', 'Line_Separator', 'Number', 'Open_Punctuation', 'Punctuation', 'Separator', 'Symbol', 'ca', 'catalan', 'cs', 'czech', 'de', 'dutch', 'el', 'en', 'english', 'es', 'fi', 'finnish', 'fr', 'french', 'german', 'greek', 'hu', 'hungarian', 'icelandic', 'is', 'it', 'italian', 'latvian', 'lv', 'nl', 'nonbreaking_prefix.', 'pl', 'polish', 'portuguese', 'pt', 'ro', 'romanian', 'ru', 'russian', 'sk', 'sl', 'slovak', 'slovenian', 'spanish', 'sv', 'swedish', 'ta', 'tamil']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\realtime\handler.py
+# hypothesis_version: 6.151.4
+
+[1011, 'aws_region_name', 'current_delta_chunks', 'current_delta_type', 'current_item_chunks', 'current_response_id', 'response', 'utf-8']

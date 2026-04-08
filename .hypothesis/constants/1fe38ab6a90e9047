@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\codestral\completion\handler.py
+# hypothesis_version: 6.151.4
+
+[200, 422, 500, '</s>', '<s>', '<|assistant|>', '<|system|>', '<|user|>', 'Authorization', 'Bearer {}', 'HTTPStatusError - {}', 'POST', 'acompletion', 'api_base', 'application/json', 'choices', 'codestral', 'complete_input_dict', 'content', 'content-type', 'created', 'custom_endpoint', 'final_prompt_value', 'finish_reason', 'headers', 'id', 'index', 'initial_prompt_value', 'logprobs', 'message', 'model', 'object', 'prompt', 'roles', 'stream', 'timeout', 'usage', '{}']

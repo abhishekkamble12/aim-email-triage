@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\replicate\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+[400, 422, ':', 'Authorization', 'Content-Type', 'application/json', 'bos_token', 'complete_input_dict', 'deployments', 'deployments/', 'eos_token', 'final_prompt_value', 'flan', 'function_call', 'functions', 'get', 'initial_prompt_value', 'input', 'max_length', 'max_new_tokens', 'max_tokens', 'meta/codellama-13b', 'output', 'prompt', 'replicate/', 'role', 'roles', 'seed', 'self', 'status', 'stop', 'stop_sequences', 'stream', 'succeeded', 'system', 'system_prompt', 'temperature', 'tool_choice', 'tools', 'top_p', 'urls', 'usage', 'version', 'vicuna']

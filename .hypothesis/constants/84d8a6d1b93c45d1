@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\deepeval\api.py
+# hypothesis_version: 6.151.4
+
+[200, '/evaluate', '/guard', '/guardrails', '/v1/dataset', '/v1/event', '/v1/feedback', '/v1/prompt', '/v1/test-run', '/v1/tracing', 'CONFIDENT_API_KEY', 'Content-Type', 'DELETE', 'GET', 'POST', 'PUT', 'application/json', 'error', 'exception', 'tries']

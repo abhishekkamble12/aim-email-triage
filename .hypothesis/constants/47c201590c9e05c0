@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\batches\handler.py
+# hypothesis_version: 6.151.4
+
+['anthropic/unknown', 'api_base', 'batch_retrieve', 'complete_input_dict', 'headers']

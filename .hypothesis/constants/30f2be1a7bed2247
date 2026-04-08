@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rag\ingestion\openai_ingestion.py
+# hypothesis_version: 6.151.4
+
+['RAGIngestOptions', 'Router', 'anchor', 'api_base', 'api_key', 'assistants', 'days', 'id', 'last_active_at', 'litellm-rag-ingest', 'openai', 'ttl_days', 'vector_store_id']

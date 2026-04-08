@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\envelope.py
+# hypothesis_version: 6.151.4
+
+[b'\n', ', ', '<Payload %r>', 'application/json', 'attachment', 'check_in', 'client_report', 'content_type', 'default', 'error', 'event', 'filename', 'internal', 'length', 'log', 'metric_bucket', 'metric_buckets', 'monitor', 'platform', 'profile', 'profile_chunk', 'python', 'rb', 'replace', 'session', 'sessions', 'statsd', 'transaction', 'type', 'utf-8']

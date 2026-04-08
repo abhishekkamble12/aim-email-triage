@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\api.py
+# hypothesis_version: 6.151.4
+
+['%s', '(.*\\.zip)/?(.*)$|', 'LICENSE', 'README', 'cat_delimiter', 'cat_file', 'cat_map', 'cat_pattern', 'citation.bib', 'utf8']

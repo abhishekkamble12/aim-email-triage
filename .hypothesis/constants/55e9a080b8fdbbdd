@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\literal_ai.py
+# hypothesis_version: 6.151.4
+
+[300, 'Content-Type', 'LITERAL_API_KEY', 'LITERAL_API_URL', 'LITERAL_BATCH_SIZE', '__literal_prompt__', 'application/json', 'choices', 'completion_tokens', 'custom_llm_provider', 'duration', 'endTime', 'error', 'error_str', 'generation', 'id', 'input', 'inputTokenCount', 'litellm', 'litellm_params', 'literalai_parent_id', 'literalai_tags', 'literalai_thread_id', 'llm', 'message', 'messageCompletion', 'messages', 'metadata', 'model', 'model_parameters', 'name', 'output', 'outputTokenCount', 'parentId', 'promptId', 'prompt_id', 'prompt_tokens', 'provider', 'query', 'response', 'rootRunId', 'settings', 'startTime', 'step_id', 'tags', 'templated', 'threadId', 'tokenCount', 'tools', 'total_tokens', 'type', 'uuid', 'variables', 'x-api-key', 'x-client-name', 'x-env']

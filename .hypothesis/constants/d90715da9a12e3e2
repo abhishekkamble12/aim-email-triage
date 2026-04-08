@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\nlp_cloud\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['Authorization', 'accept', 'application/json', 'complete_input_dict', 'content-type', 'error', 'frequency_penalty', 'generated_text', 'max_length', 'max_tokens', 'n', 'nb_generated_tokens', 'nb_input_tokens', 'num_return_sequences', 'presence_penalty', 'self', 'stop', 'stop_sequences', 'stream', 'temperature', 'text', 'top_p', 'usage']

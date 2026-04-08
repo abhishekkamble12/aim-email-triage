@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\url_helpers.py
+# hypothesis_version: 6.151.4
+
+['/', '/api', '/is-alive/ping', ':/&?=', 'AWSAccessKeyId=', 'Signature=', 'X-Amz-Signature', 'utf-8']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\sqs.py
+# hypothesis_version: 6.151.4
+
+['AppCrypto', 'Content-Type', 'POST', '__encrypted__', 'healthy', 'os.environ/', 'payload', 'sqs', 'sqs_api_version', 'sqs_aws_profile_name', 'sqs_aws_role_name', 'sqs_aws_session_name', 'sqs_aws_sts_endpoint', 'sqs_config', 'sqs_endpoint_url', 'sqs_queue_url', 'sqs_region_name', 'sqs_use_ssl', 'sqs_verify', 'unhealthy', 'utf-8']

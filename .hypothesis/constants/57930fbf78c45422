@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_utils\pre_call_checks\prompt_caching_deployment_check.py
+# hypothesis_version: 6.151.4
+
+['call_type', 'id', 'messages', 'model', 'model_id', 'model_info']

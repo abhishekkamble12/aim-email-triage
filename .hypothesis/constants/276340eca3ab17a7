@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\internals.py
+# hypothesis_version: 6.151.4
+
+[128, '\n\n  Searched in:', '\n    - %s', ' (base class for %s)', '(?<=\\n)[ ]+(?!\\s)', '(?m)^\\s*', '*.jar', '-?(\\d*)([.]?\\d*)?', '-?\\d+', '-cp', '.', '<', '<Element %r>', '=', 'CLASSPATH', 'Class %s', 'JAVAHOME', 'JAVA_HOME', '[Found %s: %s]', '\\', '\\A\\s*@deprecated:', '\\\\|%s', '_etree', 'bin', 'close quote', 'deprecated', 'devnull', 'encoding', 'file', 'getuid', 'integer', 'java', 'java.exe', 'number', 'open quote', 'pipe', 'posix', 'stdout', 'utf8', 'which']

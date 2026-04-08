@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\caching\redis_cache.py
+# hypothesis_version: 6.151.4
+
+[5.0, 100, ' <- ', '*', '.', ':', 'Unknown', 'error', 'failed', 'host', 'increment_value', 'key', 'message', 'nx', 'password', 'ping', 'port', 'redis_async_ping', 'redis_sync_ping', 'redis_version', 'register_script', 'scan_iter', 'script_load', 'service_logger_obj', 'set', 'socket_timeout', 'startup_nodes', 'status', 'success', 'ttl', 'unknown', 'utf-8']

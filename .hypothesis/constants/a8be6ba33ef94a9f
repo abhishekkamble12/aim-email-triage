@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\semcor.py
+# hypothesis_version: 6.151.4
+
+['%', '%s.%s.%02d', '.', '.*/s', '.*/s/(punc|wf)', './/s', ':', 'NE', '_', 'a', 'both', 'chunk', 'epytext en', 'lemma', 'lexsn', 'n', 'pn', 'pos', 'punc', 'r', 'rdf', 's', 'sem', 'snum', 'token', 'v', 'wf', 'wnsn', 'word']

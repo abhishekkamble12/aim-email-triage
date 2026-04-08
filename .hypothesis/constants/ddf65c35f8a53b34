@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\experiments\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 422, 'GET', 'PATCH', 'POST', 'PUT', 'application/json', 'chunk_size', 'content-type', 'datasetId', 'dataset_deleted', 'dataset_name', 'dataset_version_id', 'experiment_id', 'experiment_ids', 'experiment_items', 'experiment_name', 'experiment_scores', 'filters', 'force_sorting', 'groups', 'id', 'ids', 'items', 'last_retrieved_id', 'limit', 'merge_tags', 'metadata', 'name', 'optimization_id', 'page', 'project_deleted', 'project_id', 'prompt_id', 'prompt_version', 'prompt_versions', 'size', 'sorting', 'status', 'tags', 'truncate', 'type', 'types', 'update', 'write']

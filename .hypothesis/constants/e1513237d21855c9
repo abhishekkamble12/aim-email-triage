@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\fine_tuning\handler.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, 200, '+00:00', '/batchPredictionJobs', '/tuningJobs', '/tuningJobs/', 'Authorization', 'Content-Type', 'JOB_STATE_CANCELLED', 'JOB_STATE_FAILED', 'JOB_STATE_PENDING', 'JOB_STATE_RUNNING', 'JOB_STATE_SUCCEEDED', 'Z', 'adapter_size', 'application/json', 'baseModel', 'cachedContents', 'cancel', 'cancelled', 'countTokens', 'createTime', 'epoch_count', 'failed', 'fine_tuning.job', 'generateContent', 'hyperParameters', 'model', 'name', 'predict', 'queued', 'running', 'state', 'succeeded', 'supervisedTuningSpec', 'timeout', 'trainingDatasetUri', 'validating_files', 'validation_dataset', 'vertex_ai_beta', 'vertex_response %s']

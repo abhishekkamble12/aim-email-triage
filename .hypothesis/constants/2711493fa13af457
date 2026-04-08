@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure_ai\anthropic\transformation.py
+# hypothesis_version: 6.151.4
+
+['2023-06-01', 'anthropic-beta', 'anthropic-version', 'api_key', 'azure_ai', 'extra_body', 'is_vertex_request', 'max_retries', 'mcp_servers', 'stream_options', 'tools']

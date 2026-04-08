@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\secret_managers\main.py
+# hypothesis_version: 6.151.4
+
+['aws_kms', 'aws_secret_manager', 'azure_key_vault', 'custom', 'cyberark', 'google_kms', 'hashicorp_vault', 'litellm/', 'local', 'read_and_write', 'read_only', 'write_only']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\util.py
+# hypothesis_version: 6.151.4
+
+['(([^/]+)(/.*)?)', '.../corpora/', '\\2.zip/\\1/', '__bases__', 'corpora', 'nltk_data_subdir']

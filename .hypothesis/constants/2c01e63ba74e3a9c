@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\huggingface\embedding\handler.py
+# hypothesis_version: 6.151.4
+
+[400, 500, 'HF_API_BASE', 'HUGGINGFACE_API_BASE', 'api_base', 'async', 'complete_input_dict', 'embed', 'embedding', 'error', 'feature-extraction', 'headers', 'https', 'index', 'input_type', 'inputs', 'list', 'max_length', 'max_time', 'min_length', 'object', 'options', 'parameters', 'pipeline_tag', 'query', 'repetition_penalty', 'rerank', 'sentence-similarity', 'sentences', 'similarities', 'similarity', 'source_sentence', 'sync', 'temperature', 'texts', 'top_k', 'top_p', 'usage']

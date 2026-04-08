@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\workspaces\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 422, 'DELETE', 'GET', 'POST', 'PUT', 'application/json', 'content-type', 'interval_end', 'interval_start', 'project_ids', 'start_before_end', 'truncation_on_tables']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\groq\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['GROQ_API_BASE', 'GROQ_API_KEY', 'assistant', 'auto', 'choices', 'code', 'default', 'delta', 'error', 'fake_stream', 'flex', 'function', 'groq', 'json_mode', 'json_schema', 'json_tool_call', 'max_retries', 'message', 'name', 'reasoning', 'reasoning_content', 'reasoning_effort', 'response_format', 'response_schema', 'role', 'schema', 'self', 'service_tier', 'tool_choice', 'tools', 'type']

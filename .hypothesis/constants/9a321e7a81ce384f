@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\base_llm\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['CustomStreamWrapper', 'ModelResponse', 'POST', '__', '_abc', '_is_base_class', 'api_base is required', 'budget_tokens', 'enabled', 'function', 'json_mode', 'json_schema', 'max_tokens', 'reasoning_effort', 'response_format', 'response_schema', 'schema', 'thinking', 'tool_choice', 'tools', 'type']

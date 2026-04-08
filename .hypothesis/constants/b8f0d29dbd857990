@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\responses\utils.py
+# hypothesis_version: 6.151.4
+
+[500, ';', 'BaseModel', 'ResponseText', 'audio_tokens', 'cached_tokens', 'cost', 'custom_llm_provider', 'format', 'headers', 'id', 'image_tokens', 'input', 'input_tokens', 'json_schema', 'kwargs', 'mcp', 'metadata', 'model_id', 'model_id:', 'model_info', 'name', 'output_tokens', 'previous_response_id', 'raw_headers', 'reasoning_tokens', 'resp_', 'response_id', 'response_id:', 'schema', 'strict', 'text_tokens', 'total_tokens', 'type', 'utf-8']

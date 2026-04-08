@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\metrics\confusionmatrix.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.5, 1.0, 100.0, '     .', '  %', ' |', ' |\n', '%', '%5.1f%%', '%6d: %s\n', '%s', '-', '.', '<', '>', 'Confusion matrix:', 'Reference =', 'Test    =', 'VB', 'Value key:\n', '__main__', 'd', 'd: %s\n', 's | ', '{}-+-{}+\n', '|\n']

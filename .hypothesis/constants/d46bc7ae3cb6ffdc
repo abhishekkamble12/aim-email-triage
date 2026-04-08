@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\containers\endpoint_factory.py
+# hypothesis_version: 6.151.4
+
+[600, 'ContainerFileObject', 'async_call', 'async_name', 'endpoints', 'endpoints.json', 'list_container_files', 'litellm_call_id', 'litellm_logging_obj', 'mock_response', 'name', 'openai', 'path_params', 'response_type']

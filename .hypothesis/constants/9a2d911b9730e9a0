@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\services.py
+# hypothesis_version: 6.151.4
+
+['auth', 'batch_write_to_db', 'counter', 'did an error occur', 'gauge', 'histogram', 'metrics', 'pod_lock_manager', 'postgres', 'proxy_pre_call', 'redis', 'reset_budget_job', 'router', 'self', 'what was the error']

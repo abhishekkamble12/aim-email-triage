@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\inference\resolution.py
+# hypothesis_version: 6.151.4
+
+['  -> End', '  -> New Clause: %s', '%s', '(P(x) & Q(x)) | R(x)', '(man(x) -> --man(x))', '(man(x) -> man(x))', '(man(x) iff man(x))', '(man(x) or -man(x))', ', ', '-(-P(x) & Q(x))', '-(P(x) <-> Q(x))', '-(all x.P(x))', '-(some x.P(x))', 'A', 'ANSWER', 'P(x) <-> Q(x)', 'P(x) | (Q(x) & R(x))', 'P(x) | Q(x)', 'P(x) | Q(x) | R(x)', 'Tautology', '__main__', 'all x.man(x)', 'all y.some x.P(x,y)', 'exists x.P(x) | Q(x)', 'man(John)', 'man(Socrates)', 'man(x)', 'mortal(Socrates)', 'some x.P(x)', 'some x.all y.P(x,y)', 'some y.walks(y)', '{', '}']

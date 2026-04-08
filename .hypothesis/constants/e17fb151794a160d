@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\jedi\inference\arguments.py
+# hypothesis_version: 6.151.4
+
+['*', '**', ',', '<%s: %s>', '__iter__', 'arglist', 'argument', 'comp_for', 'dict', 'type-error-star', 'type-error-star-star']

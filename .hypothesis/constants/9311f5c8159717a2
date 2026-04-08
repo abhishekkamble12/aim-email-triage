@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai_like\common_utils.py
+# hypothesis_version: 6.151.4
+
+[400, 'Authorization', 'Bearer {}', 'Content-Type', 'POST', 'application/json', 'chat_completions', 'embeddings', '{}/chat/completions', '{}/embeddings']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\lunary.py
+# hypothesis_version: 6.151.4
+
+['0.1.43', 'Template-Id', 'arguments', 'choices', 'completion', 'completion_tokens', 'content', 'extra_body', 'extra_headers', 'function', 'id', 'litellm', 'litellm_params', 'lunary', 'message', 'metadata', 'name', 'optional_params', 'parent_run_id', 'prompt', 'prompt_tokens', 'role', 'stack', 'start', 'tags', 'tool_calls', 'tools', 'type', 'usage', 'user']

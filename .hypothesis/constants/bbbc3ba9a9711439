@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\langfuse\langfuse_mock_client.py
+# hypothesis_version: 6.151.4
+
+[100, 200, '.langfuse.com', 'LANGFUSE', 'LANGFUSE_MOCK', 'langfuse.com', 'status', 'success']

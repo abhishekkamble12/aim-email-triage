@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\xai\common_utils.py
+# hypothesis_version: 6.151.4
+
+['Authorization', 'Content-Type', 'XAI_API_BASE', 'XAI_API_KEY', 'application/json', 'content-type', 'data', 'https://api.x.ai', 'id', 'supports_web_search', 'xai/']

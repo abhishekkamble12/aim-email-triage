@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\jedi\inference\value\dynamic_arrays.py
+# hypothesis_version: 6.151.4
+
+['(', ')', 'MAGENTA', 'add', 'append', 'extend', 'insert', 'list', 'set', 'trailer', 'tuple', 'update']

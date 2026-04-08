@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\sagemaker\completion\handler.py
+# hypothesis_version: 6.151.4
+
+[300.0, 200, 408, 500, 1024, 'AWS_REGION', 'AWS_REGION_NAME', 'Authorization', 'Body', 'Error', 'HTTPStatusCode', 'Message', 'POST', 'ResponseMetadata', 'Sagemaker error %s', 'accept_eula=true', 'api_base', 'application/json', 'aws_access_key_id', 'aws_profile_name', 'aws_region_name', 'aws_role_name', 'aws_session_name', 'aws_session_token', 'aws_sts_endpoint', 'complete_input_dict', 'content-type', 'credentials', 'data', 'headers', 'inputs', 'litellm_params', 'messages', 'model', 'model_id', 'optional_params', 'request_str', 'response', 'sagemaker', 'sagemaker-runtime', 'sagemaker_base_url', 'stream', 'us-west-2', 'utf-8', 'utf8']

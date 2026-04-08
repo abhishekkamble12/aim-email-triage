@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\dependencygraph.py
+# hypothesis_version: 6.151.4
+
+['\n{} -> {} ', '\n}', ',', '-T%s', 'NTOP', 'ROOT', 'TOP', '_', '__main__', 'address', 'ctag', 'deps', 'digraph G{\n', 'dot', 'dot_json', 'edge [dir=forward]\n', 'feats', 'head', 'json', 'lemma', 'rel', 'svg', 'tag', 'tree.png', 'utf8', 'word', '{word}\t{tag}\t{head}\n']

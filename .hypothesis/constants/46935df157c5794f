@@ -1,0 +1,4 @@
+# file: D:\Reinforcement-learning\env\email_generator.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.2, 10000, 99999, '50% off holiday sale', 'Buy one get one free', 'Data Loss Detected', 'Hardware Request', 'Jane mentioned you', 'Mark liked your post', 'Re: ', 'Security Breach', 'Server Outage Down', 'Welcome New Employee', 'You Won A Tesla!', 'body', 'category', 'is_phishing', 'priority', 'route', 'subject']

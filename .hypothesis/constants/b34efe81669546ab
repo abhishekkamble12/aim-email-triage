@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\message_processing\emulation\emulator_message_processor.py
+# hypothesis_version: 6.151.4
+
+['end_time', 'error_info', 'input', 'metadata', 'model', 'output', 'provider', 'span', 'tags', 'thread_id', 'total_cost', 'trace', 'usage']

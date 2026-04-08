@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\experimental_pass_through\adapters\handler.py
+# hypothesis_version: 6.151.4
+
+['anthropic_messages', 'call_type', 'include_usage', 'litellm_logging_obj', 'max_tokens', 'messages', 'metadata', 'model', 'output_format', 'stop_sequences', 'stream', 'stream_options', 'system', 'temperature', 'thinking', 'tool_choice', 'tools', 'top_k', 'top_p']

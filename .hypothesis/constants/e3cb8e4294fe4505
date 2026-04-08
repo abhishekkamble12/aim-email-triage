@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\caching\redis_semantic_cache.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'REDIS_HOST', 'REDIS_PASSWORD', 'REDIS_PORT', 'data', 'embedding', 'messages', 'metadata', 'model_name', 'no-cache', 'no-store', 'prompt', 'response', 'semantic-similarity', 'trace_id', 'ttl', 'user_api_key', 'utf-8', 'vector_distance']

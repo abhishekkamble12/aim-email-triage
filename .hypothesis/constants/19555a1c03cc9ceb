@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\alerts\types\get_webhook_examples_request_alert_type.py
+# hypothesis_version: 6.151.4
+
+['general', 'pagerduty', 'slack']

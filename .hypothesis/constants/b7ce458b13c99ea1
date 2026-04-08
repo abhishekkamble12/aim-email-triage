@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\bracket_parse.py
+# hypothesis_version: 6.151.4
+
+['  </node>', '(?m)^%s.*', '(\\1', '(\\1 \\1)', '(\\1 \\2 \\3)', '(\\1 \\2)', ')', '</?alpino_ds.*>', '<alpino_ds', 'ISO-8859-1', 'S', '\\((.)\\)', '\\s*\\(\\s*\\(', '^\\(', 'alpino\\.xml', 'bad block type', 'blankline', 'mismatched parens', 'sexpr', 'unindented_paren', 'utf8']

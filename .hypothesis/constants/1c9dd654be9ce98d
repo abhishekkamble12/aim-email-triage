@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\llms\anthropic.py
+# hypothesis_version: 6.151.4
+
+['$defs', 'AnthropicInputSchema', 'additionalProperties', 'allow', 'anthropic-beta', 'anthropic-version', 'any', 'approximate', 'assistant', 'auto', 'base64', 'bash', 'char_location', 'citations', 'code_execution', 'container_upload', 'content_block_delta', 'content_block_start', 'content_block_stop', 'custom', 'direct', 'document', 'effort-2025-11-24', 'enabled', 'end_turn', 'file', 'high', 'image', 'json_schema', 'low', 'max_tokens', 'medium', 'memory', 'message', 'message_delta', 'message_start', 'none', 'oauth-2025-04-20', 'page_location', 'properties', 'redacted_thinking', 'required', 'signature_delta', 'sk-ant-oat', 'stop_sequence', 'strict', 'text', 'text_editor', 'thinking', 'thinking_delta', 'tool', 'tool_reference', 'tool_result', 'tool_use', 'type', 'url', 'user', 'web-fetch-2025-09-10', 'web_fetch', 'web_search']

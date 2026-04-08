@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\heuristics\meteor.py
+# hypothesis_version: 6.151.4
+
+[0.5, 0.9, 3.0, 'meteor_metric', 'omw-1.4', 'wordnet']

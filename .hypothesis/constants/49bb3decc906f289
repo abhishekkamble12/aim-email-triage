@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\custom_httpx\async_client_cleanup.py
+# hypothesis_version: 6.151.4
+
+['_transport', 'aclose', 'cache_dict', 'client', 'close']

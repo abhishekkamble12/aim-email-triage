@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\g_eval_presets\__init__.py
+# hypothesis_version: 6.151.4
+
+['ComplianceRiskJudge', 'DemographicBiasJudge', 'GenderBiasJudge', 'PoliticalBiasJudge', 'QARelevanceJudge', 'RegionalBiasJudge', 'ReligiousBiasJudge']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\azure_sentinel\azure_sentinel.py
+# hypothesis_version: 6.151.4
+
+[200, 204, 3600, 'AZURE_CLIENT_ID', 'AZURE_CLIENT_SECRET', 'AZURE_TENANT_ID', 'Authorization', 'Content-Type', 'Custom-LiteLLM', 'access_token', 'application/json', 'client_credentials', 'client_id', 'client_secret', 'expires_in', 'grant_type', 'scope', 'utf-8']

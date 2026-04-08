@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\recursivedescent.py
+# hypothesis_version: 6.151.4
+
+['    [', '  %c [', '*', '+', 'Backtrack', 'E', 'Expand: %s', 'Found a parse:\n%s', 'GOOD PARSE:', 'M', 'Match: %r', 'Parsing %r', 'Start:', ']', '__main__']

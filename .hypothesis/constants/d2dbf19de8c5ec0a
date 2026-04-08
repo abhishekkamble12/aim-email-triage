@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\clarifai\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+['.', 'CLARIFAI_API_KEY', 'clarifai/', 'complete_input_dict', 'frequency_penalty', 'max_tokens', 'presence_penalty', 'response_format', 'stream', 'stream_options', 'temperature', 'tool_choice', 'tools', 'top_p']

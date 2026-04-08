@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\crons\decorator.py
+# hypothesis_version: 6.151.4
+
+['Callable[P, R]', 'P', 'P.args', 'P.kwargs', 'R']

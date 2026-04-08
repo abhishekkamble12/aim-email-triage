@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\passthrough\main.py
+# hypothesis_version: 6.151.4
+
+['LiteLLMLoggingObj', 'api_base', 'bedrock', 'complete_input_dict', 'headers', 'iter_bytes', 'litellm_logging_obj', 'model', 'model_id', 'provider_config']

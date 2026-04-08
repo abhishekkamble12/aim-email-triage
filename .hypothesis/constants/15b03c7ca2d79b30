@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\gcs_bucket\gcs_bucket_base.py
+# hypothesis_version: 6.151.4
+
+[200, 204, '/', 'Authorization', 'Content-Type', 'GCS_BUCKET_NAME', 'IAM_AUTH', 'application/json', 'bucket_name', 'gcs-bucket', 'gcs_bucket_name', 'path_service_account', 'vertex_ai', 'vertex_instance']

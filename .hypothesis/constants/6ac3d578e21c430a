@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\message_processing\messages.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'delivery_attempts', 'delivery_time', 'failed', 'id', 'input', 'metadata', 'output', 'passed', 'span_id', 'supports_batching', 'thread_id', 'total_cost', 'total_estimated_cost', 'trace_id']

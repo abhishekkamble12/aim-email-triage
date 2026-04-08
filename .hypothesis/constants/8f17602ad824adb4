@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\files\handler.py
+# hypothesis_version: 6.151.4
+
+[200, '/', 'GET', 'bucket_name', 'content-type', 'file', 'file_id', 'gcs_bucket_name', 'gs://', 'path_service_account', 'vertex_instance']

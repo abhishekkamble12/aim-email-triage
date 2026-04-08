@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\error_tracking\error_filtering\filter_by_response_status_code.py
+# hypothesis_version: 6.151.4
+
+['error_tracking_extra', 'exc_info', 'extra', 'status_code']

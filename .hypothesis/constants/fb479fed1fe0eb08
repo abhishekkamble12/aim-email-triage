@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\inference\discourse.py
+# hypothesis_version: 6.151.4
+
+['    %s', '#', '%s readings:', '%s:', '-', ': %s', ': INVALID: %s', 'A boxer walks', 'A person dances', 'A student dances', 'Fido barks', 'Fido is a boxer', 'John is a boxer', 'NN', 'No model found!\n', 'No person dances', 'PRP', 'VB', 'Vincent is a boxer', 'Vincent is married', '^(a)$', '^(chases|runs)$', '^(dog|boy)$', '^(every)$', '^(he)$', '__main__', 'background.fol', 'book_grammars', 'cooked', 'd%s', 'd1', 'drt_glue.semtype', 'ex_quant', 'grammars', 'he runs', 's%s', 'sample_grammars', 'univ_quant']

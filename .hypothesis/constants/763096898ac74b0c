@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\watsonx\common_utils.py
+# hypothesis_version: 6.151.4
+
+[401, 'API key is required', 'Accept', 'Authorization', 'Content-Type', 'PROJECT_ID', 'REGION', 'SPACE_ID', 'WATSONX_APIKEY', 'WATSONX_API_BASE', 'WATSONX_API_KEY', 'WATSONX_IAM_URL', 'WATSONX_PROJECT_ID', 'WATSONX_REGION', 'WATSONX_SPACE_ID', 'WATSONX_TOKEN', 'WATSONX_URL', 'WATSONX_ZENAPIKEY', 'WML_URL', 'WX_API_KEY', 'WX_PROJECT_ID', 'WX_REGION', 'WX_SPACE_ID', 'WX_URL', 'access_token', 'api_base', 'api_key', 'apikey', 'application/json', 'base_url', 'bos_token', 'deployment/', 'eos_token', 'expires_in', 'final_prompt_value', 'grant_type', 'initial_prompt_value', 'model_id', 'project_id', 'region', 'region_name', 'role_dict', 'roles', 'space_id', 'token', 'url', 'watsonx', 'watsonx_credentials', 'watsonx_project', 'watsonx_region', 'watsonx_region_name', 'watsonx_token', 'wx_credentials', 'zen_api_key']

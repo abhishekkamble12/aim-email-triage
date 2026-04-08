@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_strategy\tag_based_routing.py
+# hypothesis_version: 6.151.4
+
+['default', 'litellm_metadata', 'litellm_params', 'metadata', 'request metadata: %s', 'tags']

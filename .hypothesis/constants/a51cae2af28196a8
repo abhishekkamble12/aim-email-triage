@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\inference\mace.py
+# hypothesis_version: 6.151.4
+
+[500, '   %s', '(', ',', '-', 'Assumptions and Goal', 'Countermodel found', 'None', "Using '%s' format", 'Valuation', '[', ']', '_', '__main__', 'a', 'all x.man(x)', 'b', 'c', 'cooked', 'd', 'e', 'f', 'function', 'g', 'h', 'i', 'interpformat', 'interpretation', 'j', 'k', 'l', 'm', 'mace4', 'man(Bill)', 'man(John)', 'man(Socrates)', 'mortal(Socrates)', 'n', 'o', 'p', 'portable', 'q', 'r', 'raw', 'relation', 's', 'standard', 'standard2', 't', 'tabular', 'tex', 'u', 'v', 'valuation', 'w', 'x', 'xml', 'y', 'z']

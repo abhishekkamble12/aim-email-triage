@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\inference\prover9.py
+# hypothesis_version: 6.151.4
+
+[101, '\n%s', '    %s.\n', '   %s', ' & ', ' -> ', ' <-> ', ' = ', ' | ', '%%ERROR:', '(', '(ACTION)', '(FATAL)', '(MAX_GIVEN)', '(MAX_KEPT)', '(MAX_MEGS)', '(MAX_SECONDS)', '(SIGSEGV)', '(man(x) -> man(x))', '(man(x) <-> man(x))', '(walk(j) & sing(j))', ')', '-', '-(', '.exe', '/usr/bin', '/usr/local/bin', '/usr/local/prover9', 'Args:', 'Calling:', 'Input:\n', 'PROVER9', 'Return code:', 'Testing proofs', '\\x y.sees(x,y)', '__main__', 'all ', 'end_of_list.\n\n', 'exists ', 'formulas(goals).\n', 'man(Socrates)', 'mortal(Socrates)', 'nltk', 'prooftrans', 'prover9', 'some x y.sees(x,y)', 'stderr:\n', 'stdout:\n', 'striplabels', 'utf-8', 'utf8', 'walk(j)', 'walks(john)']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_ai_non_gemini.py
+# hypothesis_version: 6.151.4
+
+[400, 500, '\nOutput:\n', 'POST', 'api_endpoint', 'chat', 'choices', 'client_options', 'complete_input_dict', 'content', 'custom', 'encoding', 'instances', 'language_models', 'llm_model', 'logging_obj', 'message', 'messages', 'mode', 'model', 'model_id', 'model_response', 'preview', 'print_verbose', 'private', 'prompt', 'prompt_token_count', 'request_str', 'safety_settings', 'stream', 'text', 'usage', 'usage_metadata', 'vertex_ai', 'vertex_credentials', 'vertex_location', 'vertex_project', 'vision']

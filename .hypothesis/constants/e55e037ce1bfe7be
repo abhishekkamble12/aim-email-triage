@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\relextract.py
+# hypothesis_version: 6.151.4
+
+[1500, '%s(%r, %r)', '%s:\n%s', '&(\\w+?);', '(%r...', '(%s(%s, %s)', '-', '.', '.*\\bin\\b(?!\\b.+ing)', '...%r)', ':memory:', '=', 'CARDINAL', 'DATE', 'DE', 'DURATION', 'FACILITY', 'GPE', 'IN', 'LOC', 'LOCATION', 'MEASURE', 'MONEY', 'ORG', 'ORGANIZATION', 'PER', 'PERCENT', 'PERSON', '[%s: %r] %r [%s: %r]', '_', '__main__', 'ace', 'conll2002', 'esp.train', 'filler', 'ieer', 'lcon', 'ned.train', 'objclass', 'objsym', 'objtext', 'rcon', 'subjclass', 'subjsym', 'subjtext', 'untagged_filler']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_strategy\lowest_tpm_rpm_v2.py
+# hypothesis_version: 6.151.4
+
+[0.1, 429, '%H-%M', ':', 'current_rpm', 'current_tpm', 'hidden_params', 'id', 'inf', 'litellm_model_name', 'litellm_params', 'model', 'model_group', 'model_id', 'model_info', 'model_name', 'num_retries', 'retry-after', 'rpm', 'rpm_limit', 'total_tokens', 'tpm', 'tpm_limit', 'tpm_rpm_limits', '{}:{}:rpm:{}', '{}:{}:tpm:{}']

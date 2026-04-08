@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\drt.py
+# hypothesis_version: 6.151.4
+
+[100, 300, '  | ', ' %s ', ' /\\ ', ' \\  ', ' _', ' |', '%s', '(', '([],[])', '([x,y],[sees(x,y)])', '([x],[])', '([x],[man(x)])', '([{}],[{}])', ')', '+', ',', ', ', '-', '-|', ':', '=', 'DRS', 'DRT', 'PRO', 'TEST PARSE', 'Test fol()', 'Test pretty_print()', '[', '\\x.([],[P(x)])', ']', '_', '_ ', '__  ', '__main__', '_|', 'helvetica', 'linespace', 'nw', 'quantified', 'x', 'z', '| ', '|-', '|_']

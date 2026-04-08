@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\llm_provider_key\types\provider_api_key_write_provider.py
+# hypothesis_version: 6.151.4
+
+['anthropic', 'bedrock', 'custom-llm', 'gemini', 'ollama', 'openai', 'openrouter', 'opik-free', 'vertex-ai']

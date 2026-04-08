@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\trajectory_accuracy\templates.py
+# hypothesis_version: 6.151.4
+
+['No action', 'No goal specified', 'No observation', 'No result specified', 'No thought', 'action', 'final_result', 'goal', 'observation', 'thought', 'trajectory']

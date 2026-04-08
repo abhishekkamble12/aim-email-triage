@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\sagemaker\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+[200, 1024, 'sagemaker', 'sagemaker_base_url', 'sagemaker_chat']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\s3_v2.py
+# hypothesis_version: 6.151.4
+
+[200, '/', 'Cache-Control', 'Content-Disposition', 'Content-Language', 'Content-Type', 'GET', 'PUT', 'S3Logger', 'application/json', 'en', 'metadata', 'os.environ/', 's3', 's3_api_version', 's3_aws_access_key_id', 's3_aws_profile_name', 's3_aws_role_name', 's3_aws_session_name', 's3_aws_session_token', 's3_aws_sts_endpoint', 's3_bucket_name', 's3_config', 's3_endpoint_url', 's3_path', 's3_region_name', 's3_use_key_prefix', 's3_use_ssl', 's3_use_team_prefix', 's3_verify', 'ssl_verify', 'user_api_key_alias', 'utf-8', 'x-amz-content-sha256']

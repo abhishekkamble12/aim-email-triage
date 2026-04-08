@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\vector_store_files\main.py
+# hypothesis_version: 6.151.4
+
+['acreate', 'adelete', 'alist', 'aretrieve', 'aretrieve_content', 'attributes', 'aupdate', 'client', 'file_id', 'litellm_call_id', 'litellm_logging_obj', 'openai', 'vector_store_id']

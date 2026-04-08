@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_embeddings\embedding_handler.py
+# hypothesis_version: 6.151.4
+
+[408, 'api_base', 'complete_input_dict', 'embedding', 'gemini', 'headers', 'timeout', 'vertex_ai', 'vertex_ai_beta']

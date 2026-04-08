@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\caching.py
+# hypothesis_version: 6.151.4
+
+['DynamicCacheControl', 'acompletion', 'aembedding', 'arerank', 'aresponses', 'atext_completion', 'atranscription', 'azure-blob', 'completion', 'disk', 'embedding', 'gcs', 'local', 'namespace', 'no-cache', 'no-store', 'qdrant-semantic', 'redis', 'redis-semantic', 'rerank', 'responses', 's-max-age', 's-maxage', 's3', 'text_completion', 'transcription', 'ttl']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\nkjp.py
+# hypothesis_version: 6.151.4
+
+['(', ')', ',', '.*', '.*/div/ab', '.*/header.xml', '.*/seg/fs', '.*/sourceDesc$', '.*p/.*s', '/header.xml', '</choice>', '</nkjp:paren>', '<choice>', '<nkjp:paren>', 'No such mode!', 'ann_morphosyntax.xml', 'ann_segmentation.xml', 'author', 'bibl/author', 'bibl/date', 'bibl/idno', 'bibl/note', 'bibl/publisher', 'bibl/title', 'corresp', 'ctag', 'date', 'header.xml', 'id', 'idno', 'interp', 'interps', 'lex', 'mode', 'name', 'nkjp:[^ ]* ', 'note', 'orth', 'publisher', 'string', 'tags', 'text.xml', 'title', 'type', 'value']

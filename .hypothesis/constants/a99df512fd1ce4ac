@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\gemini_embeddings\batch_embed_content_transformation.py
+# hypothesis_version: 6.151.4
+
+['embedding', 'embeddings', 'input', 'models/{}', 'values']

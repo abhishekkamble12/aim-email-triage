@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\httpx_client.py
+# hypothesis_version: 6.151.4
+
+[100, 'Accept-Encoding', 'Authorization', 'Comet-Workspace', 'Content-Encoding', 'Content-Length', 'Content-Type', 'PATCH', 'POST', 'PUT', 'SSL_CERT_FILE', '_OPIK_HTTP_PROXY', 'content-type', 'follow_redirects', 'gzip', 'limits', 'proxy', 'timeout', 'utf-8', 'verify']

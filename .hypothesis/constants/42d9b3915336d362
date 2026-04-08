@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\alerts\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 422, 'GET', 'POST', 'PUT', 'alert_type', 'application/json', 'content-type', 'enabled', 'filters', 'id', 'ids', 'metadata', 'name', 'page', 'size', 'sorting', 'triggers', 'v1/private/alerts', 'webhook', 'write']

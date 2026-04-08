@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\secret_managers\main.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, 200, 300, 3600, '/', 'Accept', 'Authorization', 'CIRCLE_OIDC_TOKEN', 'CIRCLE_OIDC_TOKEN_V2', 'Google', 'Metadata-Flavor', 'audience', 'azure', 'circleci', 'circleci_v2', 'env', 'env_path', 'false', 'file', 'github', 'google', 'local', 'oidc/', 'os.environ/', 'r', 'read_and_write', 'read_only', 'true', 'value']

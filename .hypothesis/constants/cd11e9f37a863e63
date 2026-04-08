@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\router.py
+# hypothesis_version: 6.151.4
+
+[300, 3600, '__class__', 'allow', 'audio_transcription', 'azure', 'chat', 'completion', 'cost-based-routing', 'development', 'embedding', 'free', 'image_generation', 'input_cost_per_token', 'least-busy', 'max_retries', 'moderations', 'openai', 'paid', 'params', 'production', 'prompt_caching', 'rerank', 'self', 'simple-shuffle', 'staging', 'usage-based-routing']

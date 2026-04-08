@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\gemini_embeddings\batch_embed_content_handler.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, 200, 300, 'Authorization', 'Content-Type', 'api_base', 'batch_embedding', 'complete_input_dict', 'gemini', 'headers', 'timeout', 'vertex_ai']

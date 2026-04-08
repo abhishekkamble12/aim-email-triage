@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\image_generation\amazon_nova_canvas_transformation.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'INPAINTING', 'TEXT_IMAGE', '__', 'amazon.nova-canvas', 'bedrock', 'hd', 'height', 'images', 'inpaintingParams', 'model_id', 'n', 'numberOfImages', 'premium', 'quality', 'size', 'standard', 'taskType', 'text', 'textToImageParams', 'width', 'x']

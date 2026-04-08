@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\image_edit\stability_transformation.py
+# hypothesis_version: 6.151.4
+
+[400, 'Content-Type', '_', '_hidden_params', '_n', '_response_format', 'additional_headers', 'application/json', 'aspect_ratio', 'bedrock', 'bedrock://image-edit', 'change_strength', 'composition_fidelity', 'control-sketch', 'control-structure', 'control_strength', 'creativity', 'down', 'erase', 'errors', 'fidelity', 'finish_reasons', 'grow_mask', 'image', 'images', 'init_image', 'inpaint', 'left', 'mask', 'mode', 'model', 'n', 'negative_prompt', 'outpaint', 'output_format', 'png', 'prompt', 'read', 'remove-background', 'response_data.json', 'response_format', 'right', 'search-recolor', 'search-replace', 'search_prompt', 'seed', 'select_prompt', 'size', 'stability.', 'strength', 'style-guide', 'style-transfer', 'style_image', 'style_preset', 'style_strength', 'up', 'upscale', 'utf-8', 'w']

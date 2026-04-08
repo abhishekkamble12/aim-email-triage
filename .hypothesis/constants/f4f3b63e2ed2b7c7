@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\langfuse\langfuse_prompt_management.py
+# hypothesis_version: 6.151.4
+
+['2.6.0', 'ERROR', 'LANGFUSE_DEBUG', 'LANGFUSE_HOST', 'LANGFUSE_PUBLIC_KEY', 'LANGFUSE_RELEASE', 'LANGFUSE_SECRET_KEY', 'completion', 'debug', 'error_str', 'flush_interval', 'host', 'http://', 'https://', 'langfuse', 'langfuse_host', 'langfuse_public_key', 'langfuse_secret', 'langfuse_secret_key', 'litellm', 'model', 'public_key', 'release', 'sdk_integration', 'secret_key', 'system', 'text_completion', 'user']

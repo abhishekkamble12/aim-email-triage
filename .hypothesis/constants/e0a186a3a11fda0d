@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\sagemaker\completion\transformation.py
+# hypothesis_version: 6.151.4
+
+[0.0, 0.01, 500, '<s>', 'Content-Type', 'application/json', 'best_of', 'chat', 'choices', 'complete_input_dict', 'content', 'custom_prompt_dict', 'do_sample', 'final_prompt_value', 'generated_text', 'generation', 'hf_model_name', 'initial_prompt_value', 'inputs', 'llama-2', 'max_new_tokens', 'max_tokens', 'message', 'n', 'parameters', 'roles', 'self', 'stop', 'stream', 'temperature', 'top_p', 'usage']

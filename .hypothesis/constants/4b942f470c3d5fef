@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\proxy\guardrails\guardrail_hooks\tool_permission.py
+# hypothesis_version: 6.151.4
+
+['Error message', 'Result content', 'after', 'allow', 'before', 'block', 'decision', 'default_action', 'deny', 'on_disallowed_action', 'rewrite', 'tool_name', 'tool_result', 'tool_type']

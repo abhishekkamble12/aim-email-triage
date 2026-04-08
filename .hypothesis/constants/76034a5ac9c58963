@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\interactions\main.py
+# hypothesis_version: 6.151.4
+
+['acancel_interaction', 'acreate_interaction', 'adelete_interaction', 'aget_interaction', 'api_base', 'gemini', 'interaction_id', 'litellm_call_id', 'litellm_logging_obj', 'litellm_responses']

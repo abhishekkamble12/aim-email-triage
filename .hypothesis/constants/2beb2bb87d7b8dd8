@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\custom_logger.py
+# hypothesis_version: 6.151.4
+
+[10000, 'DualCache', 'HTTPException', 'LiteLLMLoggingObj', '[BASE64_REDACTED]', '[MAX_DEPTH_REACHED]', 'content', 'error_str', 'file', 'langfuse', 'langfuse_otel', 'log_event_type', 'messages', 'model', 'output', 'post_api_call', 'pre_api_call', 'redacted-by-litellm', 'response', 'text', 'type']

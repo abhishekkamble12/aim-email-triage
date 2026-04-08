@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\sequential.py
+# hypothesis_version: 6.151.4
+
+[100.0, 100, 'NgramTagger', '[A-Z][a-z]+$', '[a-z]+$', '\\W+$', '\\w+$', 'downcase', 'mixedcase', 'number', 'other', 'prevprevtag', 'prevprevtag+word', 'prevprevword', 'prevtag', 'prevtag+word', 'prevword', 'prevword+word', 'punct', 'shape', 'suffix1', 'suffix2', 'suffix3', 'upcase', 'word', 'word.lower']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\openmeter.py
+# hypothesis_version: 6.151.4
+
+['/', '/api/v1/events', '1.0', 'Authorization', 'Bearer {}', 'Content-Type', 'OPENMETER_API_KEY', 'OPENMETER_EVENT_TYPE', 'UTC', 'api/v1/events', 'completion_tokens', 'cost', 'data', 'id', 'litellm-proxy', 'litellm_call_id', 'litellm_params', 'litellm_tokens', 'metadata', 'model', 'prompt_tokens', 'response_cost', 'source', 'specversion', 'subject', 'time', 'total_tokens', 'type', 'usage', 'user', 'user_api_key_user_id']

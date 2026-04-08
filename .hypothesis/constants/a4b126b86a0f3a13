@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_utils\cooldown_handlers.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1e-09, 1.0, 400, 401, 404, 408, 429, 500, 'APIConnectionError']

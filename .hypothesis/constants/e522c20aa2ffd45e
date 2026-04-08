@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\bnc.py
+# hypothesis_version: 6.151.4
+
+['.*/s', '.*/s/(.*/)?(c|w)', '.*/teiHeader$', './/s', 'align', 'c', 'c5', 'corr', 'event', 'gap', 'hi', 'hw', 'mw', 'n', 'pause', 'pb', 'pos', 'shift', 'titleStmt/author', 'titleStmt/editor', 'titleStmt/respStmt', 'titleStmt/title', 'trunc', 'unclear', 'vocal', 'w']

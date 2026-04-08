@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\json_validation_rule.py
+# hypothesis_version: 6.151.4
+
+['ARRAY', 'BOOLEAN', 'INTEGER', 'NULL', 'NUMBER', 'OBJECT', 'STRING', 'array', 'boolean', 'function', 'integer', 'items', 'null', 'number', 'object', 'parameters', 'properties', 'string', 'type']

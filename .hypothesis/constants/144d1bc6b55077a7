@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\xai\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+[25.0, 1000.0, 'ModelInfo', 'Usage', 'completion_tokens', 'num_sources_used', 'reasoning_tokens', 'web_search_requests', 'xai']

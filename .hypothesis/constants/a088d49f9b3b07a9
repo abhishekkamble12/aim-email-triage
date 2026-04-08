@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\core_helpers.py
+# hypothesis_version: 6.151.4
+
+['/', 'COMPLETE', 'ERROR', 'ERROR_TOXIC', 'LiteLLMLoggingObj', 'Logging', 'MAX_TOKENS', 'ModelResponseStream', 'RECITATION', 'Router', 'SAFETY', 'STOP', '_skip_mcp_handler', 'bedrock', 'content_filter', 'content_filtered', 'deployment', 'end_turn', 'eos_token', 'index', 'length', 'litellm_metadata', 'litellm_params', 'llm_provider', 'llm_provider-', 'max_tokens', 'mcp_handler_context', 'metadata', 'placeholder', 'skip_mcp_handler', 'stop', 'stop_sequence', 'tool_calls', 'tool_use', 'usage', 'user_api_key', '{}-{}']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\databricks\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+['bge-large-en', 'completion_tokens', 'databricks', 'dbrx-instruct', 'gte-large-en', 'input_cost_per_token', 'llama-2-70b-chat', 'prompt_tokens']

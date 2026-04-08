@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\skills\__init__.py
+# hypothesis_version: 6.151.4
+
+['acreate_skill', 'adelete_skill', 'aget_skill', 'alist_skills', 'create_skill', 'delete_skill', 'get_skill', 'list_skills']

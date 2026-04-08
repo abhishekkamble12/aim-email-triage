@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rag\ingestion\base_ingestion.py
+# hypothesis_version: 6.151.4
+
+[b'%PDF', '/', 'Router', 'auto', 'chunk_overlap', 'chunk_size', 'chunking_strategy', 'completed', 'content-type', 'custom_llm_provider', 'document', 'document_url', 'embedding', 'failed', 'image', 'image_url', 'markdown', 'model', 'name', 'ocr', 'openai', 'pages', 'separators', 'type', 'utf-8', 'vector_store']

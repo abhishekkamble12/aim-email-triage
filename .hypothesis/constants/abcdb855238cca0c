@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\emoji\core.py
+# hypothesis_version: 6.151.4
+
+['(%s[%s]+%s)', ':', 'E', 'EmojiMatch', 'EmojiMatchZWJ', 'EmojiMatchZWJNonRGI', 'NFKC', 'Token', 'alias', 'analyze', 'config', 'demojize', 'distinct_emoji_list', 'emoji', 'emoji_count', 'emoji_list', 'emoji_type', 'emojize', 'en', 'is_emoji', 'match_end', 'match_start', 'purely_emoji', 'replace_emoji', 'text_type', 'variant', 'version', '︎', '️']

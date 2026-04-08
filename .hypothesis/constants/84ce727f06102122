@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\bcp47.py
+# hypothesis_version: 6.151.4
+
+['%%\n', '-', '/', ': ', 'Deprecated', 'Description', 'File-Date:', 'Preferred-Value', '[0-9]', '[A-Z]', '[a-zA-Z0-9]', '[a-z]', 'deprecated', 'extension', 'extlang', 'grandfathered', 'language', 'redundant', 'region', 'script', 'sd', 'singleton', 'type', 'u', 'variant']

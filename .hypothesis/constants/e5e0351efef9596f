@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\udhr.py
+# hypothesis_version: 6.151.4
+
+['(?!README|\\.).*', '.*-Arabic$', '.*-Cyrillic$', '.*-GB2312$', '.*-Greek$', '.*-Hebrew$', '.*-Latin1$', '.*-Latin2$', '.*-SJIS$', '.*-UTF8$', 'Amahuaca', 'Armenian-DallakHelv', 'Bhojpuri-Agra', 'Burmese_Myanmar-UTF8', 'Chinese_Mandarin-HZ', 'Czech-Latin2-err', 'Czech_Cesky-UTF8', 'EUC-JP', 'Esperanto-T61', 'GB2312', 'Gujarati-UTF8', 'ISO-8859-2', 'Japanese_Nihongo-EUC', 'Japanese_Nihongo-JIS', 'Lao-UTF8', 'Magahi-Agra', 'Magahi-UTF8', 'Marathi-UTF8', 'Polish-Latin2', 'Polish_Polski-Latin2', 'Russian_Russky-UTF8~', 'SJIS', 'Tamil-UTF8', 'Vietnamese-TCVN', 'Vietnamese-VIQR', 'Vietnamese-VPS', 'cp1250', 'cp1251', 'cp1256', 'cyrillic', 'greek', 'hebrew', 'hz', 'iso2022_jp', 'latin-1', 'latin1', 'latin4', 'latin5', 'udhr', 'utf-16-le', 'utf-8']

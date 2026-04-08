@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\cohere\embed\transformation.py
+# hypothesis_version: 6.151.4
+
+['3', 'Authorization', 'Content-Type', 'application/json', 'billed_units', 'complete_input_dict', 'dimensions', 'embedding', 'embedding_types', 'embeddings', 'encoding_format', 'image', 'images', 'index', 'input', 'input_tokens', 'list', 'meta', 'object', 'output_dimension', 'usage']

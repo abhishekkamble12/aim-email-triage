@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\chat\o_series_transformation.py
+# hypothesis_version: 6.151.4
+
+[400, '/', 'content', 'frequency_penalty', 'function_call', 'functions', 'logprobs', 'max_tokens', 'o1', 'o3', 'o4', 'openai', 'parallel_tool_calls', 'presence_penalty', 'reasoning_effort', 'response_format', 'role', 'system', 'temperature', 'tool_choice', 'tools', 'top_logprobs', 'top_p', 'user']

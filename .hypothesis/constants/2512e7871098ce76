@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\custom_httpx\aiohttp_transport.py
+# hypothesis_version: 6.151.4
+
+[1024, '://', 'Connection closed', 'False', 'Session is closed', '_client_factory', '_loop', 'all', 'connect', 'pool', 'read', 'sni_hostname', 'timeout', 'transfer-encoding']

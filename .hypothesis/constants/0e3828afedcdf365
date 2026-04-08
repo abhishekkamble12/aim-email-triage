@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\image_variations\handler.py
+# hypothesis_version: 6.151.4
+
+[200, 500, 'GET', 'api_base', 'api_key', 'async_call', 'base_url', 'complete_input_dict', 'data', 'headers', 'http_client', 'https://litellm.ai', 'max_retries', 'organization', 'response', 'status_code', 'text', 'timeout']

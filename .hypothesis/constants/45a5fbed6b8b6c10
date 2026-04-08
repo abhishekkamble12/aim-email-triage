@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\serializer.py
+# hypothesis_version: 6.151.4
+
+['!limit', '<cyclic>', '__sentry_repr__', '_ids', '_meta', '_objs', 'always', 'breadcrumbs', 'custom_repr', 'data', 'description', 'extra', 'inf', 'is_vars', 'max_value_length', 'memo', 'remaining_depth', 'replace', 'request', 'spans', 'utf-8', 'values', 'x']

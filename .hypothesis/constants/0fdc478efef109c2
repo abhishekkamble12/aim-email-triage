@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\replicate\chat\handler.py
+# hypothesis_version: 6.151.4
+
+[600.0, 200, 400, 422, 500, 'canceled', 'error', 'failed', 'output', 'processing', 'replicate', 'starting', 'status', 'stream', 'streaming request', 'succeeded', 'timeout']

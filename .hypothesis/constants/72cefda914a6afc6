@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\together_ai\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+['(\\d+b)', '(\\d+m)', 'b', 'm', 'together-ai-4.1b-8b', 'together-ai-8.1b-21b', 'together-ai-up-to-4b']

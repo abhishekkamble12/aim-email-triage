@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\ovhcloud\chat\transformation.py
+# hypothesis_version: 6.151.4
+
+[400, '/', 'Content-Type', 'OVHCloud Error: {}', 'Unknown error', 'application/json', 'choices', 'code', 'created', 'delta', 'error', 'extra_body', 'function_call', 'id', 'message', 'model', 'ovhcloud', 'reasoning', 'reasoning_content', 'response_format', 'tool_choice', 'tools', 'usage']

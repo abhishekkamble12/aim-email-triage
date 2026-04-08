@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\check\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 401, 403, 'GET', 'POST', 'application/json', 'content-type', 'v1/private/auth']

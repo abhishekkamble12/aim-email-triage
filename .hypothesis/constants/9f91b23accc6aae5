@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\syc_eval\metric.py
+# hypothesis_version: 6.151.4
+
+['citation', 'correct', 'erroneous', 'ethos', 'in_context', 'incorrect', 'justification', 'none', 'openai/gpt-4.1', 'openai/gpt-5', 'preemptive', 'progressive', 'regressive', 'simple']

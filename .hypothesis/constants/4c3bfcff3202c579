@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\config.py
+# hypothesis_version: 6.151.4
+
+[256000, 1000000, '*** HIDDEN ***', 'CRITICAL', 'DEBUG', 'Default Project', 'ERROR', 'INFO', 'OPIK_CONFIG_PATH', 'WARNING', 'after', 'api_key', 'default', 'guardrails/', 'localhost', 'opik', 'opik.log', 'opik/api/', 'opik_', 'pytest', 'url_override', 'utf-8', 'w+', 'workspace', '~/.opik.config']

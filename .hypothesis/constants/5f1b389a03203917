@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\skills\main.py
+# hypothesis_version: 6.151.4
+
+['acreate_skill', 'adelete_skill', 'aget_skill', 'alist_skills', 'anthropic', 'client', 'display_title', 'files', 'limit', 'litellm_call_id', 'litellm_logging_obj', 'metadata', 'page', 'shared_session', 'skill_id', 'skills', 'source', 'user_id']

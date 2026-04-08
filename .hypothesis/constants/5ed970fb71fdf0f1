@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\hmm.py
+# hypothesis_version: 6.151.4
+
+[1e-06, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 100, 1000, 20000, '%s', '-', 'Entropy:', 'H =          ', 'H(point) =   ', 'HMM POS tagging demo', 'HMM-tagged:', 'H_exh =      ', 'H_exh(point)=', 'Test:', 'Testing', 'Testing...', 'Training HMM...', 'Untagged:', '[*]|--|[^+*-]+', 'bear', 'bull', 'convergence_logprob', 'down', 'iteration', 'logprob', 'max_iterations', 'model', 'news', 'p(tagged) =  ', 'probability =', 'static', 'tagging =    ', 'unchanged', 'up', 'verbose']

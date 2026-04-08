@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\gcs_bucket\gcs_bucket.py
+# hypothesis_version: 6.151.4
+
+['%Y-%m-%d', 'GCS_BATCH_SIZE', 'GCS_FLUSH_INTERVAL', 'bucket_name', 'default', 'error_str', 'gcs_bucket_name', 'gcs_log_id', 'id', 'kwargs', 'litellm_params', 'metadata', 'path_service_account', 'payload', 'response_obj', 'true', 'utf-8', 'vertex_instance']

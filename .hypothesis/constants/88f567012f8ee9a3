@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\types\service_toggles_config.py
+# hypothesis_version: 6.151.4
+
+['alertsEnabled', 'allow', 'csvUploadEnabled', 'datasetExportEnabled', 'exportEnabled', 'guardrailsEnabled', 'opikAIEnabled', 'welcomeWizardEnabled']

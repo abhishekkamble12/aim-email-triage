@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\llms\anthropic_messages\anthropic_response.py
+# hypothesis_version: 6.151.4
+
+['assistant', 'end_turn', 'max_tokens', 'message', 'redacted_thinking', 'stop_sequence', 'text', 'thinking', 'tool_use']

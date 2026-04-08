@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\realtime_streaming.py
+# hypothesis_version: 6.151.4
+
+['*', 'Connection closed', 'current_delta_chunks', 'current_delta_type', 'current_item_chunks', 'current_response_id', 'response', 'response.create', 'response.done', 'session.created', 'session.updated', 'type', 'utf-8']

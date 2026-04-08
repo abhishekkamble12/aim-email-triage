@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\senseval.py
+# hypothesis_version: 6.151.4
+
+[' <wf pos=\'"\'>"</wf>', '"""', '\'"\'', '(\\s+)\\&(\\s+)', '<!DOCTYPE[^>]*>', '<&\\w+ \\.>', '<(@|/?p)>', '<([~\\^])>', '<(\\&\\w+;)>', '</instance', '<\\&I[^>]*>', '<\\&frasl>\\s*<p[^>]*>', '<\\[\\/?[^>]+\\]*>', '<instance', '<lexelt', '<{([^}]+)}>', 'ACK', 'FRASL', '\\1', '\\1"\\2"/>', '\\1&amp;\\2', '\\s*"\\s*<p=\\\'"\\\'/>', 'answer', 'compound', 'context', 'head', 'head specified twice', 'instance', 'lexelt', 'pos', 's', 'senseid', 'unexpected tag %s', 'wf']

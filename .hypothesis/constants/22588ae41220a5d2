@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\opik\opik_payload_builder\extractors.py
+# hypothesis_version: 6.151.4
+
+['USD', 'anthropic', 'anthropic_vertexai', 'api_base', 'bedrock', 'bedrock_converse', 'cache_hit', 'call_type', 'cost', 'created_from', 'currency', 'current_span_data', 'error_str', 'gemini', 'google_ai', 'google_vertexai', 'groq', 'hidden_params', 'id', 'litellm', 'model', 'model_group', 'model_id', 'model_parameters', 'openai', 'opik', 'opik_', 'project_name', 'requester_metadata', 'response_cost', 'saved_cache_cost', 'status', 'tags', 'thread_id', 'total_tokens', 'trace_id', 'type']

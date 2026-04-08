@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\transitionparser.py
+# hypothesis_version: 6.151.4
+
+[0.2, 0.5, 1.0, 1000000, '   Arcs : ', '  Buffer : ', ':', ':1.0', 'BUF_0_FEATS_', 'BUF_0_FORM_', 'BUF_0_LDEP_', 'BUF_0_LEMMA_', 'BUF_0_POS_', 'BUF_0_RDEP_', 'BUF_1_FORM_', 'BUF_1_POS_', 'BUF_2_POS_', 'BUF_3_POS_', 'LEFTARC', 'REDUCE', 'RIGHTARC', 'SHIFT', 'STK_0_FEATS_', 'STK_0_FORM_', 'STK_0_LDEP_', 'STK_0_LEMMA_', 'STK_0_POS_', 'STK_0_RDEP_', 'STK_1_POS_', 'Stack : ', '_', 'address', 'arc-eager', 'arc-standard', 'feats', 'head', 'lemma', 'poly', 'rb', 'rel', 'tag', 'utf-8', 'wb', 'word', '|']

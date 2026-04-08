@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\prompt\chat\chat_prompt_template.py
+# hypothesis_version: 6.151.4
+
+['<<</image>>>', '<<</video>>>', '<<<image>>>', '<<<video>>>', '\\{\\{(.*?)\\}\\}', 'content', 'detail', 'duration', 'format', 'image_url', 'mime_type', 'role', 'text', 'type', 'url', 'video', 'video_url', 'vision']

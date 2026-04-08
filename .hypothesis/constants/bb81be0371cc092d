@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\emoji\tokenizer.py
+# hypothesis_version: 6.151.4
+
+['EmojiMatch', 'EmojiMatchZWJ', 'EmojiMatchZWJNonRGI', 'Token', 'component', 'data', 'emoji', 'emojis', 'end', 'filter_tokens', 'match_end', 'match_start', 'start', 'status', 'tokenize', '\u200d', '︎', '️']

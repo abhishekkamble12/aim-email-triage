@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\caching\caching.py
+# hypothesis_version: 6.151.4
+
+['Final hashed key: %s', 'acompletion', 'aembedding', 'arerank', 'aresponses', 'assistant', 'atext_completion', 'atranscription', 'cache', 'cache key is None', 'cache_key', 'caching_groups', 'choices', 'completion', 'content', 'default_off', 'default_on', 'delete_cache_keys', 'delta', 'disconnect', 'embedding', 'file', 'file_checksum', 'file_name', 'gcp_service_account', 'gcp_ssl_ca_certs', 'host', 'index', 'inf', 'input', 'litellm_params', 'messages', 'metadata', 'model', 'model_dump', 'model_group', 'name', 'namespace', 'object', 'password', 'ping', 'port', 'preset_cache_key', 'redis', 'redis_flush_size', 'redis_namespace', 'rerank', 'response', 'responses', 'role', 's-max-age', 's-maxage', 'startup_nodes', 'text_completion', 'timestamp', 'transcription', 'ttl', 'use-cache']

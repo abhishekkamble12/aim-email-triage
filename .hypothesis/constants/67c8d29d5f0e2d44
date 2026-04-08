@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\datadog\datadog.py
+# hypothesis_version: 6.151.4
+
+[202, 413, 1000, '10518', 'Content-Encoding', 'Content-Type', 'DD-API-KEY', 'DD_API_KEY', 'DD_SITE', 'application/json', 'cache_hit', 'caching_groups', 'call_type', 'current_root_span', 'current_span', 'dd.span_id', 'dd.trace_id', 'end_time', 'endpoint', 'failure', 'gzip', 'healthy', 'id', 'litellm.completion', 'litellm_params', 'messages', 'metadata', 'model', 'model_parameters', 'optional_params', 'previous_models', 'response', 'response_cost', 'response_time', 'span_id', 'spend', 'start_time', 'status', 'trace_id', 'unhealthy', 'usage', 'user', 'utf-8']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\context_recall\template.py
+# hypothesis_version: 6.151.4
+
+[0.2, 0.5, 0.9, 'Berlin.', 'Marseille.', 'Paris.', 'context', 'context_recall_score', 'expected_output', 'input', 'output', 'reason', 'title']

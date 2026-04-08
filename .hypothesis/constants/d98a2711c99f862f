@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai_like\embedding\handler.py
+# hypothesis_version: 6.151.4
+
+[408, 500, 'api_base', 'complete_input_dict', 'embeddings', 'input', 'model', 'timeout']

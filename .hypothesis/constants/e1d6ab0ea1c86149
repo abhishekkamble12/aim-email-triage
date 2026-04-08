@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\gemini\common_utils.py
+# hypothesis_version: 6.151.4
+
+[200, 'GEMINI_API_BASE', 'GEMINI_API_KEY', 'GOOGLE_API_KEY', 'ascii', 'contents', 'gemini/', 'litellm_params', 'model', 'models', 'models/', 'name', 'tokenizer_used', 'totalTokens', 'v1beta']

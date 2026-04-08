@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\prompt\text\prompt.py
+# hypothesis_version: 6.151.4
+
+['Prompt', 'commit', 'created_from', 'id', 'messages_json', 'name', 'opik_ui', 'template', 'type', 'version']

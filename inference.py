@@ -1,113 +1,489 @@
+"""Inference module for the OpenEnv RL Email Triage project.
+
+Wraps the RL inference loop in a FastAPI server (port 7860) so the
+Hugging Face Space stays 'Running' after tasks complete. The inference
+worker runs in a background thread on startup.
+
+Stdout contract (parsed by the OpenEnv grader):
+  [START] task=<name> env=<env> model=<model>
+  [STEP]  step=<n> action=<str> reward=<0.00> done=<true|false> error=<msg|null>
+  [END]   success=<true|false> steps=<n> rewards=<r1,r2,...>
+"""
+
+from __future__ import annotations
+
+import json
+import logging
 import os
 import re
-import json
+import sys
+import threading
+from contextlib import asynccontextmanager
+from dataclasses import dataclass
+from enum import Enum
+from typing import AsyncGenerator
+
+import uvicorn
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 from openai import OpenAI
+
 from env import AIMEnv, Action, Grader
-from env.models import TaskConfig
+from env.models import Observation, TaskConfig
 
 
-def get_env_config() -> tuple:
-    """Read HF_TOKEN (required), API_BASE_URL, MODEL_NAME from environment."""
-    hf_token = os.environ.get("HF_TOKEN")
-    if not hf_token:
-        raise ValueError("HF_TOKEN environment variable is required")
-    api_base_url = os.environ.get("API_BASE_URL", "https://api.openai.com/v1")
-    model_name = os.environ.get("MODEL_NAME", "gpt-4o-mini")
-    return (hf_token, api_base_url, model_name)
+# ---------------------------------------------------------------------------
+# Logging — write to stdout so the grader captures every line.
+# propagate=True so pytest's caplog can also capture records in tests.
+# ---------------------------------------------------------------------------
+
+logger = logging.getLogger("inference")
 
 
-def format_start(task_name: str, env_name: str, model_name: str) -> str:
-    return f"[START] task={task_name} env={env_name} model={model_name}"
+def _configure_logger() -> None:
+    """Attach a stdout StreamHandler if one isn't already present."""
+    if not any(
+        isinstance(h, logging.StreamHandler) and getattr(h, "stream", None) is sys.stdout
+        for h in logger.handlers
+    ):
+        _handler = logging.StreamHandler(sys.stdout)
+        _handler.setFormatter(logging.Formatter("%(message)s"))
+        logger.addHandler(_handler)
+    logger.setLevel(logging.DEBUG)
 
 
-def format_step(step: int, action: str, reward: float, done: bool, error) -> str:
-    return (
-        f"[STEP] step={step} action={action} reward={reward:.2f} "
-        f"done={str(done).lower()} error={error if error is not None else 'null'}"
-    )
+# ---------------------------------------------------------------------------
+# Circuit-breaker state
+# ---------------------------------------------------------------------------
+
+class _CBState(Enum):
+    CLOSED = "closed"      # normal operation
+    OPEN = "open"          # tripped — skip LLM calls for this task
 
 
-def format_end(success: bool, steps: int, rewards: list) -> str:
-    rewards_str = ",".join(f"{r:.2f}" for r in rewards)
-    return f"[END] success={str(success).lower()} steps={steps} rewards={rewards_str}"
+@dataclass
+class _CircuitBreaker:
+    """Per-task circuit breaker that trips on unrecoverable HTTP errors."""
+
+    state: _CBState = _CBState.CLOSED
+
+    def trip(self) -> None:
+        self.state = _CBState.OPEN
+
+    @property
+    def is_open(self) -> bool:
+        return self.state is _CBState.OPEN
 
 
-def run_episode(env: AIMEnv, client: OpenAI, model: str, task_name: str, env_name: str) -> None:
-    obs = env.reset()
-    print(format_start(task_name, env_name, model))
+# ---------------------------------------------------------------------------
+# EnvConfig
+# ---------------------------------------------------------------------------
 
-    done = False
-    step_num = 0
-    rewards_list = []
 
-    while not done:
-        error = None
-        action = None
+@dataclass
+class EnvConfig:
+    """Runtime configuration loaded from environment variables.
 
-        # Build prompt
-        inbox_lines = "\n".join(
-            f"  - id={e.id} subject={e.subject!r} sender={e.sender} preview={e.preview!r}"
-            for e in obs.inbox
+    Attributes:
+        hf_token: HuggingFace API token used as the OpenAI-compatible API key.
+        api_base_url: Base URL for the OpenAI-compatible inference endpoint.
+        model_name: Name of the model to use for chat completions.
+        timeout: Request timeout in seconds for each LLM API call.
+    """
+
+    hf_token: str
+    api_base_url: str
+    model_name: str
+    timeout: int = 30
+
+    @classmethod
+    def from_env(cls) -> "EnvConfig":
+        """Construct an EnvConfig by reading values from os.environ.
+
+        Returns:
+            A fully populated EnvConfig instance.
+
+        Raises:
+            ValueError: If the required HF_TOKEN environment variable is absent.
+        """
+        hf_token = os.environ.get("HF_TOKEN")
+        if not hf_token:
+            raise ValueError("HF_TOKEN environment variable is required")
+        return cls(
+            hf_token=hf_token,
+            api_base_url=os.environ.get("API_BASE_URL", "https://api.openai.com/v1"),
+            model_name=os.environ.get("MODEL_NAME", "gpt-4o-mini"),
+            timeout=int(os.environ.get("INFERENCE_TIMEOUT", "30")),
         )
-        prompt = (
-            f"You are an email triage agent.\n\n"
-            f"Inbox:\n{inbox_lines if inbox_lines else '  (empty)'}\n\n"
+
+
+# ---------------------------------------------------------------------------
+# PromptBuilder
+# ---------------------------------------------------------------------------
+
+
+class PromptBuilder:
+    """Stateless builder that converts an Observation into an LLM prompt string."""
+
+    def build(self, obs: Observation) -> str:
+        """Build a prompt string from the given observation.
+
+        Args:
+            obs: The current environment observation.
+
+        Returns:
+            A formatted prompt string ready to send to the LLM.
+        """
+        if obs.inbox:
+            inbox_section = "\n".join(
+                f"  - id={e.id} subject={e.subject!r} sender={e.sender}"
+                f" preview={e.preview!r}"
+                for e in obs.inbox
+            )
+        else:
+            inbox_section = "  (empty)"
+
+        return (
+            "You are an email triage agent.\n\n"
+            f"Inbox:\n{inbox_section}\n\n"
             f"Time left: {obs.time_left}  Step: {obs.step_count}\n\n"
-            f"Available actions:\n"
-            f'  {{"type": "open", "email_id": "<id>"}}\n'
-            f'  {{"type": "classify", "email_id": "<id>", "category": "<urgent|normal|spam|promotions|social|updates|forums>", '
-            f'"priority": "<low|medium|high|critical>", "route": "<inbox|archive|trash|escalate|review>"}}\n'
-            f'  {{"type": "detect_phishing", "email_id": "<id>"}}\n'
-            f'  {{"type": "submit"}}\n\n'
-            f"Respond with a single JSON object representing your chosen action."
+            "Available actions:\n"
+            '  {"type": "open", "email_id": "<id>"}\n'
+            '  {"type": "classify", "email_id": "<id>", "category": '
+            '"<urgent|normal|spam|promotions|social|updates|forums>", '
+            '"priority": "<low|medium|high|critical>", '
+            '"route": "<inbox|archive|trash|escalate|review>"}\n'
+            '  {"type": "detect_phishing", "email_id": "<id>"}\n'
+            '  {"type": "submit"}\n\n'
+            "Respond with a single JSON object representing your chosen action."
         )
+
+
+# ---------------------------------------------------------------------------
+# ActionParser
+# ---------------------------------------------------------------------------
+
+
+class ActionParser:
+    """Parses raw LLM text output into a validated Action instance.
+
+    Handles markdown-fenced JSON blocks and wraps parse errors as ValueError.
+    """
+
+    def parse(self, raw: str) -> Action:
+        """Parse a raw LLM response string into an Action.
+
+        Args:
+            raw: The raw text returned by the LLM, possibly wrapped in
+                markdown fences.
+
+        Returns:
+            A validated Action instance.
+
+        Raises:
+            ValueError: If the string is not valid JSON or cannot be used to
+                construct an Action.
+        """
+        m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw, re.DOTALL)
+        if m:
+            raw = m.group(1)
 
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw = response.choices[0].message.content.strip()
-            # Extract JSON from possible markdown fences
-            m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw, re.DOTALL)
-            if m:
-                raw = m.group(1)
             parsed = json.loads(raw)
-            action = Action(**parsed)
         except Exception as exc:
-            error = str(exc)
-            action = Action(type="submit")
+            raise ValueError(str(exc)) from exc
 
-        action_str = action.type
-        if action.email_id:
-            action_str += f":{action.email_id}"
-
-        obs, reward, done = env.step(action)
-        rewards_list.append(reward.value)
-        print(format_step(step_num, action_str, reward.value, done, error))
-        step_num += 1
-
-    result = env.get_result()
-    score = Grader().grade_episode(result)
-    print(format_end(score >= 0.5, step_num, rewards_list))
+        try:
+            return Action(**parsed)
+        except Exception as exc:
+            raise ValueError(str(exc)) from exc
 
 
-def main():
-    hf_token, api_base_url, model_name = get_env_config()
-    client = OpenAI(base_url=api_base_url, api_key=hf_token)
+# ---------------------------------------------------------------------------
+# EpisodeSummary
+# ---------------------------------------------------------------------------
 
-    tasks = [
-        ("easy", TaskConfig(seed=42, num_emails=3, time_budget=20,
-                            ambiguity_level=0.0, has_phishing=False, time_pressure=0.0)),
-        ("medium", TaskConfig(seed=137, num_emails=7, time_budget=30,
-                              ambiguity_level=0.2, has_phishing=True, time_pressure=0.1)),
-        ("hard", TaskConfig(seed=999, num_emails=12, time_budget=40,
-                            ambiguity_level=0.5, has_phishing=True, time_pressure=0.5)),
+
+@dataclass
+class EpisodeSummary:
+    """Per-episode metrics returned by EpisodeRunner.run().
+
+    Attributes:
+        task_name: Human-readable task identifier (e.g. "easy").
+        env_name: Environment identifier (e.g. "aim-email-triage").
+        steps: Total number of steps executed in the episode.
+        rewards: Reward value collected at each step.
+        success: True when the graded score is >= 0.5.
+    """
+
+    task_name: str
+    env_name: str
+    steps: int
+    rewards: list[float]
+    success: bool
+
+
+# ---------------------------------------------------------------------------
+# EpisodeRunner
+# ---------------------------------------------------------------------------
+
+
+def _is_fatal_http_error(exc: Exception) -> bool:
+    """Return True for HTTP 402 / 403 errors that should trip the circuit breaker."""
+    msg = str(exc).lower()
+    # openai SDK surfaces these as status_code attributes or in the message
+    for marker in ("402", "403", "payment required", "forbidden", "permission"):
+        if marker in msg:
+            return True
+    # Check for openai APIStatusError with status_code attribute
+    status = getattr(exc, "status_code", None)
+    if status in (402, 403):
+        return True
+    return False
+
+
+class EpisodeRunner:
+    """Executes a single RL episode loop (reset → step → grade)."""
+
+    def __init__(
+        self,
+        env: AIMEnv,
+        client: OpenAI,
+        config: EnvConfig,
+        circuit_breaker: _CircuitBreaker | None = None,
+    ) -> None:
+        self.env = env
+        self.client = client
+        self.config = config
+        self._prompt_builder = PromptBuilder()
+        self._action_parser = ActionParser()
+        self._cb = circuit_breaker or _CircuitBreaker()
+
+    def run(self, task_name: str, env_name: str) -> EpisodeSummary:
+        """Execute one full episode and return a summary.
+
+        Args:
+            task_name: Human-readable task identifier.
+            env_name: Environment identifier string.
+
+        Returns:
+            An EpisodeSummary with step count, rewards, and success flag.
+        """
+        obs = self.env.reset()
+        done = False
+        step_num = 0
+        rewards_list: list[float] = []
+
+        while not done:
+            error: str | None = None
+            action: Action
+
+            # --- Circuit breaker: skip LLM if tripped ---
+            if self._cb.is_open:
+                error = "circuit_breaker_open"
+                action = Action(type="submit")
+            else:
+                prompt = self._prompt_builder.build(obs)
+                try:
+                    response = self.client.chat.completions.create(
+                        model=self.config.model_name,
+                        messages=[{"role": "user", "content": prompt}],
+                        timeout=self.config.timeout,
+                    )
+                    raw = (response.choices[0].message.content or "").strip()
+                    action = self._action_parser.parse(raw)
+
+                except (TimeoutError, ConnectionError) as exc:
+                    logger.warning("LLM transient error: %s", exc)
+                    error = str(exc)
+                    action = Action(type="submit")
+
+                except Exception as exc:
+                    error = str(exc)
+                    if _is_fatal_http_error(exc):
+                        logger.error(
+                            "Circuit breaker tripped (fatal HTTP error): %s", exc
+                        )
+                        self._cb.trip()
+                    action = Action(type="submit")
+
+            # Build action string for the log
+            action_str = action.type
+            if action.email_id:
+                action_str += f":{action.email_id}"
+
+            try:
+                obs, reward, done = self.env.step(action)
+            except Exception as exc:
+                logger.error("env.step raised: %s", exc)
+                done = True
+                continue
+
+            rewards_list.append(reward.value)
+
+            # --- Exact stdout contract ---
+            logger.info(
+                "[STEP] step=%d action=%s reward=%.2f done=%s error=%s",
+                step_num,
+                action_str,
+                reward.value,
+                str(done).lower(),
+                error if error is not None else "null",
+            )
+            step_num += 1
+
+        result = self.env.get_result()
+        score = Grader().grade_episode(result)  # type: ignore[no-untyped-call]
+        return EpisodeSummary(
+            task_name=task_name,
+            env_name=env_name,
+            steps=step_num,
+            rewards=rewards_list,
+            success=score >= 0.5,
+        )
+
+
+# ---------------------------------------------------------------------------
+# InferenceRunner
+# ---------------------------------------------------------------------------
+
+
+class InferenceRunner:
+    """Top-level orchestrator that runs all tasks end-to-end."""
+
+    DEFAULT_TASKS: list[tuple[str, TaskConfig]] = [
+        (
+            "easy",
+            TaskConfig(
+                seed=42,
+                num_emails=3,
+                time_budget=20,
+                ambiguity_level=0.0,
+                has_phishing=False,
+                time_pressure=0.0,
+            ),
+        ),
+        (
+            "medium",
+            TaskConfig(
+                seed=137,
+                num_emails=7,
+                time_budget=30,
+                ambiguity_level=0.2,
+                has_phishing=True,
+                time_pressure=0.1,
+            ),
+        ),
+        (
+            "hard",
+            TaskConfig(
+                seed=999,
+                num_emails=12,
+                time_budget=40,
+                ambiguity_level=0.5,
+                has_phishing=True,
+                time_pressure=0.5,
+            ),
+        ),
     ]
 
-    for task_name, config in tasks:
-        env = AIMEnv(config)
-        run_episode(env, client, model_name, task_name, "aim-email-triage")
+    def __init__(
+        self,
+        config: EnvConfig | None = None,
+        tasks: list[tuple[str, TaskConfig]] | None = None,
+    ) -> None:
+        _configure_logger()
+        self.config = config if config is not None else EnvConfig.from_env()
+        self.tasks = tasks if tasks is not None else self.DEFAULT_TASKS
+
+    def run_all(self) -> None:
+        """Run every task, emitting [START]/[END] logs and isolating failures."""
+        client = OpenAI(base_url=self.config.api_base_url, api_key=self.config.hf_token)
+
+        for task_name, task_config in self.tasks:
+            env_name = "aim-email-triage"
+            cb = _CircuitBreaker()  # fresh breaker per task
+
+            # --- Exact stdout contract ---
+            logger.info(
+                "[START] task=%s env=%s model=%s",
+                task_name,
+                env_name,
+                self.config.model_name,
+            )
+            try:
+                env = AIMEnv(task_config)
+                runner = EpisodeRunner(env, client, self.config, cb)
+                summary = runner.run(task_name, env_name)
+                rewards_str = ",".join(f"{r:.2f}" for r in summary.rewards)
+
+                # --- Exact stdout contract ---
+                logger.info(
+                    "[END] success=%s steps=%d rewards=%s",
+                    str(summary.success).lower(),
+                    summary.steps,
+                    rewards_str,
+                )
+            except Exception as exc:
+                logger.error("Unhandled exception for task %s: %s", task_name, exc)
+
+
+# ---------------------------------------------------------------------------
+# FastAPI server — keeps the HF Space 'Running' after tasks complete
+# ---------------------------------------------------------------------------
+
+_run_status: dict[str, object] = {"state": "pending", "completed_tasks": []}
+
+
+def _inference_worker() -> None:
+    """Background thread: run all tasks then mark done. Never crashes the server."""
+    _run_status["state"] = "running"
+    try:
+        _configure_logger()
+        runner = InferenceRunner()
+        runner.run_all()
+        _run_status["state"] = "done"
+    except ValueError as exc:
+        logger.error("Configuration error: %s", exc)
+        _run_status["state"] = "config_error"
+    except Exception as exc:
+        logger.error("Inference worker crashed: %s", exc)
+        _run_status["state"] = "error"
+
+
+@asynccontextmanager
+async def _lifespan(application: FastAPI) -> AsyncGenerator[None, None]:
+    t = threading.Thread(target=_inference_worker, daemon=True, name="inference-worker")
+    t.start()
+    yield
+
+
+app = FastAPI(title="AIM-Env Inference", version="1.0.0", lifespan=_lifespan)
+
+
+@app.get("/")
+def root() -> JSONResponse:
+    return JSONResponse({"service": "AIM-Env Inference", "status": _run_status["state"]})
+
+
+@app.get("/health")
+def health() -> JSONResponse:
+    return JSONResponse({"status": "ok"})
+
+
+@app.get("/status")
+def status() -> JSONResponse:
+    return JSONResponse(_run_status)
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+
+def main() -> None:
+    """Start the FastAPI server on port 7860 (HF Spaces default)."""
+    uvicorn.run(app, host="0.0.0.0", port=7860, log_level="warning")
 
 
 if __name__ == "__main__":

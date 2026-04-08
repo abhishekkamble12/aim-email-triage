@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tree\tree.py
+# hypothesis_version: 6.151.4
+
+[0.5, '\n{}"{}"\n{}^', ' ]', '%s', '%s\\s*(%s)?|%s|(%s)', '()', '(JJ big)', '(NN cake)', '([#\\$%&~_\\{\\}])', '+', ', ', '...', '/', 'Chomsky normal form:', 'Collapse unary:', 'LaTeX output:', 'Probabilistic Tree:', 'Production output:', 'Tree', 'Tree modification:', 'Use label() instead', '[.', '\\Tree ', '\\\\\\1', '\\s', '^', 'bothorder', 'end-of-string', 'leaves', 'postorder', 'preorder', 'right', 'stream', 'test', 'x', 'y', 'z', '{}({}, [{}])', '{}{}{} {}{}', '|']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_embeddings\types.py
+# hypothesis_version: 6.151.4
+
+['CLASSIFICATION', 'CLUSTERING', 'CODE_RETRIEVAL_QUERY', 'FACT_VERIFICATION', 'QUESTION_ANSWERING', 'RETRIEVAL_DOCUMENT', 'RETRIEVAL_QUERY', 'SEMANTIC_SIMILARITY']

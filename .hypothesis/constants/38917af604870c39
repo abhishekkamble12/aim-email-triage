@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\realtime\handler.py
+# hypothesis_version: 6.151.4
+
+[1011, '/v1/realtime', 'Authorization', 'OpenAI-Beta', 'already completed', 'api_base', 'complete_input_dict', 'headers', 'http://', 'https://', 'model', 'query_params', 'realtime=v1', 'websocket.close', 'ws://', 'wss://']

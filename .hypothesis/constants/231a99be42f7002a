@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\perceptron.py
+# hypothesis_version: 6.151.4
+
+[-1.0, 0.0, 0.97, 1.0, 100, '!DIGITS', '!HYPHEN', '!YEAR', '-', '-END-', '-END2-', '-START-', '-START2-', 'Accuracy : ', 'Read from file: ', '__main__', 'bias', 'classes', 'eng', 'i pref1', 'i suffix', 'i tag+i-2 tag', 'i word', 'i+1 suffix', 'i+1 word', 'i+2 word', 'i-1 suffix', 'i-1 tag', 'i-1 tag+i word', 'i-1 word', 'i-2 tag', 'i-2 word', 'rb', 'rus', 'tagdict', 'w', 'weights', 'xxx']

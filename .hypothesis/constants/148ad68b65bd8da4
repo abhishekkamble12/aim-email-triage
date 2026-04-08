@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tag\mapping.py
+# hypothesis_version: 6.151.4
+
+['.', '.map', 'A', 'A-PRO', 'ADJ', 'ADP', 'ADV', 'ADV-PRO', 'ANUM', 'CONJ', 'DET', 'INTJ', 'NONLEX', 'NOUN', 'NUM', 'PARENTH', 'PART', 'PR', 'PRAEDIC', 'PRAEDIC-PRO', 'PRON', 'PRT', 'S', 'S-PRO', 'UNK', 'V', 'VERB', 'X', 'brown', 'en-brown', 'en-ptb', 'ru-rnc-new', 'text', 'universal', 'wsj']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\bedrock\rerank\handler.py
+# hypothesis_version: 6.151.4
+
+[408, 'Authorization', 'Content-Type', 'POST', 'api_base', 'application/json', 'bedrock', 'bedrock-runtime', 'body', 'complete_input_dict', 'endpoint_url', 'headers', 'prepped', 'utf-8']

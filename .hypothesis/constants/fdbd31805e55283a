@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\llm_response_utils\response_metadata.py
+# hypothesis_version: 6.151.4
+
+[1000, '_hidden_params', '_response_ms', 'additional_headers', 'api_base', 'cache_duration_ms', 'cache_hit', 'id', 'litellm_call_id', 'litellm_model_name', 'llm_api_duration_ms', 'model_id', 'model_info', 'response_cost']

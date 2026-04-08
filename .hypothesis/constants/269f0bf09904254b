@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\llm_cost_calc\tool_call_cost_tracking.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1000.0, 'annotations', 'azure', 'computer_use_usage', 'days', 'file_citation', 'file_search', 'file_search_call', 'high', 'input_tokens', 'key', 'litellm_provider', 'low', 'medium', 'message', 'output_tokens', 'search_context_size', 'server_tool_use', 'storage_gb', 'tools', 'type', 'url_citation', 'vector_store_usage', 'web_search', 'web_search_call', 'web_search_options', 'web_search_preview', 'web_search_requests']

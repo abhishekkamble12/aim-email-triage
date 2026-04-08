@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\chunk\named_entity.py
+# hypothesis_version: 6.151.4
+
+['  {:15} {:15} {2}', ' "', '" ', "''", '-', '...', '.sgm', '.tmx.rdc.xml', '<(?!/?TEXT)[^>]+>', '</TEXT>[\\s\\S]*', 'B-', 'I-', 'NAME', 'NE', 'O', 'S', 'TYPE', 'V', '[\\s\\S]*<TEXT>', '\\W+$', '\\w+$', '__main__', '``', 'bad fmt value', 'bias', 'binary', 'bnews', 'document/entity', 'downcase', 'en-basic', 'en-wordlist', 'entity_mention', 'entity_type', 'head/charseq/end', 'head/charseq/start', 'iis', 'mixedcase', 'multiclass', 'nextpos', 'nextword', 'number', 'other', 'pos', 'pos+prevtag', 'prefix3', 'prevpos', 'prevtag', 'prevword', 'punct', 'shape', 'shape+prevtag', 'suffix3', 'upcase', 'word', 'word+nextpos', 'wordlen']

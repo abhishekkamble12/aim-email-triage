@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\types\project_metric_response_public_metric_type.py
+# hypothesis_version: 6.151.4
+
+['COST', 'DURATION', 'FEEDBACK_SCORES', 'SPAN_COUNT', 'SPAN_DURATION', 'SPAN_FEEDBACK_SCORES', 'SPAN_TOKEN_USAGE', 'THREAD_COUNT', 'THREAD_DURATION', 'TOKEN_USAGE', 'TRACE_COUNT']

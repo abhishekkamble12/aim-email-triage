@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\responses\litellm_completion_transformation\session_handler.py
+# hypothesis_version: 6.151.4
+
+['input', 'message', 'messages', 'metadata', 'proxy_server_request', 'response', 'response_id', 'session_id', '{}']

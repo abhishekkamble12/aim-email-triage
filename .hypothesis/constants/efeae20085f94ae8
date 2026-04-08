@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\experimental_pass_through\messages\handler.py
+# hypothesis_version: 6.151.4
+
+['agentic_loop_params', 'custom_llm_provider', 'is_async', 'litellm_logging_obj', 'litellm_params', 'model', 'stream', 'tools']

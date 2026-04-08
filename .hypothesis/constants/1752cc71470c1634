@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\span\span_client.py
+# hypothesis_version: 6.151.4
+
+['Span', 'general', 'opik_parent_span_id', 'opik_trace_id', 'span']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\projectivedependencyparser.py
+# hypothesis_version: 6.151.4
+
+[1e-08, 1.0, '\n%d <- %d, %s', '%s', '%s\t%s\t%d\t%s\n', "'...", '-', '.', '<', 'CC[%d,%d]: %s', 'Cathy', 'Parse:', "Parsing '", 'ROOT', 'START', 'STOP', '__main__', 'cats', 'deps', 'fell', 'hen', 'modifier word.', 'null', 'of', 'price', 'scratch', 'stock', 'tag', 'the', 'walls', 'wild', 'word', 'zag', 'zwaaien']

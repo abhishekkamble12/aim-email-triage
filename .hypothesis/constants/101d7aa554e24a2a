@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\petals\completion\handler.py
+# hypothesis_version: 6.151.4
+
+['api_base', 'choices', 'complete_input_dict', 'content', 'final_prompt_value', 'initial_prompt_value', 'input_ids', 'inputs', 'message', 'model', 'outputs', 'pt', 'roles', 'usage']

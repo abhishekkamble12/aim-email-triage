@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\containers\main.py
+# hypothesis_version: 6.151.4
+
+[600, 'acreate_container', 'adelete_container', 'after', 'alist_containers', 'aretrieve_container', 'async_call', 'container_id', 'create_container', 'delete_container', 'limit', 'list_container_files', 'list_containers', 'litellm_call_id', 'litellm_logging_obj', 'mock_response', 'openai', 'order', 'retrieve_container']

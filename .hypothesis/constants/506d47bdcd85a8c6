@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\earleychart.py
+# hypothesis_version: 6.151.4
+
+['\n* Processing queue:', '* Grammar', '* Sentence:', 'Bad restriction: %s', 'Not all parses found', 'Nr trees:', 'Time:', '__main__']

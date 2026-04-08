@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\cost_calculator.py
+# hypothesis_version: 6.151.4
+
+['aembedding', 'claude', 'codestral', 'cost_per_character', 'cost_per_token', 'embedding', 'gemini-1.0-pro', 'gemini-2', 'gemini-pro', 'gemma', 'input_cost_per_token', 'jamba', 'llama', 'mistral', 'vertex_ai']

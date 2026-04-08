@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\knbc.py
+# hypothesis_version: 6.151.4
+
+[100, '#', '%s', '([\\-0-9]*)([ADIP])', '*+', '-', '.*', '.*/KN.*', '/', 'EOS', 'EOS|\\*|\\#|\\+', '\\d\\-\\d\\-[\\d]+\\-[\\d]+', '__main__', 'address', 'corpora/knbc/corpus1', 'deps', 'euc-jp', 'knbc/corpus1', 'rel', 'utf-8', 'utf8', 'word', '{}({})', '{}/{}']

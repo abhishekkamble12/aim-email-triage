@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\chat\handler.py
+# hypothesis_version: 6.151.4
+
+[200, 500, 'BaseConfig', 'CustomStreamWrapper', '_tool_result', 'accumulated_json', 'anthropic', 'api_base', 'arguments', 'caller', 'citation', 'complete_input_dict', 'container', 'content_block', 'content_block_delta', 'content_block_start', 'content_block_stop', 'data', 'data:', 'delta', 'error', 'function', 'headers', 'id', 'index', 'input_json_delta', 'is_vertex_request', 'json_mode', 'message', 'message_delta', 'message_start', 'name', 'partial_json', 'redacted_thinking', 'response', 'server_tool_use', 'signature', 'status_code', 'stop', 'stop_reason', 'stream', 'text', 'text_delta', 'thinking', 'thinking_blocks', 'thinking_delta', 'timeout', 'tool_result', 'tool_results', 'tool_use', 'type', 'usage', 'utf-8', 'valid_json', 'web_search_results', '{}']

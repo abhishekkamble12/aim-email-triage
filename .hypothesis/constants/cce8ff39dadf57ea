@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\langsmith.py
+# hypothesis_version: 6.151.4
+
+[1.0, 300, '%Y%m%dT%H%M%S%fZ', '/', '/api/v1', 'LANGSMITH_API_KEY', 'LANGSMITH_BASE_URL', 'LANGSMITH_BATCH_SIZE', 'LANGSMITH_PROJECT', 'LANGSMITH_TENANT_ID', 'LLMRun', 'conversation_id', 'credentials', 'data', 'dotted_order', 'endTime', 'end_time', 'error', 'error_str', 'extra', 'failure', 'id', 'inputs', 'langsmith_api_key', 'langsmith_base_url', 'langsmith_project', 'langsmith_tenant_id', 'litellm-completion', 'litellm_params', 'llm', 'metadata', 'name', 'outputs', 'parent_run_id', 'post', 'project_name', 'request_tags', 'requester_metadata', 'response', 'run_id', 'run_name', 'run_type', 'runs/batch', 'session_id', 'session_name', 'startTime', 'start_time', 'status', 'tags', 'thread_id', 'trace_id', 'x-api-key', 'x-tenant-id']

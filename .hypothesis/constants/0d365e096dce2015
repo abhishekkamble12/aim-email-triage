@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_utils\prompt_caching_cache.py
+# hypothesis_version: 6.151.4
+
+[300, ',', ':', 'cache_control', 'content', 'dict', 'ephemeral', 'messages', 'tools', 'type']

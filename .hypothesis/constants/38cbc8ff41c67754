@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\scipy\io\matlab\__init__.py
+# hypothesis_version: 6.151.4
+
+['MatReadError', 'MatReadWarning', 'MatWriteError', 'MatWriteWarning', 'MatlabFunction', 'MatlabObject', 'MatlabOpaque', 'loadmat', 'mat_struct', 'matfile_version', 'savemat', 'varmats_from_mat', 'whosmat']

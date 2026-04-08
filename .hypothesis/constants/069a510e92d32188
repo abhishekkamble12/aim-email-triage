@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\videos\main.py
+# hypothesis_version: 6.151.4
+
+[600, 'after', 'api_base', 'async_call', 'client', 'custom_llm_provider', 'limit', 'litellm_call_id', 'litellm_logging_obj', 'mock_response', 'openai', 'order', 'prompt', 'user', 'video_id']

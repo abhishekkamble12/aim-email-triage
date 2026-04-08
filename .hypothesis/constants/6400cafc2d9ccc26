@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\helicone.py
+# hypothesis_version: 6.151.4
+
+[200, 1000, '/', '2020-10-01', 'Authorization', 'Content-Type', 'HELICONE_API_BASE', 'HELICONE_API_KEY', 'Helicone-Auth', 'application/json', 'arguments', 'assistant', 'choices', 'claude', 'command-light', 'command-medium', 'command-medium-beta', 'command-nightly', 'command-r', 'command-r-plus', 'completion_tokens', 'content', 'endTime', 'finish_reason', 'function', 'gpt', 'gpt-3.5-turbo', 'headers', 'helicone_', 'id', 'input', 'input_tokens', 'json', 'litellm_call_id', 'litellm_params', 'message', 'messages', 'meta', 'metadata', 'milliseconds', 'model', 'name', 'openai-version', 'output_tokens', 'prompt_tokens', 'providerRequest', 'providerResponse', 'proxy_server_request', 'role', 'seconds', 'startTime', 'status', 'stop_reason', 'stop_sequence', 'text', 'timing', 'tool_calls', 'tool_use', 'type', 'url', 'usage', 'user']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\images\main.py
+# hypothesis_version: 6.151.4
+
+[600, 'AZURE_AD_TOKEN', 'AZURE_API_BASE', 'AZURE_API_KEY', 'AZURE_API_TYPE', 'AZURE_API_VERSION', 'AZURE_OPENAI_API_KEY', 'Content-Type', 'aimg_generation', 'api-key', 'api_base', 'api_key', 'api_version', 'application/json', 'async_call', 'azure', 'azure_ad_token', 'azure_ai', 'azure_scope', 'b64_json', 'base_model', 'base_url', 'bedrock', 'client', 'client_id', 'client_secret', 'custom_handler', 'custom_llm_provider', 'dall-e-2', 'default_headers', 'deployment_id', 'drop_params', 'extra_headers', 'headers', 'litellm_call_id', 'litellm_logging_obj', 'logger_fn', 'max_retries', 'metadata', 'mock_response', 'model', 'model_info', 'n', 'openai', 'organization', 'preset_cache_key', 'provider', 'proxy_server_request', 'quality', 'request_timeout', 'size', 'stability', 'stream_response', 'style', 'tenant_id', 'timeout', 'url', 'user']

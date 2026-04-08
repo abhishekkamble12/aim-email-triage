@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\plugins\pytest\decorator.py
+# hypothesis_version: 6.151.4
+
+['PYTEST_CURRENT_TEST', 'expected_output', 'input', 'metadata', 'test_name']

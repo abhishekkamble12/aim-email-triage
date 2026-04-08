@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\gcs_bucket\gcs_bucket_mock_client.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1000.0, 150, 200, 204, '150', 'GCS', 'GCS_MOCK', 'GCS_MOCK_LATENCY_MS', 'api_base', 'cache_hit', 'cache_key', 'call_type', 'completion', 'completionStartTime', 'completion_tokens', 'custom_llm_provider', 'endTime', 'end_user', 'error_information', 'error_str', 'hidden_params', 'https://api.mock.com', 'id', 'kind', 'llm_api_status', 'messages', 'metadata', 'mock', 'mock-gcs-token', 'mock-model', 'mock-object', 'mock-project-id', 'mock-request-id', 'mock-trace-id', 'model', 'model_group', 'model_id', 'model_parameters', 'name', 'os', 'prompt_tokens', 'request_tags', 'requester_ip_address', 'response', 'response_cost', 'response_time', 'saved_cache_cost', 'startTime', 'status', 'status_fields', 'storage#object', 'stream', 'success', 'total_tokens', 'trace_id']

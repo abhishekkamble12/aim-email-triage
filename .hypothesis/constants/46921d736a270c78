@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\cost_calculation.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'cost_per_second', 'cost_per_token', 'openai']

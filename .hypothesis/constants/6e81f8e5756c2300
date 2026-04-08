@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\opik\opik_payload_builder\api.py
+# hypothesis_version: 6.151.4
+
+['current_span_data', 'custom_llm_provider', 'headers', 'litellm_params', 'messages', 'metadata', 'project_name', 'proxy_server_request', 'response', 'response_cost', 'thread_id', 'usage']

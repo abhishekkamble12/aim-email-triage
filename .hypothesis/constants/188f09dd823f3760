@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\trace\trace_data.py
+# hypothesis_version: 6.151.4
+
+['attachments', 'end_time', 'error_info', 'feedback_scores', 'general', 'id', 'input', 'metadata', 'name', 'output', 'project_name', 'start_time', 'tags', 'thread_id']

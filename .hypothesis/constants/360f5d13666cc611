@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\arize\arize_phoenix.py
+# hypothesis_version: 6.151.4
+
+['/', '/traces', '/v1', '/v1/traces', ':4317', 'PHOENIX_API_KEY', 'PHOENIX_PROJECT_NAME', 'default', 'error_message', 'grpc://', 'healthy', 'message', 'otlp_grpc', 'otlp_http', 'status', 'unhealthy']

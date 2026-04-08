@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\interactions\utils.py
+# hypothesis_version: 6.151.4
+
+['agent', 'agent_config', 'background', 'custom_llm_provider', 'gemini', 'generation_config', 'input', 'kwargs', 'model', 'response_format', 'response_mime_type', 'response_modalities', 'store', 'stream', 'system_instruction', 'tools']

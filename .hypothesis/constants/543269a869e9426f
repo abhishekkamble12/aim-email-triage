@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\sentry_sdk\metrics.py
+# hypothesis_version: 6.151.4
+
+[b'\n', b',', b':', b'@', b'|', b'|#', b'|T', 1.0, 5.0, 7.0, 10.0, 24.0, 60.0, 1000.0, 3600.0, 1000000.0, 100000, 4294967295, '%s:%s@%s', ',', '[^a-zA-Z0-9_\\-.\\/]+', '[^a-zA-Z0-9_\\-.]+', '[^a-zA-Z0-9_]+', '\\', '\\\\', '\\n', '\\r', '\\t', '\\u{2c}', '\\u{7c}', '_', '_experiments', '_measurements', 'ascii', 'before_emit_metric', 'c', 'context-manager', 'count', 'd', 'day', 'decorator', 'did not enter', 'environment', 'g', 'hour', 'in_metrics', 'last', 'location', 'mapping', 'max', 'metric.timing', 'metric_meta', 'microsecond', 'millisecond', 'min', 'minute', 'nanosecond', 'none', 'release', 's', 'second', 'source', 'statsd', 'sum', 'tags', 'timestamp', 'transaction', 'type', 'utf-8', 'value', 'week', '{}:{}@{}', '|']

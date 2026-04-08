@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\athina.py
+# hypothesis_version: 6.151.4
+
+[200, 1000, 'ATHINA_API_KEY', 'ATHINA_BASE_URL', 'Content-Type', 'application/json', 'athina-api-key', 'completion_tokens', 'context', 'custom_attributes', 'customer_id', 'customer_user_id', 'environment', 'expected_response', 'functions', 'language_model_id', 'litellm_params', 'messages', 'metadata', 'model', 'model_options', 'optional_params', 'prompt', 'prompt_slug', 'prompt_tokens', 'request', 'response', 'response_time', 'session_id', 'stream', 'tags', 'tools', 'total_tokens', 'usage', 'user_feedback', 'user_query']

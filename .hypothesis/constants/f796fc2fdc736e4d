@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\opik_query_language.py
+# hypothesis_version: 6.151.4
+
+['!=', '"', "'", '-', '.', '<', '<=', '=', '>', '>=', 'OpikQueryLanguage', '_', 'and', 'contains', 'created_at', 'created_by', 'data', 'date_time', 'default', 'dictionary', 'duration', 'end_time', 'ends_with', 'feedback_scores', 'field', 'full_data', 'id', 'input', 'is_empty', 'is_not_empty', 'key', 'last_updated_at', 'last_updated_by', 'list', 'map', 'metadata', 'model', 'name', 'not_contains', 'number', 'number_of_messages', 'operator', 'or', 'output', 'provider', 'source', 'span_id', 'start_time', 'starts_with', 'status', 'string', 'tags', 'template_structure', 'thread_id', 'total_estimated_cost', 'trace_id', 'type', 'usage', 'usage.prompt_tokens', 'usage.total_tokens', 'value']

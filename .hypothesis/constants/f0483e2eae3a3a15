@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\arize\arize_phoenix_client.py
+# hypothesis_version: 6.151.4
+
+[401, 403, 404, 'Accept', 'Authorization', 'api_base is required', 'api_key is required', 'application/json', 'data', 'http_handler', 'response', 'status_code']

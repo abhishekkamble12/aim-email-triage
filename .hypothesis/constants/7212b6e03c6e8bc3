@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rerank_api\rerank_utils.py
+# hypothesis_version: 6.151.4
+
+['documents', 'max_chunks_per_doc', 'max_tokens_per_doc', 'query', 'return_documents', 'top_n']

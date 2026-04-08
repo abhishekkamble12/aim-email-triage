@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\heuristics\readability.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, 100.0, 'en_US', 'flesch_kincaid_grade', 'flesch_reading_ease', 'max_grade', 'min_grade', 'readability_metric', 'sentence_count', 'syllable_count', 'syllables_per_word', 'within_grade_bounds', 'word_count', 'words_per_sentence']

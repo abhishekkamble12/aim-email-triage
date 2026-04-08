@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\parse\pchart.py
+# hypothesis_version: 6.151.4
+
+[1.0, '     %r', '  %-50s [%s]', '  %-50s [DISCARDED]', '  please wait...', '(All Parses)', 'Bad sentence number', 'Draw parses (y/n)? ', 'Fundamental Rule', 'Print parses (y/n)? ', 'Which demo (%d-%d)? ', '__main__', 'n/a', 'y']

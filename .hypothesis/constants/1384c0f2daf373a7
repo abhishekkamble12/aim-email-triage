@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\image_generation\image_generation_handler.py
+# hypothesis_version: 6.151.4
+
+[5.0, 600.0, 200, '_', 'api_base', 'bytesBase64Encoded', 'complete_input_dict', 'headers', 'image_generation', 'imagegeneration', 'instances', 'parameters', 'predictions', 'prompt', 'sampleCount', 'timeout', 'vertex_ai']

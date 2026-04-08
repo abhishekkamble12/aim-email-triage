@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\translate\api.py
+# hypothesis_version: 6.151.4
+
+['"%s_source"', '"%s_target"', '%d-%d', "'%s'", ', ', '-', '-T%s', '...', 'Alignment(%r)', 'PhraseTableEntry', '[%s]', 'dot', 'graph align {\n', 'log_prob', 'svg', 'trg_phrase', 'utf8', '{rank = same; %s}\n', '}']

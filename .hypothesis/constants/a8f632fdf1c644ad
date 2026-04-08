@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\azure_ai\anthropic\handler.py
+# hypothesis_version: 6.151.4
+
+[500, 'api_base', 'azure_ai', 'complete_input_dict', 'headers', 'is_vertex_request', 'json_mode', 'response', 'status_code', 'stream', 'text', 'timeout']

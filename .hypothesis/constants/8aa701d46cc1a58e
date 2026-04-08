@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\classify\util.py
+# hypothesis_version: 6.151.4
+
+[0.8, 500, 750, 1000, 2000, 2500, 2750, 5000, 5500, 123456, 654321, '  Senses: ', '-', 'Accuracy: %6.4f', 'Reading data...', 'aeiouy', 'alwayson', 'count(%s)', 'endswith', 'endswith(%s)', 'endswith(vowel)', 'female', 'female.txt', 'has(%s)', 'male', 'male.txt', 'max_acc', 'max_iter', 'min_accdelta', 'min_ll', 'min_lldelta', 'startswith', 'startswith(%s)', 'startswith(vowel)']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\panlex_swadesh.py
+# hypothesis_version: 6.151.4
+
+['CC0 1.0 Universal', 'PanlexLanguage', 'iso639', 'iso639_type', 'langvar_uid', 'name', 'panlex_uid', 'script', 'swadesh([0-9].*)\\/']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\openai\transcriptions\handler.py
+# hypothesis_version: 6.151.4
+
+['ClientSession', 'api_base', 'atranscription', 'audio_transcription', 'complete_input_dict', 'custom_llm_provider', 'duration', 'file', 'model', 'openai', 'response_headers', 'whisper-1']

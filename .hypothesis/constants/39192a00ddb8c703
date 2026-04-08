@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\classify\rte_classify.py
+# hypothesis_version: 6.151.4
+
+[',', '.', 'Accuracy: %6.4f', 'GIS', 'IIS', 'a', 'alwayson', 'and', 'are', 'denied', 'failed', 'have', 'in', 'is', 'it', 'megam', 'ne', 'ne overlap', 'ne_hyp_extra', 'ne_overlap', 'neg_hyp', 'neg_txt', 'never', 'no', 'not', 'of', 'rejected', 'rte1_dev.xml', 'rte1_test.xml', 'rte2_dev.xml', 'rte2_test.xml', 'rte3_dev.xml', 'rte3_test.xml', 'the', 'they', 'to', 'very', 'were', 'word', 'word overlap', 'word_hyp_extra', 'word_overlap']

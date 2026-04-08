@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\g_eval\presets.py
+# hypothesis_version: 6.151.4
+
+['GEVAL_PRESETS', 'bias_demographic', 'bias_gender', 'bias_political', 'bias_regional', 'bias_religion', 'dialogue_helpfulness', 'prompt_uncertainty', 'qa_relevance']

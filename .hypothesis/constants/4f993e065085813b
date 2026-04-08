@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\deprecated_providers\palm.py
+# hypothesis_version: 6.151.4
+
+[400, 500, 'POST', '__', 'choices', 'complete_input_dict', 'content', 'inference_params', 'message', 'output', 'palm/', 'role', 'self', 'stream', 'usage', 'user']

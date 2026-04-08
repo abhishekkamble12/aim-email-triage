@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\custom_guardrail.py
+# hypothesis_version: 6.151.4
+
+['GuardrailConfigModel', 'LiteLLMLoggingObj', 'TypedDict', 'acompletion', 'async_pre_call_hook', 'data', 'default_message', 'extra_body', 'guardrails', 'input', 'litellm_metadata', 'logging_only', 'messages', 'metadata', 'model', 'request', 'request_data', 'response', 'success', 'unknown', 'user_api_key_hash', 'user_api_key_team_id', 'user_api_key_user_id']

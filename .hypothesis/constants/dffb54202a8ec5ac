@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\caching\caching_handler.py
+# hypothesis_version: 6.151.4
+
+[1000, 'Cache Hit!', 'Checking Async Cache', 'Checking Sync Cache', '_hidden_params', 'acompletion', 'api_base', 'api_key', 'aresponses', 'audio_transcription', 'cache', 'cache_hit', 'cache_key', 'cached_response', 'caching', 'custom_llm_provider', 'detail', 'embedding', 'input', 'logger_fn', 'messages', 'metadata', 'model', 'model_info', 'no-cache', 'no-store', 'parent_otel_span', 'preset_cache_key', 'proxy_server_request', 'rerank', 'responses', 'stream', 'stream_response', 'user', 'whisper-1']

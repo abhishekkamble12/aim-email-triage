@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\google_genai\main.py
+# hypothesis_version: 6.151.4
+
+['STOP', 'agenerate_content', 'base_url', 'candidates', 'candidatesTokenCount', 'client', 'content', 'finishReason', 'generationConfig', 'index', 'litellm_call_id', 'litellm_logging_obj', 'litellm_metadata', 'model', 'parts', 'promptTokenCount', 'role', 'safetyRatings', 'stream', 'systemInstruction', 'system_instruction', 'text', 'totalTokenCount', 'usageMetadata']

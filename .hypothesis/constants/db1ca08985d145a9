@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_model_garden\main.py
+# hypothesis_version: 6.151.4
+
+[400, 500, ':', 'language_models', 'preview', 'stream', 'us-central1', 'v1beta1', 'vertex_ai']

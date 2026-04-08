@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\dotprompt\prompt_manager.py
+# hypothesis_version: 6.151.4
+
+['#}', '%}', '*.prompt', 'array', 'bool', 'boolean', 'content', 'dict', 'float', 'format', 'html', 'input', 'int', 'integer', 'list', 'metadata', 'model', 'number', 'object', 'output', 'schema', 'str', 'string', 'utf-8', 'xml', '{#', '{%', '{{', '}}']

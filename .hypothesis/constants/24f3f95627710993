@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\sem\evaluate.py
+# hypothesis_version: 6.151.4
+
+['#', '%s => %s', '(- P | R)', '(P & Q)', '(P & R)', '(P -> Q)', '(P -> R)', '(P <-> P)', '(P <-> R)', '(P | - P)', '(P | R)', '(R -> P)', '(R <-> R)', '(R | P)', '(R | R)', '(adam = mia)', '(boy(x) & girl(x))', '(boy(x) | girl(x))', '(girl(x) -> dog(x))', '(x = x)', '*', '-', '- (P & R)', '- - P', '- P', '- R', '-(x = adam)', 'FOL Formulas Demo', 'Model m1:\n', 'Model m2:\n', 'Models Demo', 'P', 'Q', 'R', 'Satisfiers Demo', 'Undefined', '\\s*,\\s*', '\\s*=+>\\s*', '\\x y. love(x, y)', '\\x. boy(x)(adam)', '__main__', 'adam', 'b1', 'b2', 'betty', 'boy', 'boy(x)', 'd1', 'dog', 'exists y. love(y, x)', 'exists z1. boy(z1)', 'fido', 'g', 'g1', 'g2', 'girl', 'love', 'love (adam, betty)', 'love(adam, x)', 'love(x, adam)', 'trace', 'walks', 'x', 'y', 'z', '{']

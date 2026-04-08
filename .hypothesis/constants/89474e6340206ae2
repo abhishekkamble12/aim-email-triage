@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\g_eval_presets\bias_classifier.py
+# hypothesis_version: 6.151.4
+
+[0.0, 'bias_demographic', 'bias_gender', 'bias_political', 'bias_regional', 'bias_religion', 'gender_bias_judge', 'political_bias_judge', 'regional_bias_judge', 'religious_bias_judge']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\manual_evaluation\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 'POST', 'application/json', 'content-type', 'entity_ids', 'entity_type', 'project_id', 'rule_ids']

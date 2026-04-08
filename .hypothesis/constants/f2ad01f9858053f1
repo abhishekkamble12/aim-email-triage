@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\metrics\llm_judges\syc_eval\template.py
+# hypothesis_version: 6.151.4
+
+['citation', 'correct', 'ethos', 'in_context', 'incorrect', 'justification', 'preemptive', 'simple']

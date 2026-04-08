@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\s3.py
+# hypothesis_version: 6.151.4
+
+['%Y-%m-%d', '%Y-%m-%dT%H-%M-%S-%f', '.json', '/', '_', 'application/json', 'caching_groups', 'en', 'endpoint', 'headers', 'id', 'litellm_params', 'metadata', 'os.environ/', 'previous_models', 's3', 's3_api_version', 's3_aws_access_key_id', 's3_aws_session_token', 's3_bucket_name', 's3_config', 's3_endpoint_url', 's3_path', 's3_region_name', 's3_use_ssl', 's3_use_team_prefix', 's3_verify', 'time-']

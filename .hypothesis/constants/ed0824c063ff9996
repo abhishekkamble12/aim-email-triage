@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\integrations\slack_alerting.py
+# hypothesis_version: 6.151.4
+
+[0.05, 0.15, 'budget_alerts', 'cooldown_deployment', 'daily_reports', 'db_exceptions', 'fallback_reports', 'llm_exceptions', 'llm_requests_hanging', 'llm_too_slow', 'new_model_added', 'new_team_created', 'outage_alerts', 'region_outage_alerts', 'spend_reports', 'support@berri.ai', 'team_deleted', 'team_updated', 'virtual_key_deleted', 'virtual_key_updated']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\types\llms\stability.py
+# hypothesis_version: 6.151.4
+
+['1024x1024', '1024x1792', '16:9', '1792x1024', '1:1', '21:9', '256x256', '2:3', '3:2', '3:4', '4:3', '4:5', '512x512', '5:4', '9:16', '9:21', 'conservative', 'creative', 'erase', 'fast', 'image-to-image', 'inpaint', 'jpeg', 'outpaint', 'png', 'remove-background', 'sd3', 'sd3-large', 'sd3-large-turbo', 'sd3-medium', 'sd3.5-large', 'sd3.5-large-turbo', 'sd3.5-medium', 'search-and-recolor', 'search-and-replace', 'sketch', 'stable-image-core', 'stable-image-ultra', 'structure', 'style', 'style-transfer', 'text-to-image', 'webp']

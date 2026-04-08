@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\integrations\litellm\completion_chunks_aggregator.py
+# hypothesis_version: 6.151.4
+
+['chat.completion', 'choices', 'content', 'created', 'delta', 'dict', 'finish_reason', 'id', 'index', 'message', 'model', 'model_dump', 'object', 'role', 'system_fingerprint', 'usage']

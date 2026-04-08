@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\vertex_ai\vertex_llm_base.py
+# hypothesis_version: 6.151.4
+
+['/', ':', '?alt=sse', 'Authorization', 'Content-Type', 'VERTEXAI_CREDENTIALS', 'VERTEXAI_LOCATION', 'VERTEXAI_PROJECT', 'VERTEX_LOCATION', 'application/json', 'authorized_user', 'aws', 'cached_entry: %s', 'chat', 'credential_source', 'environment_id', 'external_account', 'gemini', 'global', 'project_id', 'requires_scopes', 'type', 'us-central1', 'v1', 'v1beta1', 'vertex_ai', 'vertex_ai_beta', 'vertex_ai_location', 'vertex_ai_project', 'vertex_credentials', 'vertex_location', 'vertex_project', 'x-goog-api-key', '{}/models/{}:{}', '{}:{}']

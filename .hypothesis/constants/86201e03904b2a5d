@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\databricks\common_utils.py
+# hypothesis_version: 6.151.4
+
+[200, 400, 500, '-', '/', '/serving-endpoints', '0.0.0', 'Authorization', 'Bearer {}', 'Content-Type', 'DATABRICKS_API_BASE', 'DATABRICKS_CLIENT_ID', 'User-Agent', '[REDACTED]', '[REDACTED_PAT]', '\\1[REDACTED]', '_', 'access_token', 'all-apis', 'api-key', 'api_key', 'apikey', 'application/json', 'authorization', 'chat_completions', 'client_credentials', 'credential', 'embeddings', 'grant_type', 'litellm', 'password', 'scope', 'secret', 'token', 'x-api-key', 'x-databricks-token', '{}/chat/completions', '{}/embeddings']

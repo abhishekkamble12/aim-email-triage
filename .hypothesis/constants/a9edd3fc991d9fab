@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\posthog_mock_client.py
+# hypothesis_version: 6.151.4
+
+[100, 200, '.posthog.com', 'POSTHOG', 'POSTHOG_MOCK', 'app.posthog.com', 'posthog.com', 'status', 'success', 'us.i.posthog.com']

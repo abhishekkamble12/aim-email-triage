@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\assistants\main.py
+# hypothesis_version: 6.151.4
+
+[600.0, 400, 600, 'AZURE_AD_TOKEN', 'AZURE_API_BASE', 'AZURE_API_KEY', 'AZURE_API_VERSION', 'AZURE_OPENAI_API_KEY', 'OPENAI_API_BASE', 'OPENAI_API_KEY', 'OPENAI_BASE_URL', 'OPENAI_ORGANIZATION', 'Unsupported provider', 'a_add_message', 'acreate_thread', 'aget_assistants', 'aget_messages', 'aget_thread', 'arun_thread', 'assistant', 'attachments', 'azure', 'azure_ad_token', 'client', 'content', 'create_thread', 'delete_assistant', 'description', 'extra_body', 'instructions', 'metadata', 'model', 'n/a', 'name', 'openai', 'request_timeout', 'response_format', 'role', 'temperature', 'tool_resources', 'tools', 'top_p', 'user']

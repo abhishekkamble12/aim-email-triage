@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\types\alert_trigger_write_event_type.py
+# hypothesis_version: 6.151.4
+
+['experiment:finished', 'prompt:committed', 'prompt:created', 'prompt:deleted', 'trace:cost', 'trace:errors', 'trace:feedback_score', 'trace:latency']

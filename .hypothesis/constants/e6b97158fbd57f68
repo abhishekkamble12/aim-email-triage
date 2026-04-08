@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\custom_httpx\container_handler.py
+# hypothesis_version: 6.151.4
+
+[600, '/containers', 'BaseContainerConfig', 'ContainerFileObject', 'Content-Type', 'DELETE', 'GET', 'LiteLLMLoggingObj', 'POST', 'api_base', 'api_key', 'async_name', 'containers', 'content', 'content-type', 'content_type', 'endpoints', 'endpoints.json', 'error', 'file', 'filename', 'headers', 'is_multipart', 'message', 'method', 'name', 'params', 'path', 'path_params', 'query_params', 'response_type', 'returns_binary', 'ssl_verify']

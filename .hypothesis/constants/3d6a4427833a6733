@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\deprecated_providers\aleph_alpha.py
+# hypothesis_version: 6.151.4
+
+['Authorization', 'POST', '__', 'accept', 'application/json', 'choices', 'complete_input_dict', 'completion', 'completions', 'content', 'content-type', 'control', 'error', 'finish_reason', 'message', 'model', 'prompt', 'role', 'self', 'stream', 'system', 'usage', 'user']

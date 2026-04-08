@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\metrics\agreement.py
+# hypothesis_version: 6.151.4
+
+[0.0, 1.0, '%s\t%s\t%s', ',', '--agreement', '--columnsep', '--distance', '--exclude', '--file', '--include', '--labelsep', '--presence', '--thorough', '--verbose', '-T', '-a', '-c', '-d', '-e', '-f', '-i', '-l', '-p', '-v', '0', '_', '__main__', 'agreement', 'append', 'binary_distance', 'coder', 'columnsep', 'distance', 'exclude', 'file', 'include', 'item', 'kappa', 'labels', 'labelsep', 'presence', 'store_true', 'thorough', 'verbose']

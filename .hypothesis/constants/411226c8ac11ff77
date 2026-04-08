@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\rte.py
+# hypothesis_version: 6.151.4
+
+['<RTEPair: id=%s>', 'FALSE', 'NO', 'TRUE', 'YES', 'challenge', 'entailment', 'id', 'length', 'pair', 'task', 'value']

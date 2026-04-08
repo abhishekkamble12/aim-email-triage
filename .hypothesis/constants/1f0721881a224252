@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\redirect\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 'GET', 'dataset_id', 'experiment_id', 'optimization_id', 'path', 'trace_id', 'workspace_name']

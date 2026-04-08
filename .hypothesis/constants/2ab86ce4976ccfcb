@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\cohere\embed\handler.py
+# hypothesis_version: 6.151.4
+
+['Authorization', 'POST', 'Request-Source', 'accept', 'api_base', 'application/json', 'authorization', 'complete_input_dict', 'content-type', 'headers', 'request-source', 'timeout', 'unspecified:litellm']

@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\sap\chat\handler.py
+# hypothesis_version: 6.151.4
+
+[502, '[DONE]', 'choices', 'code', 'config', 'created', 'data: ', 'delta', 'enabled', 'error', 'final_result', 'finish_reason', 'id', 'index', 'model', 'object', 'orchestration_result', 'request_id', 'stream', 'stream-chunk', 'unknown']

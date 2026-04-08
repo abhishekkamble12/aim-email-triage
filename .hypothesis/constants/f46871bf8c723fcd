@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\tree\prettyprinter.py
+# hypothesis_version: 6.151.4
+
+[2.5, 1440, 1591, 2170, 2771, '\x1b[%d;1m%s\x1b[0m', ' | ', ' │ ', '%2d: %s', '%2r', '%s', '-', '.', '...', '/', '</svg>', 'ASCII version:', 'Discontinuous tree', 'TreePrettyPrinter', '\\1\\n', '_', '__main__', '_|_', 'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'white', 'yellow', '{}: "{}"', '…', '─', '┌', '┐', '┬', '┴', '┼']

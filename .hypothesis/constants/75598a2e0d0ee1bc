@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\evaluation\models\litellm\litellm_chat_model.py
+# hypothesis_version: 6.151.4
+
+[0.5, 8.0, '1.52.15', 'ModelResponse', '__opik_retries', 'choices', 'content', 'gpt-5-nano', 'groq', 'ignore', 'litellm', 'logprobs', 'message', 'ollama', 'response_format', 'role', 'temperature', 'top_logprobs', 'user']

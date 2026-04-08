@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\api_objects\span\span_data.py
+# hypothesis_version: 6.151.4
+
+['SpanData', 'attachments', 'end_time', 'error_info', 'feedback_scores', 'general', 'id', 'input', 'metadata', 'model', 'name', 'output', 'parent_span_id', 'project_name', 'provider', 'start_time', 'tags', 'total_cost', 'trace_id', 'type', 'usage']

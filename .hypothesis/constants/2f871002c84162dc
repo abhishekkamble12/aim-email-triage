@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\datadog\datadog_mock_client.py
+# hypothesis_version: 6.151.4
+
+[100, 202, '.datadoghq.com', 'DATADOG', 'DATADOG_MOCK', 'datadoghq.com', 'ok', 'status']

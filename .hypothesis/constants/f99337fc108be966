@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\model_response_utils.py
+# hypothesis_version: 6.151.4
+
+['_', 'choices', 'delta', 'enhancements', 'finish_reason', 'index', 'logprobs', 'model_', 'model_extra', 'usage']

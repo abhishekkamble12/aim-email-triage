@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 'GET', 'is-alive/ping', 'is-alive/ver']

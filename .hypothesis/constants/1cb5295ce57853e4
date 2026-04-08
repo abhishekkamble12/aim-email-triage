@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\batches\batch_utils.py
+# hypothesis_version: 6.151.4
+
+[0.0, 200, ';', 'JOB_STATE_SUCCEEDED', 'anthropic', 'azure', 'batch_', 'batch_processing', 'batch_request', 'body', 'content', 'dict', 'gemini-2.5-flash', 'hosted_vllm', 'json_objects=%s', 'llm_output_file_id,', 'messages', 'model', 'openai', 'optional_params', 'response', 'role', 'status', 'status_code', 'total_cost=%s', 'usage', 'user', 'utf-8', 'vertex_ai']

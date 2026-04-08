@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rag\rag_query.py
+# hypothesis_version: 6.151.4
+
+['Context:\n\n', 'choices', 'content', 'data', 'index', 'message', 'rerank_results', 'results', 'role', 'search_results', 'text', 'type', 'user']

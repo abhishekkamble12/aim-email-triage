@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\datasets\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 400, 404, 409, 'DELETE', 'GET', 'PATCH', 'POST', 'PUT', 'application/json', 'batch_group_id', 'change_description', 'chunk_size', 'content-type', 'custom_prompt', 'data', 'dataset_id', 'dataset_name', 'dataset_version', 'description', 'enrichment_options', 'experiment_ids', 'file', 'filters', 'id', 'ids', 'item_ids', 'items', 'last_retrieved_id', 'merge_tags', 'model', 'multipart/form-data', 'name', 'override', 'page', 'preserve_fields', 'prompt_id', 'sample_count', 'search', 'size', 'sorting', 'source', 'span_id', 'span_ids', 'steam_limit', 'tag', 'tags', 'tags_to_add', 'trace_id', 'trace_ids', 'truncate', 'update', 'v1/private/datasets', 'version', 'version_name', 'version_ref', 'visibility', 'write']

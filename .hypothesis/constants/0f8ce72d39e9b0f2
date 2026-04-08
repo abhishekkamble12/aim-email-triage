@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\types.py
+# hypothesis_version: 6.151.4
+
+['anthropic', 'anthropic_vertexai', 'bedrock', 'categorical', 'evaluation', 'general', 'google_ai', 'google_vertexai', 'groq', 'guardrail', 'llm', 'numerical', 'openai', 'span', 'tool', 'trace']

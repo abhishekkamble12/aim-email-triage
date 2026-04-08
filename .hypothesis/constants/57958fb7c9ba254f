@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\router_strategy\lowest_cost.py
+# hypothesis_version: 6.151.4
+
+[5.0, '%H', '%M', '%Y-%m-%d', 'api_base', 'id', 'inf', 'input_cost_per_token', 'litellm_params', 'metadata', 'model', 'model_group', 'model_info', 'rpm', 'tpm', 'usage']

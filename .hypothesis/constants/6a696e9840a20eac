@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\integrations\humanloop.py
+# hypothesis_version: 6.151.4
+
+['Content-Type', 'HUMANLOOP_API_KEY', 'X-Api-Key', 'application/json', 'content', 'humanloop', 'humanloop_api_key', 'model', 'optional_params', 'prompt_template', 'template', '{', '{{', '{}/', '}', '}}']

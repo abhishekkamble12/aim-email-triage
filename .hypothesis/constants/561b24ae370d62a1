@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rerank_api\main.py
+# hypothesis_version: 6.151.4
+
+['AZURE_AI_API_BASE', 'BEDROCK_API_BASE', 'COHERE_API_BASE', 'DEEPINFRA_API_BASE', 'DEEPINFRA_API_KEY', 'FIREWORKSAI_API_KEY', 'FIREWORKS_AI_API_KEY', 'FIREWORKS_AI_TOKEN', 'FIREWORKS_API_KEY', 'HOSTED_VLLM_API_BASE', 'HOSTED_VLLM_API_KEY', 'INFINITY_API_BASE', 'NVIDIA_NIM_API_BASE', 'TOGETHERAI_API_KEY', 'VOYAGE_AI_API_KEY', 'VOYAGE_API_BASE', 'VOYAGE_API_KEY', 'arerank', 'azure_ai', 'client', 'cohere', 'deepinfra', 'drop_params', 'extra_headers', 'fireworks_ai', 'headers', 'hosted_vllm', 'infinity', 'litellm_call_id', 'litellm_logging_obj', 'litellm_proxy', 'max_chunks_per_doc', 'max_tokens_per_doc', 'metadata', 'model_info', 'preset_cache_key', 'proxy_server_request', 'stream_response', 'together_ai', 'user', 'voyage']

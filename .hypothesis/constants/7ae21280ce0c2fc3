@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\dashboards\raw_client.py
+# hypothesis_version: 6.151.4
+
+[200, 300, 404, 409, 'DELETE', 'GET', 'PATCH', 'POST', 'application/json', 'config', 'content-type', 'description', 'ids', 'name', 'page', 'size', 'sorting']

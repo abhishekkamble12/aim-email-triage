@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\timit.py
+# hypothesis_version: 6.151.4
+
+[0.01, 16000, ', ', '.*', '.*\\.wav', '.phn', '.txt', '.wav', '.wrd', '/', ';', 'Bad line: %r', 'S', 'SpeakerInfo(%s)', '\\w+-\\w+/\\w+\\.txt', 'metadata', 'phn', 'rb', 'spkrinfo.txt', 'timitdic.txt', 'txt', 'utf8', 'w', 'wav', 'wave', 'wrd']

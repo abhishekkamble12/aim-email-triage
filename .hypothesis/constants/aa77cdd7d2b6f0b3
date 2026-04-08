@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\llms\anthropic\experimental_pass_through\messages\utils.py
+# hypothesis_version: 6.151.4
+
+[503, 2095, 'anthropic', 'assistant', 'content', 'end_turn', 'id', 'input_tokens', 'message', 'model', 'output_tokens', 'role', 'stop_reason', 'stop_sequence', 'text', 'type', 'usage']

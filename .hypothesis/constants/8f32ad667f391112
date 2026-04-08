@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\litellm_core_utils\redact_messages.py
+# hypothesis_version: 6.151.4
+
+['__aiter__', '__anext__', 'choices', 'content', 'data', 'headers', 'input', 'litellm_params', 'message_logging', 'messages', 'output', 'prompt', 'reasoning', 'reasoning_content', 'redacted-by-litellm', 'role', 'stream', 'summary', 'text', 'thinking_blocks', 'type', 'user', 'user_api_key']

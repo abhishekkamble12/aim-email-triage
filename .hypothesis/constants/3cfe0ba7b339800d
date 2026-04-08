@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\litellm\rag\ingestion\s3_vectors_ingestion.py
+# hypothesis_version: 6.151.4
+
+[200, 201, 409, '-', '.', 'Content-Type', 'GET', 'POST', 'PUT', 'RAGIngestOptions', 'Router', 'application/json', 'aws_access_key_id', 'aws_external_id', 'aws_profile_name', 'aws_region_name', 'aws_role_name', 'aws_session_name', 'aws_session_token', 'aws_sts_endpoint', 'chunk_index', 'data', 'dataType', 'dimension', 'distanceMetric', 'distance_metric', 'embedding', 'filename', 'float32', 'indexName', 'index_name', 'key', 'metadata', 'model', 'queryVector', 'returnDistance', 'returnMetadata', 's3vectors', 'source_text', 'ssl_verify', 'test', 'topK', 'utf-8', 'vectorBucketName', 'vector_bucket_name', 'vectors', 'x-amz-content-sha256']

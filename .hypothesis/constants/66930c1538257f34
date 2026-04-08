@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\opik\rest_api\types\breakdown_config_public_field.py
+# hypothesis_version: 6.151.4
+
+['error_info', 'metadata', 'model', 'name', 'none', 'provider', 'tags', 'type']

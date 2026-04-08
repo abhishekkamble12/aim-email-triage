@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\nltk\corpus\reader\mte.py
+# hypothesis_version: 6.151.4
+
+['#', '*', '-', '.', '.*$', '00README.txt', 'A', 'ADJ', 'ADP', 'ADV', 'C', 'CONJ', 'D', 'DET', 'M', 'N', 'NOUN', 'NUM', 'P', 'PRON', 'PRT', 'Q', 'R', 'S', 'V', 'VERB', 'X', '^', 'ana', 'lemma', 'msd', 'oana-bg.xml', 'oana-mk.xml', 'tei', 'universal', 'utf8', 'xml']
