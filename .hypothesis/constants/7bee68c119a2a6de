@@ -1,0 +1,4 @@
+# file: C:\Users\Abhishek\AppData\Roaming\Python\Python312\site-packages\starlette\types.py
+# hypothesis_version: 6.151.4
+
+['AppType', 'Request', 'WebSocket']

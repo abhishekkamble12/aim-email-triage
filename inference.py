@@ -76,6 +76,16 @@ class _CircuitBreaker:
 
 
 # ---------------------------------------------------------------------------
+# Stdout format helpers
+# ---------------------------------------------------------------------------
+
+
+def format_start(task_name: str, env_name: str, model_name: str) -> str:
+    """Return the [START] stdout line for the given task/env/model names."""
+    return f"[START] task={task_name} env={env_name} model={model_name}"
+
+
+# ---------------------------------------------------------------------------
 # EnvConfig
 # ---------------------------------------------------------------------------
 

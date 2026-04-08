@@ -1,0 +1,4 @@
+# file: D:\Reinforcement-learning\env\env.py
+# hypothesis_version: 6.151.4
+
+[-0.5, -0.3, -0.25, -0.2, -0.15, -0.1, -0.05, -0.02, 0.0, 0.01, 0.2, 0.35, 0.6, 1.0, 'already_opened', 'already_processed', 'classify', 'correct_priority', 'correct_route', 'critical', 'detect_phishing', 'false_positive', 'invalid_action', 'no_open_penalty', 'open', 'opened', 'phishing_detected', 'processed', 'step', 'submit', 'timeout', 'unread', 'wrong_classification', 'wrong_priority', 'wrong_route']

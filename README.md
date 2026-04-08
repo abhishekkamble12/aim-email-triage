@@ -13,15 +13,9 @@ tags:
 
 # AIM-Env: AI Email Triage RL Environment
 
-AIM-Env is an [OpenEnv](https://openenv.dev)-compliant reinforcement learning environment where an LLM agent triages a simulated email inbox. An LLM-powered agent reads inbox state, decides actions (open, classify, detect phishing, submit), and is scored on accuracy, routing, and efficiency.
+AIM-Env is an [OpenEnv](https://openenv.dev)-compliant reinforcement learning environment where an LLM agent triages a simulated email inbox. The agent reads inbox state, decides actions (open, classify, detect phishing, submit), and is scored on accuracy, routing, and efficiency.
 
-The project ships three components:
-
-| Component | Purpose |
-|---|---|
-| `inference.py` | OpenEnv entry point — the only file the grader executes |
-| `backend/` | FastAPI server for the interactive web demo |
-| `src/` | React + Vite frontend dashboard |
+The project ships as a FastAPI server (`inference.py`) that keeps the Hugging Face Space alive while running the RL episode loop in a background thread. The grader drives the environment via stdout-parsed `[START]` / `[STEP]` / `[END]` lines.
 
 ---
 
@@ -30,21 +24,12 @@ The project ships three components:
 - [Architecture](#architecture)
 - [Repository Structure](#repository-structure)
 - [Quick Start](#quick-start)
-  - [Run inference (grader mode)](#run-inference-grader-mode)
-  - [Run the web demo](#run-the-web-demo)
-  - [Run with Docker](#run-with-docker)
 - [Environment Variables](#environment-variables)
 - [How the RL Environment Works](#how-the-rl-environment-works)
-  - [Episode Lifecycle](#episode-lifecycle)
-  - [Action Space](#action-space)
-  - [Observation Space](#observation-space)
-  - [Reward Structure](#reward-structure)
-  - [Grader & Scoring](#grader--scoring)
 - [Task Configurations](#task-configurations)
 - [Stdout Format Contract](#stdout-format-contract)
-- [Code Architecture (inference.py)](#code-architecture-inferencepy)
+- [Code Architecture](#code-architecture)
 - [Data Models](#data-models)
-- [Training](#training)
 - [Testing](#testing)
 - [Docker](#docker)
 - [OpenEnv Spec Compliance](#openenv-spec-compliance)
@@ -57,28 +42,23 @@ The project ships three components:
 ┌─────────────────────────────────────────────────────────┐
 │                    OpenEnv Grader / CI                  │
 └────────────────────────┬────────────────────────────────┘
-                         │ docker run
+                         │ docker run (port 7860)
                          ▼
 ┌─────────────────────────────────────────────────────────┐
-│                    inference.py                         │
+│                    inference.py (FastAPI)                │
 │                                                         │
-│  InferenceRunner                                        │
+│  Background thread: InferenceRunner                     │
 │    └── EpisodeRunner (per task)                         │
 │          ├── PromptBuilder  ──► LLM prompt              │
 │          ├── ActionParser   ◄── LLM response            │
 │          └── AIMEnv         ──► step / reset / grade    │
 │                                                         │
+│  HTTP routes: GET /  GET /health  GET /status           │
 │  Config: HF_TOKEN / API_BASE_URL / MODEL_NAME           │
 └─────────────────────────────────────────────────────────┘
-
-┌──────────────────┐     ┌──────────────────────────────┐
-│  React Frontend  │────►│  FastAPI Backend              │
-│  (src/)          │     │  (backend/)                   │
-│  Vite + Tailwind │     │  /api/run-demo                │
-│  Dashboard/Demo  │     │  /api/train-agent             │
-└──────────────────┘     │  /api/metrics                 │
-                         └──────────────────────────────┘
 ```
+
+The inference loop runs in a daemon thread on startup. The FastAPI server stays alive on port 7860 so the Hugging Face Space remains green. All grader-relevant output goes to stdout.
 
 ---
 
@@ -86,12 +66,10 @@ The project ships three components:
 
 ```
 .
-├── inference.py              # OpenEnv entry point (grader executes this)
-├── Dockerfile                # python:3.10-slim image for inference.py
-├── docker-compose.yml        # Runs backend + frontend together
-├── requirements.txt          # openai, pydantic, fastapi, uvicorn
-├── openenv.yaml              # OpenEnv task registry (easy/medium/hard)
-├── test_inference.py         # Unit + property-based tests (pytest + Hypothesis)
+├── inference.py              # OpenEnv entry point + FastAPI server
+├── Dockerfile                # python:3.10-slim image
+├── requirements.txt          # openai, pydantic, fastapi, uvicorn, httpx
+├── openenv.yaml              # OpenEnv task registry (easy / medium / hard)
 │
 ├── env/                      # Core RL environment package
 │   ├── __init__.py
@@ -101,39 +79,24 @@ The project ships three components:
 │   ├── grader.py             # Deterministic episode scoring
 │   └── email_generator.py    # Seeded, reproducible email synthesis
 │
-├── tasks/                    # Task config modules
-│   ├── task_easy.py
-│   ├── task_medium.py
-│   └── task_hard.py
+├── tests/
+│   └── test_inference_properties.py  # Hypothesis property-based tests
 │
-├── backend/                  # FastAPI web API (demo/dashboard only)
+├── backend/                  # FastAPI web API (interactive demo only)
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── app/
-│       ├── main.py           # FastAPI app, CORS, rate limiting
-│       ├── api/routes.py     # /run-demo, /run-task, /train-agent, /metrics
-│       ├── services/
-│       │   ├── env_service.py
-│       │   ├── agent_service.py
-│       │   └── training_service.py
-│       └── schemas/          # Pydantic request/response schemas
+│       ├── main.py
+│       ├── api/routes.py
+│       └── services/
 │
-├── src/                      # React + Vite frontend
+├── src/                      # React + Vite frontend (demo dashboard)
 │   ├── pages/
-│   │   ├── Home.jsx          # Landing page with live stats
-│   │   ├── Demo.jsx          # Interactive agent demo
-│   │   ├── Dashboard.jsx     # Training metrics & analytics
-│   │   ├── Architecture.jsx  # System diagram
-│   │   └── About.jsx
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   └── Footer.jsx
-│   └── services/api.js       # Axios client for backend
+│   └── components/
 │
 └── training/
     ├── train.py              # Q-learning + LLM hybrid training loop
-    ├── scores.json           # Saved training scores
-    └── learning_curve.png    # Training curve visualization
+    └── scores.json
 ```
 
 ---
@@ -143,7 +106,7 @@ The project ships three components:
 ### Run inference (grader mode)
 
 ```bash
-pip install openai pydantic
+pip install -r requirements.txt
 
 export HF_TOKEN=your_token_here
 export API_BASE_URL=https://api.openai.com/v1   # optional
@@ -152,7 +115,19 @@ export MODEL_NAME=gpt-4o-mini                   # optional
 python inference.py
 ```
 
-### Run the web demo
+The server starts on port 7860 and immediately begins running episodes in the background. Grader output streams to stdout.
+
+### Run with Docker
+
+```bash
+docker build -t aim-env .
+docker run --rm \
+  -e HF_TOKEN=your_token_here \
+  -p 7860:7860 \
+  aim-env
+```
+
+### Run the web demo (optional)
 
 Requires Node.js 18+ and Python 3.10+.
 
@@ -169,33 +144,16 @@ npm run dev
 
 Then open http://localhost:5173.
 
-### Run with Docker
-
-**Inference only (grader mode):**
-
-```bash
-docker build -t aim-env .
-docker run --rm \
-  -e HF_TOKEN=your_token_here \
-  aim-env
-```
-
-**Full stack (backend + frontend):**
-
-```bash
-docker-compose up --build
-```
-
 ---
 
 ## Environment Variables
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `HF_TOKEN` | **Yes** | — | API key for the LLM client. Raises `ValueError` immediately if missing. |
-| `API_BASE_URL` | No | `https://api.openai.com/v1` | Base URL for any OpenAI-compatible endpoint. |
-| `MODEL_NAME` | No | `gpt-4o-mini` | Model identifier used for all completions. |
-| `INFERENCE_TIMEOUT` | No | `30` | Per-request timeout in seconds. |
+| `HF_TOKEN` | yes | — | API key for the LLM client. Raises `ValueError` immediately if missing. |
+| `API_BASE_URL` | no | `https://api.openai.com/v1` | Base URL for any OpenAI-compatible endpoint. |
+| `MODEL_NAME` | no | `gpt-4o-mini` | Model identifier used for all completions. |
+| `INFERENCE_TIMEOUT` | no | `30` | Per-request timeout in seconds. |
 
 ---
 
@@ -203,19 +161,21 @@ docker-compose up --build
 
 ### Episode Lifecycle
 
-For each of the three tasks (easy → medium → hard), one full episode runs:
+For each of the three tasks (easy → medium → hard):
 
 1. `AIMEnv(config)` is instantiated with the task's `TaskConfig`.
 2. `env.reset()` generates a deterministic inbox using the fixed seed and returns the initial `Observation`.
-3. `[START]` is logged to stdout.
+3. `[START]` is printed to stdout.
 4. The step loop runs until `done`:
    - `PromptBuilder` converts the `Observation` into a natural-language prompt.
    - The LLM is called via `client.chat.completions.create(...)`.
    - `ActionParser` extracts the JSON action from the response (handles markdown fences). On any parse failure, falls back to `{"type": "submit"}`.
    - `env.step(action)` returns `(Observation, Reward, done)`.
-   - `[STEP]` is logged to stdout.
+   - `[STEP]` is printed to stdout.
 5. `env.get_result()` + `Grader().grade_episode()` compute the final score.
-6. `[END]` is logged to stdout.
+6. `[END]` is printed to stdout.
+
+A per-task circuit breaker trips on HTTP 402/403 errors, skipping further LLM calls for that task and submitting immediately.
 
 ### Action Space
 
@@ -261,13 +221,14 @@ Example LLM responses:
 | `wrong_classification` | `-0.25` | Category mismatch |
 | `wrong_priority` | `-0.10` | Priority wrong (category was correct) |
 | `wrong_route` | `-0.10` | Route wrong (category was correct) |
-| `phishing_detected` | `+0.60` | Correctly flagged phishing email |
+| `phishing_detected` | `+0.60` | Correctly flagged non-critical phishing |
 | `phishing_detected_critical` | `+1.00` | Correctly flagged critical phishing |
 | `false_positive` | `-0.20` | Flagged a non-phishing email as phishing |
 | `no_open_penalty` | `-0.15` | Tried to classify without opening first |
 | `already_processed` | `-0.05` | Acted on an already-processed email |
 | `invalid_action` | `-0.05` | Malformed or unknown action |
 | `timeout` | `-0.50` | Time budget exhausted |
+| `delay` | `-0.30` | Per-step penalty for ignoring a critical email |
 
 ### Grader & Scoring
 
@@ -287,6 +248,8 @@ An episode is a **success** when `score >= 0.5`.
 
 ## Task Configurations
 
+Defined in `openenv.yaml` and mirrored in `InferenceRunner.DEFAULT_TASKS`:
+
 | Task | Seed | Emails | Time Budget | Ambiguity | Phishing | Time Pressure |
 |---|---|---|---|---|---|---|
 | `easy` | 42 | 3 | 20 | 0.0 | No | 0.0 |
@@ -301,25 +264,31 @@ An episode is a **success** when `score >= 0.5`.
 
 ## Stdout Format Contract
 
-The grader parses stdout line-by-line. Lines must match exactly:
+The grader parses stdout line-by-line. Lines must match exactly.
 
 ### `[START]`
+
 ```
 [START] task=<task_name> env=<env_name> model=<model_name>
 ```
+
+Example:
 ```
 [START] task=easy env=aim-email-triage model=gpt-4o-mini
 ```
 
 ### `[STEP]`
+
 ```
 [STEP] step=<n> action=<action_str> reward=<0.00> done=<true|false> error=<msg|null>
 ```
+
 - `reward` — always 2 decimal places
 - `done` — lowercase `true` or `false`
 - `error` — literal `null` when no error, otherwise the exception message
 - `action_str` — `<type>` or `<type>:<email_id>`
 
+Example:
 ```
 [STEP] step=0 action=open:email_001 reward=-0.01 done=false error=null
 [STEP] step=1 action=classify:email_001 reward=0.73 done=false error=null
@@ -327,43 +296,50 @@ The grader parses stdout line-by-line. Lines must match exactly:
 ```
 
 ### `[END]`
+
 ```
 [END] success=<true|false> steps=<n> rewards=<r1,r2,...>
 ```
+
 - `rewards` — comma-separated, each to 2 decimal places, no spaces
 
+Example:
 ```
 [END] success=true steps=3 rewards=-0.01,0.73,-0.02
 ```
 
 ---
 
-## Code Architecture (inference.py)
+## Code Architecture
 
 `inference.py` is structured in dependency order:
 
 ```
-EnvConfig → PromptBuilder → ActionParser → EpisodeSummary → EpisodeRunner → InferenceRunner
+EnvConfig → PromptBuilder → ActionParser → EpisodeSummary → EpisodeRunner → InferenceRunner → FastAPI app
 ```
 
-| Class | Role |
+| Class / Function | Role |
 |---|---|
 | `EnvConfig` | Dataclass holding runtime config; `from_env()` reads env vars and raises `ValueError` if `HF_TOKEN` is missing |
 | `PromptBuilder` | Stateless; converts an `Observation` into a natural-language LLM prompt |
 | `ActionParser` | Parses raw LLM text (including markdown-fenced JSON) into a validated `Action`; wraps errors as `ValueError` |
 | `EpisodeSummary` | Dataclass capturing per-episode metrics: task name, steps, rewards, success flag |
+| `_CircuitBreaker` | Per-task breaker that trips on HTTP 402/403 errors, preventing further LLM calls for that task |
 | `EpisodeRunner` | Runs one full episode loop; handles LLM timeouts, connection errors, and env step failures with graceful fallbacks |
 | `InferenceRunner` | Top-level orchestrator; iterates over all tasks, emits `[START]`/`[END]` logs, isolates per-task failures |
+| `_inference_worker` | Background thread target; runs `InferenceRunner.run_all()` and updates `_run_status` |
+| FastAPI `app` | Keeps the HF Space alive; exposes `/`, `/health`, `/status` |
 
-Error handling summary:
+### Error Handling
 
 | Scenario | Handler | Fallback |
 |---|---|---|
 | `HF_TOKEN` missing | `EnvConfig.from_env` | `ValueError` — process exits |
 | LLM `TimeoutError` / `ConnectionError` | `EpisodeRunner` | `WARNING` log + `Action(type="submit")` |
+| HTTP 402 / 403 | `EpisodeRunner` + `_CircuitBreaker` | circuit breaker trips, remaining steps use submit |
 | Any other LLM exception | `EpisodeRunner` | error recorded in `[STEP]` log + `Action(type="submit")` |
 | `env.step` exception | `EpisodeRunner` | `ERROR` log + `done = True` |
-| `EpisodeRunner.run` unhandled exception | `InferenceRunner.run_all` | `ERROR` log + continue to next task |
+| Unhandled exception per task | `InferenceRunner.run_all` | `ERROR` log + continue to next task |
 
 ---
 
@@ -405,45 +381,27 @@ class Reward(BaseModel):
 
 ---
 
-## Training
-
-`training/train.py` implements a Q-learning + LLM hybrid agent for offline experimentation:
-
-- Epsilon-greedy exploration (ε starts at 0.9, decays to 0.1)
-- Q-values stored per `(opened_emails, time_left)` state key
-- Few-shot experience replay: top positive-reward steps are injected into the LLM prompt
-- Runs 100 episodes across easy/medium/hard tasks
-
-```bash
-export OPENAI_API_KEY=your_key   # optional — runs in mock mode without it
-python training/train.py
-```
-
-Results are saved to `training/scores.json` and visualized in `training/learning_curve.png`.
-
----
-
 ## Testing
 
-Tests live in `test_inference.py` alongside `inference.py`. The suite covers all six classes with both unit tests and property-based tests via [Hypothesis](https://hypothesis.readthedocs.io/).
+Property-based tests live in `tests/test_inference_properties.py` and use [Hypothesis](https://hypothesis.readthedocs.io/).
 
 ```bash
 pip install pytest hypothesis pytest-mock
-pytest test_inference.py -v
+pytest tests/ -v
 ```
 
-| Test type | Count | What it covers |
-|---|---|---|
-| Unit tests | 14 | `EnvConfig.from_env` defaults/errors, `PromptBuilder` rendering, `EpisodeRunner` call counts, `InferenceRunner` log format |
-| Property tests | 10 | Field round-trips, `ActionParser` round-trip, markdown fence transparency, invalid JSON, prompt completeness, rewards length, LLM exception fallback, `run_all` task count |
+| Property | What it verifies |
+|---|---|
+| Property 1 | `EnvConfig.from_env()` raises `ValueError` when `HF_TOKEN` is absent |
+| Property 2 | `format_start()` output always contains `[START]`, `task=`, `env=`, `model=` |
 
-All 24 tests pass in ~32 seconds.
+Each property runs 20 examples (fast CI mode). Increase `max_examples` in `@settings(...)` for more thorough coverage.
 
 ---
 
 ## Docker
 
-**Inference image** (`Dockerfile` at repo root):
+The root `Dockerfile` builds a minimal inference-only image:
 
 ```dockerfile
 FROM python:3.10-slim
@@ -451,12 +409,21 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
+EXPOSE 7860
 CMD ["python", "inference.py"]
 ```
 
-No Node.js, no build tools. Installs only `openai` and `pydantic`. Well within Hugging Face container limits (2 vCPU / 8 GB RAM).
+`requirements.txt` installs only what the server needs:
 
-**Full stack** (`docker-compose.yml`): spins up the FastAPI backend on port 8000 and the React frontend on port 3000.
+```
+openai>=1.0.0
+pydantic>=2.0.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
+httpx>=0.27.0
+```
+
+No Node.js, no build tools. Well within Hugging Face container limits (2 vCPU / 8 GB RAM).
 
 ---
 
@@ -479,5 +446,5 @@ No Node.js, no build tools. Installs only `openai` and `pydantic`. Well within H
 | Deterministic grader returning `[0.0, 1.0]` | ✅ |
 | `openenv.yaml` config at repo root | ✅ |
 | `python:3.10-slim` Docker base image | ✅ |
-| `mypy --strict` clean | ✅ |
-| `ruff check` clean | ✅ |
+| Server binds to `0.0.0.0:7860` | ✅ |
+| Per-task circuit breaker on fatal HTTP errors | ✅ |
