@@ -1,0 +1,19 @@
+name: aim-email-triage
+version: "1.0"
+description: "Email triage RL environment with LLM agent"
+tasks:
+  - name: easy
+    difficulty: easy
+    seed: 42
+    num_emails: 3
+    time_budget: 20
+  - name: medium
+    difficulty: medium
+    seed: 137
+    num_emails: 7
+    time_budget: 30
+  - name: hard
+    difficulty: hard
+    seed: 999
+    num_emails: 12
+    time_budget: 40

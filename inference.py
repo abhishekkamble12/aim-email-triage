@@ -1,162 +1,114 @@
-import sys
-sys.path.append('.')
 import os
-import json
 import re
-import logging
+import json
+from openai import OpenAI
 from env import AIMEnv, Action, Grader
-from tasks import EASY_TASK_CONFIG, MEDIUM_TASK_CONFIG, HARD_TASK_CONFIG
-import openai
+from env.models import TaskConfig
 
-# Configure Production Logging
-logging.basicConfig(
-    level=logging.INFO, 
-    format="%(asctime)s | %(name)s | %(levelname)s | %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('aim_env.log', mode='a')
-    ]
-)
-logger = logging.getLogger("AIM_ENV_AGENT")
 
-class LLMAgent:
-    def __init__(self, api_key: str = None):
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
-        if self.api_key:
-            self.client = openai.OpenAI(api_key=self.api_key)
-        else:
-            self.client = None
-            logger.warning("No OpenAI API key provided, LLM agent will fallback to heuristic")
+def get_env_config() -> tuple:
+    """Read HF_TOKEN (required), API_BASE_URL, MODEL_NAME from environment."""
+    hf_token = os.environ.get("HF_TOKEN")
+    if not hf_token:
+        raise ValueError("HF_TOKEN environment variable is required")
+    api_base_url = os.environ.get("API_BASE_URL", "https://api.openai.com/v1")
+    model_name = os.environ.get("MODEL_NAME", "gpt-4o-mini")
+    return (hf_token, api_base_url, model_name)
 
-    def decide(self, obs) -> Action:
-        # If no API key or client, fallback to heuristic logic
-        if not self.client:
-            logger.info("Using heuristic fallback for LLM agent")
-            return self._heuristic_fallback(obs)
-        
-        inbox_desc = "\n".join([f"- {e.id}: {e.subject} ({e.preview})" for e in obs.inbox])
-        prompt = f"""
-You are an email triage agent under time pressure.
 
-Inbox:
-{inbox_desc}
+def format_start(task_name: str, env_name: str, model_name: str) -> str:
+    return f"[START] task={task_name} env={env_name} model={model_name}"
 
-Opened: {obs.opened}
-Time left: {obs.time_left}
 
-You must return a raw JSON object as your action. Valid action types: "open", "classify", "detect_phishing", "submit".
-For "open", include "email_id".
-For "classify", include "email_id", "category", "priority", "route".
-For "detect_phishing", include "email_id".
-For "submit", no other fields.
+def format_step(step: int, action: str, reward: float, done: bool, error) -> str:
+    return (
+        f"[STEP] step={step} action={action} reward={reward:.2f} "
+        f"done={str(done).lower()} error={error if error is not None else 'null'}"
+    )
 
-Example:
-{{"type": "open", "email_id": "12345"}}
-"""
-        try:
-            response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=100,
-                temperature=0.1  # Low temperature for consistent decisions
-            )
-            action_str = response.choices[0].message.content.strip()
-            return self.parse_action(action_str)
-        except Exception as e:
-            logger.warning(f"LLM decision failed, falling back to heuristic: {str(e)}")
-            return self._heuristic_fallback(obs)
 
-    def _heuristic_fallback(self, obs) -> Action:
-        """Simple heuristic fallback when LLM is unavailable"""
-        if obs.inbox and not obs.opened:
-            return Action(type="open", email_id=obs.inbox[0].id)
-        elif obs.opened:
-            eid = obs.opened[0]
-            return Action(
-                type="classify", 
-                email_id=eid, 
-                category="normal", 
-                priority="medium", 
-                route="inbox"
-            )
-        else:
-            return Action(type="submit")
+def format_end(success: bool, steps: int, rewards: list) -> str:
+    rewards_str = ",".join(f"{r:.2f}" for r in rewards)
+    return f"[END] success={str(success).lower()} steps={steps} rewards={rewards_str}"
 
-    def parse_action(self, action_str: str) -> Action:
-        # Extract JSON from markdown code blocks if present
-        match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', action_str, re.DOTALL)
-        if match:
-            action_str = match.group(1)
-        
-        try:
-            data = json.loads(action_str)
-            return Action(**data)
-        except Exception as e:
-            logger.debug(f"Action parse failed: {str(e)}")
-            return Action(type="submit")
 
-class HeuristicAgent:
-    def __init__(self):
-        logger.info("Initializing Heuristic Agent.")
-
-    def decide(self, obs) -> Action:
-        if obs.inbox and not obs.opened:
-            return Action(type="open", email_id=obs.inbox[0].id)
-        elif obs.opened:
-            eid = obs.opened[0]
-            # Random heuristic rule
-            return Action(
-                type="classify", 
-                email_id=eid, 
-                category="normal", 
-                priority="medium", 
-                route="inbox"
-            )
-        else:
-            return Action(type="submit")
-
-def run_task(config, agent, grader):
-    env = AIMEnv(config)
+def run_episode(env: AIMEnv, client: OpenAI, model: str, task_name: str, env_name: str) -> None:
     obs = env.reset()
-    
-    logs = [f"[START] Num Emails: {config.num_emails}"]
-    logger.info(logs[0])
-    
-    total_reward = 0
-    step = 0
-    
-    while not env.done:
-        action = agent.decide(obs)
+    print(format_start(task_name, env_name, model))
+
+    done = False
+    step_num = 0
+    rewards_list = []
+
+    while not done:
+        error = None
+        action = None
+
+        # Build prompt
+        inbox_lines = "\n".join(
+            f"  - id={e.id} subject={e.subject!r} sender={e.sender} preview={e.preview!r}"
+            for e in obs.inbox
+        )
+        prompt = (
+            f"You are an email triage agent.\n\n"
+            f"Inbox:\n{inbox_lines if inbox_lines else '  (empty)'}\n\n"
+            f"Time left: {obs.time_left}  Step: {obs.step_count}\n\n"
+            f"Available actions:\n"
+            f'  {{"type": "open", "email_id": "<id>"}}\n'
+            f'  {{"type": "classify", "email_id": "<id>", "category": "<urgent|normal|spam|promotions|social|updates|forums>", '
+            f'"priority": "<low|medium|high|critical>", "route": "<inbox|archive|trash|escalate|review>"}}\n'
+            f'  {{"type": "detect_phishing", "email_id": "<id>"}}\n'
+            f'  {{"type": "submit"}}\n\n'
+            f"Respond with a single JSON object representing your chosen action."
+        )
+
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = response.choices[0].message.content.strip()
+            # Extract JSON from possible markdown fences
+            m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw, re.DOTALL)
+            if m:
+                raw = m.group(1)
+            parsed = json.loads(raw)
+            action = Action(**parsed)
+        except Exception as exc:
+            error = str(exc)
+            action = Action(type="submit")
+
+        action_str = action.type
+        if action.email_id:
+            action_str += f":{action.email_id}"
+
         obs, reward, done = env.step(action)
-        total_reward += reward.value
-        
-        step_log = f"[STEP {step}] Action: {action.type} -> Reward Component Sum: {reward.value:.2f}"
-        logs.append(step_log)
-        logger.debug(step_log)
-        
-        step += 1
-        
+        rewards_list.append(reward.value)
+        print(format_step(step_num, action_str, reward.value, done, error))
+        step_num += 1
+
     result = env.get_result()
-    final_score = grader.grade_episode(result, logs)
-    
-    end_log = f"[END] Final Score: {final_score:.2f} | Efficiency: {result.efficiency:.2f}"
-    logs.append(end_log)
-    logger.info(end_log)
-    
-    return final_score
+    score = Grader().grade_episode(result)
+    print(format_end(score >= 0.5, step_num, rewards_list))
+
+
+def main():
+    hf_token, api_base_url, model_name = get_env_config()
+    client = OpenAI(base_url=api_base_url, api_key=hf_token)
+
+    tasks = [
+        ("easy", TaskConfig(seed=42, num_emails=3, time_budget=20,
+                            ambiguity_level=0.0, has_phishing=False, time_pressure=0.0)),
+        ("medium", TaskConfig(seed=137, num_emails=7, time_budget=30,
+                              ambiguity_level=0.2, has_phishing=True, time_pressure=0.1)),
+        ("hard", TaskConfig(seed=999, num_emails=12, time_budget=40,
+                            ambiguity_level=0.5, has_phishing=True, time_pressure=0.5)),
+    ]
+
+    for task_name, config in tasks:
+        env = AIMEnv(config)
+        run_episode(env, client, model_name, task_name, "aim-email-triage")
+
 
 if __name__ == "__main__":
-    api_key = os.getenv("OPENAI_API_KEY")
-    if api_key:
-        logger.info("OPENAI_API_KEY detected. Using LLMAgent.")
-        agent = LLMAgent(api_key)
-    else:
-        logger.warning("OPENAI_API_KEY not set. Falling back to HeuristicAgent baseline.")
-        agent = HeuristicAgent()
-        
-    grader = Grader()
-    tasks_to_run = [EASY_TASK_CONFIG, MEDIUM_TASK_CONFIG, HARD_TASK_CONFIG]
-    
-    for task_cfg in tasks_to_run:
-        logger.info(f"--- Launching Task (Seed: {task_cfg.seed}) ---")
-        run_task(task_cfg, agent, grader)
+    main()

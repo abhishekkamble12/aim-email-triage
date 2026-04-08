@@ -1,0 +1,29 @@
+# Ignore Frontend / Node.js
+node_modules/
+src/
+dist/
+public/
+package.json
+package-lock.json
+vite.config.js
+tailwind.config.js
+postcss.config.js
+index.html
+
+# Ignore Development / Local Files
+.git/
+.github/
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.ipynb_checkpoints/
+aim_env.log
+analysis.md
+test_platform.py
+
+# Ignore Docker / System files
+docker-compose.yml
+.DS_Store

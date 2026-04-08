@@ -1,1 +1,0 @@
-# AIM-Env Backend Application

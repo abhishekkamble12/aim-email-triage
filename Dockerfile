@@ -1,22 +1,6 @@
-FROM node:18-alpine
-
+FROM python:3.10-slim
 WORKDIR /app
-
-# Copy package files
-COPY frontend/package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy source code
-COPY frontend/ ./
-
-# Build the application
-RUN npm run build
-
-# Expose port
-EXPOSE 3000
-
-# Start the application
-CMD ["npm", "run", "preview"]
-CMD ["npm", "run", "preview"]
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "inference.py"]
