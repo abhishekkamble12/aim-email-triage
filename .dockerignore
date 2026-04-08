@@ -1,4 +1,4 @@
-# Ignore Frontend / Node.js
+# Frontend / Node.js (not needed in container)
 node_modules/
 src/
 dist/
@@ -10,20 +10,40 @@ tailwind.config.js
 postcss.config.js
 index.html
 
-# Ignore Development / Local Files
-.git/
-.github/
-.vscode/
+# Backend FastAPI (not needed in container)
+backend/
+
+# Python cache
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pycache
+
+# Environment / secrets
 .env
-.ipynb_checkpoints/
+**/.env
+backend/.env
+
+# Git / IDE
+.git/
+.gitignore
+.github/
+.vscode/
+.kiro/
+
+# Dev / test artifacts
 aim_env.log
 analysis.md
 test_platform.py
+training/
+*.log
+*.json.bak
 
-# Ignore Docker / System files
+# Docker Compose (not needed inside image)
 docker-compose.yml
+
+# OS artifacts
 .DS_Store
+Thumbs.db
