@@ -19,4 +19,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         # This forces your GitHub code into your Hugging Face Space
-        run: git push --force https://Abhishek1205:$HF_TOKEN@huggingface.co/spaces/Abhishek1205/aim-email-triage main
+        run: git push --force https://Abhishek1205:$HF_TOKEN@huggingface.co/spaces/Abhishek1205/Email-RL-Agent main
