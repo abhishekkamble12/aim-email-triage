@@ -17,16 +17,15 @@ import logging
 import os
 import re
 import sys
-import threading
-from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from enum import Enum
-from typing import AsyncGenerator
+from typing import Any
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from openai import OpenAI
+from pydantic import BaseModel
 
 from env import AIMEnv, Action, Grader
 from env.models import Observation, TaskConfig
@@ -439,41 +438,38 @@ class InferenceRunner:
 
 
 # ---------------------------------------------------------------------------
-# FastAPI server — keeps the HF Space 'Running' after tasks complete
+# FastAPI server — OpenEnv-compliant API mode
+# The grader acts as the agent; we just listen and respond synchronously.
+# Background inference loop is disabled in this mode.
 # ---------------------------------------------------------------------------
 
-_run_status: dict[str, object] = {"state": "pending", "completed_tasks": []}
+# Global environment instance — maintains state between API calls
+_env: AIMEnv | None = None
+
+_DEFAULT_TASK_CONFIG = TaskConfig(
+    seed=42,
+    num_emails=5,
+    time_budget=30,
+    ambiguity_level=0.2,
+    has_phishing=True,
+    time_pressure=0.1,
+)
 
 
-def _inference_worker() -> None:
-    """Background thread: run all tasks then mark done. Never crashes the server."""
-    _run_status["state"] = "running"
-    try:
-        _configure_logger()
-        runner = InferenceRunner()
-        runner.run_all()
-        _run_status["state"] = "done"
-    except ValueError as exc:
-        logger.error("Configuration error: %s", exc)
-        _run_status["state"] = "config_error"
-    except Exception as exc:
-        logger.error("Inference worker crashed: %s", exc)
-        _run_status["state"] = "error"
+class ResetRequest(BaseModel):
+    seed: int | None = None
 
 
-@asynccontextmanager
-async def _lifespan(application: FastAPI) -> AsyncGenerator[None, None]:
-    t = threading.Thread(target=_inference_worker, daemon=True, name="inference-worker")
-    t.start()
-    yield
+class StepRequest(BaseModel):
+    action: dict | str
 
 
-app = FastAPI(title="AIM-Env Inference", version="1.0.0", lifespan=_lifespan)
+app = FastAPI(title="AIM-Env Inference", version="1.0.0")
 
 
 @app.get("/")
 def root() -> JSONResponse:
-    return JSONResponse({"service": "AIM-Env Inference", "status": _run_status["state"]})
+    return JSONResponse({"service": "AIM-Env Inference", "status": "ready"})
 
 
 @app.get("/health")
@@ -481,9 +477,55 @@ def health() -> JSONResponse:
     return JSONResponse({"status": "ok"})
 
 
-@app.get("/status")
-def status() -> JSONResponse:
-    return JSONResponse(_run_status)
+@app.post("/reset")
+def reset(body: ResetRequest | None = None) -> JSONResponse:
+    """Reset the environment and return the initial observation."""
+    global _env
+    seed = (body.seed if body else None) or _DEFAULT_TASK_CONFIG.seed
+    config = TaskConfig(
+        seed=seed,
+        num_emails=_DEFAULT_TASK_CONFIG.num_emails,
+        time_budget=_DEFAULT_TASK_CONFIG.time_budget,
+        ambiguity_level=_DEFAULT_TASK_CONFIG.ambiguity_level,
+        has_phishing=_DEFAULT_TASK_CONFIG.has_phishing,
+        time_pressure=_DEFAULT_TASK_CONFIG.time_pressure,
+    )
+    _env = AIMEnv(config)
+    obs: Observation = _env.reset()
+    return JSONResponse(obs.model_dump())
+
+
+@app.post("/step")
+def step(body: StepRequest) -> JSONResponse:
+    """Advance the environment by one step."""
+    global _env
+    if _env is None:
+        raise HTTPException(status_code=400, detail="Environment not initialized. Call /reset first.")
+
+    # Parse action — accept dict or JSON string
+    raw_action = body.action
+    if isinstance(raw_action, str):
+        try:
+            raw_action = json.loads(raw_action)
+        except Exception as exc:
+            raise HTTPException(status_code=422, detail=f"Invalid action JSON: {exc}")
+
+    try:
+        action = Action(**raw_action)
+    except Exception as exc:
+        raise HTTPException(status_code=422, detail=f"Invalid action fields: {exc}")
+
+    try:
+        obs, reward, done = _env.step(action)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    return JSONResponse({
+        "observation": obs.model_dump(),
+        "reward": round(reward.value, 2),
+        "done": done,
+        "info": reward.components,
+    })
 
 
 # ---------------------------------------------------------------------------
