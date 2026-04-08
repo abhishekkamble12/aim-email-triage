@@ -21,6 +21,9 @@ __pycache__/
 *.pyd
 *.pycache
 
+# Environment / secrets
+.env
+**/.env
 
 # Git / IDE
 .git/
