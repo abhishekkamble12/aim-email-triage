@@ -60,3 +60,5 @@ task.md
 
 # Kiro IDE
 .kiro/
+.kiro/specs/
+.kiro/spe
