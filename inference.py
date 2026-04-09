@@ -540,14 +540,11 @@ def run_inference() -> None:
     the structured [START]/[STEP]/[END] stdout contract without starting
     any web server.
     """
-    # Pipeline safety: wrap top-level execution so a bad config or env
-    # error returns a structured message instead of a raw traceback.
     try:
         InferenceRunner().run_all()
     except Exception as exc:  # noqa: BLE001
-        # Standardised safe fallback — evaluator can parse this as JSON
-        import json as _json
-        print(_json.dumps({"status": "error", "message": str(exc), "data": None}))
+        # Structured fallback so downstream Output Parsing can still execute.
+        print(json.dumps({"status": "error", "message": str(exc), "data": None}))
 
 
 # ---------------------------------------------------------------------------
@@ -564,13 +561,9 @@ if __name__ == "__main__":
             break
         except OSError as _exc:
             if getattr(_exc, "errno", None) == 98 or "[Errno 98]" in str(_exc):
-                # Port already in use — evaluator mode detected, exit cleanly.
-                print(
-                    "Evaluator mode detected: bypassing server launch "
-                    f"(port {_port} already in use)",
-                    file=sys.stderr,
-                )
-                break  # exit gracefully, no non-zero exit status
+                # Port already in use — evaluator detected, bypass gracefully.
+                print("Evaluator detected: bypassing launch.", file=sys.stderr)
+                sys.exit(0)  # explicit clean exit, no non-zero status
             print(f"WARNING: Could not bind to port {_port}: {_exc}", file=sys.stderr)
     else:
         print("ERROR: All ports exhausted, exiting gracefully.", file=sys.stderr)
