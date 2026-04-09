@@ -534,8 +534,15 @@ def step(body: StepRequest) -> JSONResponse:
 
 
 def main() -> None:
-    """Start the FastAPI server on port 7860 (HF Spaces default)."""
-    uvicorn.run(app, host="0.0.0.0", port=7860, log_level="warning")
+    """Start the FastAPI server, falling back to alternate ports on bind failure."""
+    base_port = int(os.environ.get("PORT", 7860))
+    for port in (base_port, base_port + 1, base_port + 2):
+        try:
+            uvicorn.run(app, host="0.0.0.0", port=port, log_level="warning")
+            return
+        except OSError as exc:
+            print(f"WARNING: Could not bind to port {port}: {exc}", file=sys.stderr)
+    print("ERROR: All ports exhausted, exiting gracefully.", file=sys.stderr)
 
 
 if __name__ == "__main__":
