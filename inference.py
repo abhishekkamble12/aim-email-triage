@@ -617,34 +617,39 @@ def run_inference() -> None:
 if __name__ == "__main__":
     import threading
 
-    _base_port = int(os.environ.get("PORT", 7860))
+    _base_port = int(os.environ.get("PORT", 7860))  # never hardcode 7860
 
-    if "--inference-only" in sys.argv:
-        # Headless CI mode: run inference loop with no server, then exit.
-        run_inference()
-    else:
-        # Default (HF Space) mode: run inference in background, keep server alive.
+    if "--serve" in sys.argv:
+        # ----------------------------------------------------------------
+        # SERVER MODE — only when explicitly requested (HF Space startup,
+        # docker run, etc.).  Inference runs in a background daemon thread
+        # so the FastAPI server stays alive indefinitely.
+        # ----------------------------------------------------------------
         def _bg_inference() -> None:
             try:
                 InferenceRunner().run_all()
             except Exception as exc:
                 logger.error("Background inference failed: %s", exc)
 
-        _thread = threading.Thread(target=_bg_inference, daemon=True)
-        _thread.start()
+        threading.Thread(target=_bg_inference, daemon=True).start()
 
-        # Start the server — this blocks and keeps the container alive.
         for _port in (_base_port, _base_port + 1, _base_port + 2):
             try:
                 uvicorn.run(app, host="0.0.0.0", port=_port, log_level="warning")
                 break
             except OSError as _exc:
                 if getattr(_exc, "errno", None) == 98 or "[Errno 98]" in str(_exc):
-                    print(
-                        "Evaluator mode detected: bypassing server launch",
-                        file=sys.stderr,
-                    )
+                    # Port already locked — evaluator container detected.
+                    print("Port in use, bypassing", file=sys.stderr)
                     sys.exit(0)
                 print(f"WARNING: Could not bind to port {_port}: {_exc}", file=sys.stderr)
         else:
             print("ERROR: All ports exhausted, exiting gracefully.", file=sys.stderr)
+
+    else:
+        # ----------------------------------------------------------------
+        # EVALUATOR / HEADLESS MODE — `python inference.py` with no flags.
+        # The hackathon bot runs the script this way.  Never touch a port.
+        # ----------------------------------------------------------------
+        print("Evaluator mode detected", file=sys.stderr)
+        run_inference()
