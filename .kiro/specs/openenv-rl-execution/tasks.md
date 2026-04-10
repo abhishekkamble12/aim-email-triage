@@ -34,7 +34,7 @@ Refactor the AIM-Env Platform into a strictly compliant OpenEnv RL execution env
     - Reward: 2 decimal places; booleans: lowercase; error: literal `"null"` when `None`
     - _Requirements: 2.2, 2.4, 2.5_
 
-  - [~]* 2.6 Write property test for `format_step()` — Property 3: [STEP] line correct formatting
+  - [ ]* 2.6 Write property test for `format_step()` — Property 3: [STEP] line correct formatting
     - **Property 3: [STEP] line contains all required fields with correct formatting**
     - **Validates: Requirements 2.2, 2.4, 2.5**
     - Use `@given(st.integers(min_value=0), st.text(min_size=1), st.floats(allow_nan=False, allow_infinity=False), st.booleans(), st.one_of(st.none(), st.text(min_size=1)))`
@@ -43,7 +43,7 @@ Refactor the AIM-Env Platform into a strictly compliant OpenEnv RL execution env
     - Return `[END] success=<true|false> steps=<n> rewards=<r1,r2,...rn>` with each reward to 2 decimal places
     - _Requirements: 2.3, 2.4, 2.5_
 
-  - [~]* 2.8 Write property test for `format_end()` — Property 4: [END] line correct formatting
+  - [ ]* 2.8 Write property test for `format_end()` — Property 4: [END] line correct formatting
     - **Property 4: [END] line contains all required fields**
     - **Validates: Requirements 2.3, 2.4, 2.5**
     - Use `@given(st.booleans(), st.integers(min_value=0), st.lists(st.floats(min_value=-10, max_value=10, allow_nan=False)))`
@@ -54,7 +54,7 @@ Refactor the AIM-Env Platform into a strictly compliant OpenEnv RL execution env
     - On LLM failure: catch exception, set `error` field in `[STEP]`, fall back to `Action(type="submit")`
     - _Requirements: 4.1, 4.2, 4.3, 5.1, 5.2, 6.1_
 
-  - [~]* 2.10 Write property test for episode termination — Property 7: Episode loop always terminates
+  - [ ]* 2.10 Write property test for episode termination — Property 7: Episode loop always terminates
     - **Property 7: Episode loop always terminates with done=True**
     - **Validates: Requirements 6.1**
     - Use `@given(st.sampled_from([EASY_TASK_CONFIG, MEDIUM_TASK_CONFIG, HARD_TASK_CONFIG]))`, run with heuristic agent, assert `done == True` and `steps > 0`
@@ -69,12 +69,12 @@ Refactor the AIM-Env Platform into a strictly compliant OpenEnv RL execution env
     - No code changes needed if already correct; add a docstring clarifying the formula
     - _Requirements: 3.4_
 
-  - [~]* 4.2 Write property test for `Grader` — Property 5: Grader always returns score in [0.0, 1.0]
+  - [ ]* 4.2 Write property test for `Grader` — Property 5: Grader always returns score in [0.0, 1.0]
     - **Property 5: Grader always returns a score in [0.0, 1.0]**
     - **Validates: Requirements 3.4**
     - Use `@given(st.floats(0, 1), st.floats(0, 1), st.floats(0, 1), st.floats(0, 1), st.floats(0, 1))`, build `EpisodeResult`, assert `0.0 <= score <= 1.0`
 
-  - [~]* 4.3 Write property test for `AIMEnv.reset()` — Property 6: reset() returns valid Observation
+  - [ ]* 4.3 Write property test for `AIMEnv.reset()` — Property 6: reset() returns valid Observation
     - **Property 6: reset() always returns a valid Observation**
     - **Validates: Requirements 3.1**
     - Use `@given(st.integers(1, 15), st.integers(10, 60), st.integers(0, 9999))`, build `TaskConfig`, call `reset()`, assert `time_left == config.time_budget`, `step_count == 0`, `done == False`
@@ -88,7 +88,7 @@ Refactor the AIM-Env Platform into a strictly compliant OpenEnv RL execution env
   - Write `requirements.txt` at repo root containing only `openai` and `pydantic`
   - _Requirements: 8.1, 8.2, 8.3_
 
-- [~]* 6.1 Write smoke tests for Dockerfile and openenv.yaml
+- [ ]* 6.1 Write smoke tests for Dockerfile and openenv.yaml
   - Verify `Dockerfile` `FROM` line is `python:3.10-slim`
   - Verify `requirements.txt` contains only `openai` and `pydantic` (no other packages)
   - Verify `openenv.yaml` parses successfully and contains `easy`, `medium`, `hard` task entries
