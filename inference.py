@@ -109,6 +109,17 @@ class EnvConfig:
     def from_env(cls) -> "EnvConfig":
         """Construct an EnvConfig by reading values from os.environ.
 
+        Provider swap guide — set these env vars to migrate away from HF:
+          Groq:       API_BASE_URL=https://api.groq.com/openai/v1
+                      HF_TOKEN=<groq_api_key>
+                      MODEL_NAME=llama3-8b-8192
+          OpenRouter: API_BASE_URL=https://openrouter.ai/api/v1
+                      HF_TOKEN=<openrouter_api_key>
+                      MODEL_NAME=mistralai/mistral-7b-instruct
+          Together:   API_BASE_URL=https://api.together.xyz/v1
+                      HF_TOKEN=<together_api_key>
+                      MODEL_NAME=mistralai/Mistral-7B-Instruct-v0.2
+
         Returns:
             A fully populated EnvConfig instance.
 
@@ -120,8 +131,11 @@ class EnvConfig:
             raise ValueError("HF_TOKEN environment variable is required")
         return cls(
             hf_token=hf_token,
-            api_base_url=os.environ.get("API_BASE_URL", "https://api.openai.com/v1"),
-            model_name=os.environ.get("MODEL_NAME", "gpt-4o-mini"),
+            api_base_url=os.environ.get(
+                "API_BASE_URL",
+                "https://router.huggingface.co/novita/v3/openai",  # HF default
+            ),
+            model_name=os.environ.get("MODEL_NAME", "Qwen/Qwen2.5-7B-Instruct"),
             timeout=int(os.environ.get("INFERENCE_TIMEOUT", "30")),
         )
 
@@ -134,11 +148,14 @@ class EnvConfig:
 class PromptBuilder:
     """Stateless builder that converts an Observation into an LLM prompt string."""
 
-    def build(self, obs: Observation) -> str:
+    def build(self, obs: Observation, action_history: list[str] | None = None) -> str:
         """Build a prompt string from the given observation.
 
         Args:
             obs: The current environment observation.
+            action_history: Ordered list of action strings already taken this
+                episode. Injected into the prompt so the LLM avoids repeating
+                itself (the root cause of the classify-loop bug).
 
         Returns:
             A formatted prompt string ready to send to the LLM.
@@ -152,9 +169,21 @@ class PromptBuilder:
         else:
             inbox_section = "  (empty)"
 
+        # [LOOP BREAKER] Show the last 5 actions so the model knows what to avoid
+        if action_history:
+            recent = action_history[-5:]
+            history_section = (
+                "\nActions already taken this episode (DO NOT repeat these):\n"
+                + "\n".join(f"  {i+1}. {a}" for i, a in enumerate(recent))
+                + "\n"
+            )
+        else:
+            history_section = ""
+
         return (
             "You are an email triage agent.\n\n"
-            f"Inbox:\n{inbox_section}\n\n"
+            f"Inbox:\n{inbox_section}\n"
+            f"{history_section}\n"
             f"Time left: {obs.time_left}  Step: {obs.step_count}\n\n"
             "Available actions:\n"
             '  {"type": "open", "email_id": "<id>"}\n'
@@ -238,15 +267,14 @@ class EpisodeSummary:
 
 
 def _is_fatal_http_error(exc: Exception) -> bool:
-    """Return True for HTTP 402 / 403 errors that should trip the circuit breaker."""
+    """Return True for HTTP 402/403/429 errors that should trip the circuit breaker."""
     msg = str(exc).lower()
-    # openai SDK surfaces these as status_code attributes or in the message
-    for marker in ("402", "403", "payment required", "forbidden", "permission"):
+    for marker in ("402", "403", "429", "payment required", "forbidden",
+                   "permission", "too many requests", "rate limit", "depleted"):
         if marker in msg:
             return True
-    # Check for openai APIStatusError with status_code attribute
     status = getattr(exc, "status_code", None)
-    if status in (402, 403):
+    if status in (402, 403, 429):
         return True
     return False
 
@@ -260,6 +288,7 @@ class EpisodeRunner:
         client: OpenAI,
         config: EnvConfig,
         circuit_breaker: _CircuitBreaker | None = None,
+        loop_break_threshold: int = 3,
     ) -> None:
         self.env = env
         self.client = client
@@ -267,32 +296,31 @@ class EpisodeRunner:
         self._prompt_builder = PromptBuilder()
         self._action_parser = ActionParser()
         self._cb = circuit_breaker or _CircuitBreaker()
+        # Loop-breaker: tracks consecutive identical actions to prevent credit drain
+        self._loop_break_threshold = loop_break_threshold
+        self._last_action_str: str | None = None
+        self._consecutive_count: int = 0
 
     def run(self, task_name: str, env_name: str) -> EpisodeSummary:
-        """Execute one full episode and return a summary.
-
-        Args:
-            task_name: Human-readable task identifier.
-            env_name: Environment identifier string.
-
-        Returns:
-            An EpisodeSummary with step count, rewards, and success flag.
-        """
+        """Execute one full episode and return a summary."""
         obs = self.env.reset()
         done = False
         step_num = 0
         rewards_list: list[float] = []
+        # History fed back into the prompt so the LLM knows what it already tried
+        action_history: list[str] = []
 
         while not done:
             error: str | None = None
             action: Action
 
-            # --- Circuit breaker: skip LLM if tripped ---
+            # --- Circuit breaker: skip LLM if tripped, submit immediately ---
             if self._cb.is_open:
                 error = "circuit_breaker_open"
                 action = Action(type="submit")
             else:
-                prompt = self._prompt_builder.build(obs)
+                # [LOOP BREAKER] Inject history so the model sees prior actions
+                prompt = self._prompt_builder.build(obs, action_history)
                 try:
                     response = self.client.chat.completions.create(
                         model=self.config.model_name,
@@ -314,12 +342,41 @@ class EpisodeRunner:
                             "Circuit breaker tripped (fatal HTTP error): %s", exc
                         )
                         self._cb.trip()
+                        # [FIX] Terminate immediately — don't burn another API call
+                        done = True
+                        rewards_list.append(-1.0)
+                        logger.info(
+                            "[STEP] step=%d action=submit reward=-1.00"
+                            " done=true error=%s",
+                            step_num, error,
+                        )
+                        step_num += 1
+                        break
                     action = Action(type="submit")
 
-            # Build action string for the log
+            # Build canonical action string for loop detection and logging
             action_str = action.type
             if action.email_id:
                 action_str += f":{action.email_id}"
+
+            # [LOOP BREAKER] Force submit if same action repeated N times in a row
+            if action_str == self._last_action_str:
+                self._consecutive_count += 1
+                if self._consecutive_count >= self._loop_break_threshold:
+                    logger.warning(
+                        "Loop breaker triggered after %d consecutive '%s' actions"
+                        " — forcing submit",
+                        self._consecutive_count, action_str,
+                    )
+                    action = Action(type="submit")
+                    action_str = "submit"
+                    error = f"loop_breaker:{self._consecutive_count}"
+                    self._consecutive_count = 0
+            else:
+                self._last_action_str = action_str
+                self._consecutive_count = 1
+
+            action_history.append(action_str)
 
             try:
                 obs, reward, done = self.env.step(action)
@@ -330,7 +387,6 @@ class EpisodeRunner:
 
             rewards_list.append(reward.value)
 
-            # --- Exact stdout contract ---
             logger.info(
                 "[STEP] step=%d action=%s reward=%.2f done=%s error=%s",
                 step_num,
