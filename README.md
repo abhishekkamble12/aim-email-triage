@@ -11,6 +11,8 @@ tags:
   - llm
 ---
 
+
+-------
 # AIM-Env: AI Email Triage RL Environment
 
 AIM-Env is an [OpenEnv](https://openenv.dev)-compliant reinforcement learning environment where an LLM agent triages a simulated email inbox. The agent reads inbox state, decides actions (open, classify, detect phishing, submit), and is scored on accuracy, routing, and efficiency.
