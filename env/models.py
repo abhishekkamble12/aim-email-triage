@@ -4,7 +4,7 @@ Defines all Pydantic schemas and enum structures representing the state
 and configuration of the simulation.
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional
 from enum import Enum
 
@@ -43,6 +43,19 @@ class Action(BaseModel):
     category: Optional[EmailCategory] = Field(default=None, description="The category classification assigned.")
     priority: Optional[PriorityLevel] = Field(default=None, description="The priority classification assigned.")
     route: Optional[RouteOption] = Field(default=None, description="The destination route assigned.")
+
+    @field_validator("email_id", mode="before")
+    @classmethod
+    def coerce_email_id_to_str(cls, v: object) -> object:
+        """Coerce integer email_id to string.
+
+        The LLM sometimes emits {"email_id": 28289} (no quotes) instead of
+        {"email_id": "28289"}, which causes a Pydantic validation error.
+        Converting to str here silently fixes that without touching env logic.
+        """
+        if v is not None and not isinstance(v, str):
+            return str(v)
+        return v
 
 class EmailPartial(BaseModel):
     """Structure for emails visible from the inbox viewport."""

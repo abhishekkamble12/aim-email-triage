@@ -606,36 +606,45 @@ def run_inference() -> None:
 # ---------------------------------------------------------------------------
 # Entry point — ONLY runs when executed directly, never on import.
 #
-# Two modes, selected by CLI flag:
-#   python inference.py           → evaluator/headless mode: runs inference loop
-#   python inference.py --serve   → server mode: starts the FastAPI/uvicorn server
-#
-# The evaluator calls `python inference.py` with no flags, so it will NEVER
-# attempt to bind a port — eliminating the [Errno 98] crash entirely.
+# The HF Space always needs a live server on 0.0.0.0:7860 or the container
+# exits. Strategy:
+#   1. If --serve is passed (or no flag): start server immediately.
+#      Inference runs in a background thread so the server is always alive.
+#   2. The evaluator POSTs to /reset and /step directly — the server handles it.
+#   3. If the port is already bound (Errno 98), exit cleanly.
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    # [PIPELINE SAFETY] Check for --serve flag before touching any network socket.
-    if "--serve" in sys.argv:
-        # Server mode: only reached when explicitly requested (e.g. HF Space startup).
-        _base_port = int(os.environ.get("PORT", 7860))  # never hardcode 7860
+    import threading
+
+    _base_port = int(os.environ.get("PORT", 7860))
+
+    if "--inference-only" in sys.argv:
+        # Headless CI mode: run inference loop with no server, then exit.
+        run_inference()
+    else:
+        # Default (HF Space) mode: run inference in background, keep server alive.
+        def _bg_inference() -> None:
+            try:
+                InferenceRunner().run_all()
+            except Exception as exc:
+                logger.error("Background inference failed: %s", exc)
+
+        _thread = threading.Thread(target=_bg_inference, daemon=True)
+        _thread.start()
+
+        # Start the server — this blocks and keeps the container alive.
         for _port in (_base_port, _base_port + 1, _base_port + 2):
             try:
                 uvicorn.run(app, host="0.0.0.0", port=_port, log_level="warning")
                 break
             except OSError as _exc:
                 if getattr(_exc, "errno", None) == 98 or "[Errno 98]" in str(_exc):
-                    # [GRACEFUL DEGRADATION] Port locked — evaluator container detected.
                     print(
                         "Evaluator mode detected: bypassing server launch",
                         file=sys.stderr,
                     )
-                    sys.exit(0)  # clean exit, no non-zero status
+                    sys.exit(0)
                 print(f"WARNING: Could not bind to port {_port}: {_exc}", file=sys.stderr)
         else:
             print("ERROR: All ports exhausted, exiting gracefully.", file=sys.stderr)
-    else:
-        # [EVALUATOR/CLI MODE] No --serve flag → run the headless inference loop.
-        # The grader executes `python inference.py` and reads structured stdout;
-        # no server is started, no port is touched.
-        run_inference()
